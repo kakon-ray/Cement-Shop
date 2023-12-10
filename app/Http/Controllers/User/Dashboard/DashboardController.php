@@ -10,4 +10,9 @@ class DashboardController extends Controller
     public function dashboard(){
         return view('user.dashboard.dashboard');
     }
+
+    public function home()
+    {
+        return view('user.guest.home');
+    }
 }

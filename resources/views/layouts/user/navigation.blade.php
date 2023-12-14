@@ -13,8 +13,23 @@
 						</div>
 						<div class="topbar-menu right-menu">
 							<ul>
-								<li class="menu-item" ><a title="Register or Login" href="login.html">Login</a></li>
-								<li class="menu-item" ><a title="Register or Login" href="register.html">Register</a></li>
+								@if(Auth::guard()->user())
+								<li class="menu-item" >
+								 <a title="Register or Login" href="{{ route('login') }}">
+									<form method="POST" action="{{ route('logout') }}">
+										@csrf
+					
+										<input type="submit" class="input-text" value="Logout" name="submit">
+									</form>
+								</a>
+							</li>
+					
+								@endif
+								@if(!Auth::guard()->user())
+								<li class="menu-item" ><a title="Register or Login" href="{{ route('login') }}">Login</a></li>
+								<li class="menu-item" ><a title="Register or Login" href="{{route('register')}}">Register</a></li>
+								@endif
+								
 								<li class="menu-item lang-menu menu-item-has-children parent">
 									<a title="English" href="#"><span class="img label-before"><img src="assets/images/lang-en.png" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul class="submenu lang" >
@@ -47,7 +62,7 @@
 					<div class="mid-section main-info-area">
 
 						<div class="wrap-logo-top left-section">
-							<a href="index.html" class="link-to-home"><img src="{{asset('user/images/logo-top-1.png')}}" alt="mercado"></a>
+							<a href="{{route('home')}}" class="link-to-home"><img src="{{asset('user/images/logo-top-1.png')}}" alt="mercado"></a>
 						</div>
 
 						<div class="wrap-search center-section">
@@ -84,7 +99,7 @@
 
 						<div class="wrap-icon right-section">
 							<div class="wrap-icon-section wishlist">
-								<a href="#" class="link-direction">
+								<a href="{{ route('user.wishlist') }}" class="link-direction">
 									<i class="fa fa-heart" aria-hidden="true"></i>
 									<div class="left-info">
 										<span class="index">0 item</span>
@@ -93,7 +108,7 @@
 								</a>
 							</div>
 							<div class="wrap-icon-section minicart">
-								<a href="#" class="link-direction">
+								<a href="{{ route('user.cart') }}" class="link-direction">
 									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 									<div class="left-info">
 										<span class="index">4 items</span>

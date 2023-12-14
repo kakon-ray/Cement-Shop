@@ -37,6 +37,7 @@
         <script src="{{asset('user/js/jquery.countdown.min.js')}}"></script>
         <script src="{{asset('user/js/jquery.sticky.js')}}"></script>
         <script src="{{asset('user/js/functions.js')}}"></script>
+        <script src="{{asset('user/js/auth.js')}}"></script>
 
 
          <!-- sweet alert -->

@@ -23,4 +23,8 @@ class UserGuestController extends Controller
     {
         return view('user.guest.contact');
     }
+    public function product_details()
+    {
+        return view('user.guest.product_details');
+    }
 }

@@ -1,6 +1,6 @@
 $(document).ready(function(){
   //Admin login submit alert
-    $('body').on('submit','#submitloginform',function(e){
+    $('body').on('submit','#login_alert',function(e){
       e.preventDefault();
   
       $.ajax({
@@ -19,7 +19,7 @@ $(document).ready(function(){
               timer: 1500,
             });
 
-            window.location.href = 'dashboard';
+            window.location.href = '/user/cart';
           }else{
             Swal.fire({
               icon: "error",

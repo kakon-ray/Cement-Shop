@@ -13,6 +13,7 @@ Route::name('admin.')->prefix('admin')->group(function () {
     Route::post('register', [AdminRegistationController::class, 'store']);
     Route::get('login', [LoginController::class, 'create'])->name('login');
     Route::post('login', [LoginController::class, 'store']);
+    Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
     // admin password reset
     Route::get('password-reset', [ForgetController::class,'password_reset'])->name('password.reset');

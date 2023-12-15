@@ -22,17 +22,36 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-cog"></i>
-            <span>Product</span>
+            <span>Category</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white my-2 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Buttons</a>
+            <div class="bg-white my-1 collapse-inner rounded">
+                <a class="collapse-item" href="buttons.html">Category</a>
             </div>
-            <div class="bg-white my-2 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Buttons</a>
+            <div class="bg-white my-1 collapse-inner rounded">
+                <a class="collapse-item" href="buttons.html">Sub Category</a>
             </div>
-            <div class="bg-white my-2 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Buttons</a>
+            <div class="bg-white my-1 collapse-inner rounded">
+                <a class="collapse-item" href="buttons.html">Child Category</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3"
+            aria-expanded="true" aria-controls="collapse3">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Settings</span>
+        </a>
+        <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white my-1 collapse-inner rounded">
+                <a class="collapse-item" href="buttons.html">Seo Setting</a>
+            </div>
+            <div class="bg-white my-1 collapse-inner rounded">
+                <a class="collapse-item" href="buttons.html">SMTP Mail Setting</a>
+            </div>
+            <div class="bg-white my-1 collapse-inner rounded">
+                <a class="collapse-item" href="buttons.html">Page Manage</a>
             </div>
         </div>
     </li>

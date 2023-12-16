@@ -13,4 +13,6 @@ class CategoryController extends Controller
     public function category_submit(Request $request){
        dd($request->all());
     }
+
+    
 }

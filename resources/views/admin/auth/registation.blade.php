@@ -41,7 +41,7 @@
         </div>
 
         <div class="flex justify-content-between mt-4">
-            <x-primary-button>
+            <x-primary-button class="btn-submit">
                 {{ __('Register') }}
             </x-primary-button>
 

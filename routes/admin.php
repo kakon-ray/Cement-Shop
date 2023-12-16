@@ -19,6 +19,7 @@ Route::name('admin.')->prefix('admin')->group(function () {
 Route::name('admin.')->prefix('admin')->group(function () {
     Route::middleware(['AdminAuth','VerifiedAdminEmail'])->group(function (){
         Route::get('category', [CategoryController::class, 'category'])->name('category');
+        Route::post('category/submit', [CategoryController::class, 'category_submit'])->name('category.submit');
         
     });
 });

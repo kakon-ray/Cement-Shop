@@ -10,4 +10,7 @@ class CategoryController extends Controller
     public function category(){
         return view('admin.category.category');
     }
+    public function category_submit(Request $request){
+       dd($request->all());
+    }
 }

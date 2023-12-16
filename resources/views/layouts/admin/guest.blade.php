@@ -25,6 +25,19 @@
                 height: 200px !important;
                 font-size: 11px !important;
             }
+
+            .btn-submit{
+                background-color: red;
+                color: white
+                
+            }
+
+            .btn-submit:hover{
+                background-color: rgb(219, 6, 6);
+                color: white;
+                border-style:none;
+                outline-style:none;
+            }
         </style>
     </head>
     <body class="font-sans text-gray-900 antialiased">

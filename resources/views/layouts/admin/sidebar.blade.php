@@ -26,7 +26,7 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white my-1 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Category</a>
+                <a class="collapse-item" href="{{route('admin.category')}}">Category</a>
             </div>
             <div class="bg-white my-1 collapse-inner rounded">
                 <a class="collapse-item" href="buttons.html">Sub Category</a>

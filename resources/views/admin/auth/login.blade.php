@@ -35,7 +35,7 @@
             </label>
         </div>
 
-        <x-primary-button class="mt-3">
+        <x-primary-button class="mt-3 btn-submit">
             {{ __('Log in') }}
         </x-primary-button>
 

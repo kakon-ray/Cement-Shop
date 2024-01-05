@@ -9,22 +9,7 @@ class UserGuestController extends Controller
 {
     public function home()
     {
-        return view('user.guest.home');
+        return view('user.home.index');
     }
-    public function about()
-    {
-        return view('user.guest.about');
-    }
-    public function shop()
-    {
-        return view('user.guest.shop');
-    }
-    public function contact()
-    {
-        return view('user.guest.contact');
-    }
-    public function product_details()
-    {
-        return view('user.guest.product_details');
-    }
+
 }

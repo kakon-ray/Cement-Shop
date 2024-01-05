@@ -2,51 +2,46 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-
-        <title>{{ config('app.name', 'Ecommerce') }}</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        {{-- bootstrap css --}}
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-        <style>
-            .btn-submit{
-                background-color: red;
-                color: white
-                
-            }
-            .btn-submit:hover{
-                background-color: rgb(219, 6, 6);
-                color: white
-            }
-        </style>
+        <title>Home</title>	
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset('user/images/favicon.ico')}}">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{asset('user/css/animate.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('user/css/font-awesome.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('user/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('user/css/owl.carousel.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('user/css/chosen.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('user/css/style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('user/css/color-01.css')}}">
+        
     </head>
+
     <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
-            </div>
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
-           
+        @include('layouts.user.navigation')
 
-                @yield('content')
-            </div>
-        </div>
+        <main>
+            @yield('content')
+        </main>
+
+        @include('layouts.user.footer')
+
+
+        <script src="{{asset('user/js/jquery-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
+        <script src="{{asset('user/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('user/js/jquery.flexslider.js')}}"></script>
+        <script src="{{asset('user/js/chosen.jquery.min.js')}}"></script>
+        <script src="{{asset('user/js/owl.carousel.min.js')}}"></script>
+        <script src="{{asset('user/js/jquery.countdown.min.js')}}"></script>
+        <script src="{{asset('user/js/jquery.sticky.js')}}"></script>
+        <script src="{{asset('user/js/functions.js')}}"></script>
+        <script src="{{asset('user/js/auth.js')}}"></script>
 
 
          <!-- sweet alert -->
          <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-       <script src="{{asset('js/auth.js')}}"></script>
+       <script src="{{asset('user/js/auth.js')}}"></script>
     </body>
 </html>

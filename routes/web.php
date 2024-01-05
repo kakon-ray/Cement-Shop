@@ -19,31 +19,8 @@ Route::name('user.')->prefix('user')->group(function () {
 });
 
 
-// user cart routes
-Route::name('user.')->prefix('user')->group(function () {
-    Route::middleware('auth','verified')->group(function () {
-        Route::get('cart', [CartController::class, 'cart'])->name('cart');
-    });
-});
-
-
-// user checkout routes
-Route::name('user.')->prefix('user')->group(function () {
-    Route::middleware('auth','verified')->group(function () {
-        Route::get('checkout', [CheckoutController::class, 'checkout'])->name('checkout');
-    });
-});
-
-
-// user wishlist routes
-Route::name('user.')->prefix('user')->group(function () {
-    Route::middleware('auth','verified')->group(function () {
-        Route::get('wishlist', [WishlistController::class, 'wishlist'])->name('wishlist');
-    });
-});
 
 
 
 
-require __DIR__.'/auth.php';
 require __DIR__.'/admin_auth.php';

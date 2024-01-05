@@ -1,22 +1,26 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home</title>	
-        <link rel="shortcut icon" type="image/x-icon" href="{{asset('user/images/favicon.ico')}}">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{{asset('user/css/animate.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('user/css/font-awesome.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('user/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('user/css/owl.carousel.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('user/css/chosen.min.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('user/css/style.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('user/css/color-01.css')}}">
-        
-    </head>
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from risingtheme.com/html/rokon-demo/rokon/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Jan 2024 14:21:38 GMT -->
+<head>
+  <meta charset="utf-8">
+  <title>Rokon - Single Product eCommerce HTML Template</title>
+  <meta name="description" content="Morden Bootstrap HTML5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    
+   <!-- ======= All CSS Plugins here ======== -->
+  <link rel="stylesheet" type="text/css" href="{{asset('user/css/plugins/swiper-bundle.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('user/css/plugins/glightbox.min.css')}}">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+
+  <!-- Plugin css -->
+  <!-- <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css"> -->
+  
+  <!-- Custom Style CSS -->
+  <link rel="stylesheet" type="text/css" href="{{asset('user/css/style.css')}}">
+</head>
 
     <body class="font-sans text-gray-900 antialiased">
 
@@ -29,19 +33,14 @@
         @include('layouts.user.footer')
 
 
-        <script src="{{asset('user/js/jquery-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
-        <script src="{{asset('user/js/bootstrap.min.js')}}"></script>
-        <script src="{{asset('user/js/jquery.flexslider.js')}}"></script>
-        <script src="{{asset('user/js/chosen.jquery.min.js')}}"></script>
-        <script src="{{asset('user/js/owl.carousel.min.js')}}"></script>
-        <script src="{{asset('user/js/jquery.countdown.min.js')}}"></script>
-        <script src="{{asset('user/js/jquery.sticky.js')}}"></script>
-        <script src="{{asset('user/js/functions.js')}}"></script>
-        <script src="{{asset('user/js/auth.js')}}"></script>
-
+        <script src="{{asset('user/js/plugins/swiper-bundle.min.js')}}" defer="defer"></script>
+        <script src="{{asset('user/js/plugins/glightbox.min.js')}}" defer="defer"></script>
+      
+        <!-- Customscript js -->
+        <script src="{{asset('user/js/script.js')}}" defer="defer"></script>
 
          <!-- sweet alert -->
          <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-       <script src="{{asset('user/js/auth.js')}}"></script>
+        <script src="{{asset('user/js/auth.js')}}"></script>
     </body>
 </html>

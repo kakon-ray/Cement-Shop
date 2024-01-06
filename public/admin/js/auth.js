@@ -21,7 +21,7 @@ $(document).ready(function(){
               customClass: 'swalstyle',
             });
 
-            window.location.href = '/admin/dashboard';
+            window.location.href = '/admin/dashboard/home';
           }else{
             Swal.fire({
               icon: "error",

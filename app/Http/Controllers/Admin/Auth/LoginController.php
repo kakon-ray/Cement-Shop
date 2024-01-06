@@ -10,30 +10,35 @@ use Illuminate\Support\Facades\Response;
 
 class LoginController extends Controller
 {
-    public function create(){
+    public function create()
+    {
         return view('admin.auth.login');
     }
 
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $request->validate([
             'email' => 'required',
             'password' => 'required',
         ]);
 
-        if(Auth::guard('admin')->attempt(['email'=>$request->email,'password'=>$request->password])){
+        if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
             // return redirect('admin/dashboard');
-            $arr = array('status'=>200,'msg'=>'Login Successed');
-            return \Response::json($arr);
-        }else{
+            return response()->json([
+                'status' => 200,
+                'msg' => 'Login Successed'
+            ]);
+        } else {
             // return back()->with('error','Invalid Username and Passsword');
-            $arr = array('status'=>400,'msg'=>'Login Faild');
-            return \Response::json($arr);
-            
+            return response()->json([
+                'status' => 400,
+                'msg' => 'Login Faild'
+            ]);
         }
-
     }
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
         Auth::guard('admin')->logout();
         return redirect('admin/login');
     }

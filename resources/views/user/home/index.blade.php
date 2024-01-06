@@ -14,7 +14,7 @@
 								<div class="swiper-slide ">
 									<div class="hero__slider--items">
 										<div class="hero__slider--thumbnail">
-											<img class="hero__slider--thumbnail__img display-block" src="assets/img/slider/home1-slider-thumbnail.webp" alt="slider img">
+											<img class="hero__slider--thumbnail__img display-block" src="{{asset('user/img/slider/home1-slider-thumbnail.webp')}}" alt="slider img">
 										</div>
 										<div class="slider__content text-center">
 											<h2 class="slider__content--maintitle h1">Natural Materials Drone Earthy </h2>
@@ -36,7 +36,7 @@
 								<div class="swiper-slide ">
 									<div class="hero__slider--items">
 										<div class="hero__slider--thumbnail">
-											<img class="hero__slider--thumbnail__img display-block" src="assets/img/slider/home1-slider-thumbnail2.webp" alt="slider img">
+											<img class="hero__slider--thumbnail__img display-block" src="{{asset('user/img/slider/home1-slider-thumbnail2.webp')}}" alt="slider img">
 										</div>
 										<div class="slider__content text-center">
 											<h2 class="slider__content--maintitle h1">Natural Materials Drone Earthy </h2>
@@ -58,7 +58,7 @@
 								<div class="swiper-slide ">
 									<div class="hero__slider--items">
 										<div class="hero__slider--thumbnail">
-											<img class="hero__slider--thumbnail__img display-block" src="assets/img/slider/home1-slider-thumbnail3.webp" alt="slider img">
+											<img class="hero__slider--thumbnail__img display-block" src="{{asset('user/img/slider/home1-slider-thumbnail3.webp')}}" alt="slider img">
 										</div>
 										<div class="slider__content text-center">
 											<h2 class="slider__content--maintitle h1">Natural Materials Drone Earthy </h2>
@@ -80,7 +80,7 @@
 								<div class="swiper-slide ">
 									<div class="hero__slider--items">
 										<div class="hero__slider--thumbnail">
-											<img class="hero__slider--thumbnail__img display-block" src="assets/img/slider/home1-slider-thumbnail4.webp" alt="slider img">
+											<img class="hero__slider--thumbnail__img display-block" src="{{asset('user/img/slider/home1-slider-thumbnail4.webp')}}" alt="slider img">
 										</div>
 										<div class="slider__content text-center">
 											<h2 class="slider__content--maintitle h1">Natural Materials Drone Earthy </h2>
@@ -115,7 +115,7 @@
 			<div class="row row-cols-md-2 row-cols-1  align-items-center">
 				<div class="col">
 					<div class="image__with--text__thumbnail">
-						<img class="display-block" src="assets/img/other/drone-image.webp" alt="drone-image">
+						<img class="display-block" src="{{asset('user/img/other/drone-image.webp')}}" alt="drone-image">
 					</div>
 				</div>
 				<div class="col">
@@ -142,7 +142,7 @@
 							</ul>
 						</div>  
 						<div class="image__with--text__content--footer d-flex">
-							<img class="display-block" src="assets/img/other/text-shape.webp" alt="text-shape">
+							<img class="display-block" src="{{asset('user/img/other/text-shape.webp')}}" alt="text-shape">
 							<p class="image__with--text__content--footer__desc">
 								YEARS SINCE WE ESTABLISHED - <br>
 								EXPERIENCE & STILL A GROWING <br>
@@ -152,7 +152,7 @@
 				</div>
 			</div>
 		</div>
-		<img class="image__with--text__position--shape display-block" src="assets/img/other/image-with-text-section-shape.webp" alt="shape img">
+		<img class="image__with--text__position--shape display-block" src="{{asset('user/img/other/image-with-text-section-shape.webp')}}" alt="shape img">
 	</section>
 	<!-- End image with text section -->
 
@@ -171,8 +171,8 @@
 							<a class="services__card--link" href="product-details.html">
 								<div class="services__card--topbar d-flex justify-content-between">
 									<div class="services__card--icon mb-20">
-										<img class="display-block services__card--primary__icon" src="assets/img/icon/service-icon1.webp" alt="services-icon">
-										<img class="display-block services__card--secondary__icon" src="assets/img/icon/service-icon1-white.webp" alt="services-icon">
+										<img class="display-block services__card--primary__icon" src="{{asset('user/img/icon/service-icon1.webp')}}" alt="services-icon">
+										<img class="display-block services__card--secondary__icon" src="{{asset('user/img/icon/service-icon1-white.webp')}}" alt="services-icon">
 									</div>
 									<div class="services__card--number">
 										<span class="services__card--number__text">1</span>
@@ -193,99 +193,11 @@
 							<a class="services__card--link" href="product-details.html">
 								<div class="services__card--topbar d-flex justify-content-between">
 									<div class="services__card--icon mb-20">
-										<img class="display-block services__card--primary__icon" src="assets/img/icon/service-icon2.webp" alt="services-icon">
-										<img class="display-block services__card--secondary__icon" src="assets/img/icon/service-icon2-white.webp" alt="services-icon">
+										<img class="display-block services__card--primary__icon" src="{{asset('user/img/icon/service-icon1.webp')}}" alt="services-icon">
+										<img class="display-block services__card--secondary__icon" src="{{asset('user/img/icon/service-icon1-white.webp')}}" alt="services-icon">
 									</div>
 									<div class="services__card--number">
-										<span class="services__card--number__text">2</span>
-									</div>
-								</div>
-								<div class="services__card--content">
-									<h3 class="services__card--maintitle mb-15">Advanced To Watch </h3>
-									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
-									<span class="services__card--readmore text__secondary"> Read More
-										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
-									</span>
-								</div>
-							</a>
-						</article>
-					</div>
-					<div class="col custom-col mb-30">
-						<article class="services__card">
-							<a class="services__card--link" href="shop.html">
-								<div class="services__card--topbar d-flex justify-content-between">
-									<div class="services__card--icon mb-20">
-										<img class="display-block services__card--primary__icon" src="assets/img/icon/service-icon3.webp" alt="services-icon">
-										<img class="display-block services__card--secondary__icon" src="assets/img/icon/service-icon3-white.webp" alt="services-icon">
-									</div>
-									<div class="services__card--number">
-										<span class="services__card--number__text">3</span>
-									</div>
-								</div>
-								<div class="services__card--content">
-									<h3 class="services__card--maintitle mb-15">Dolor consectetur.</h3>
-									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
-									<span class="services__card--readmore text__secondary"> Read More
-										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
-									</span>
-								</div>
-							</a>
-						</article>
-					</div>
-					<div class="col custom-col mb-30">
-						<article class="services__card">
-							<a class="services__card--link" href="shop.html">
-								<div class="services__card--topbar d-flex justify-content-between">
-									<div class="services__card--icon mb-20">
-										<img class="display-block services__card--primary__icon" src="assets/img/icon/service-icon4.webp" alt="services-icon">
-										<img class="display-block services__card--secondary__icon" src="assets/img/icon/service-icon4-white.webp" alt="services-icon">
-									</div>
-									<div class="services__card--number">
-										<span class="services__card--number__text">4</span>
-									</div>
-								</div>
-								<div class="services__card--content">
-									<h3 class="services__card--maintitle mb-15">Amet consect elit.</h3>
-									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
-									<span class="services__card--readmore text__secondary"> Read More
-										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
-									</span>
-								</div>
-							</a>
-						</article>
-					</div>
-					<div class="col custom-col mb-30">
-						<article class="services__card">
-							<a class="services__card--link" href="shop.html">
-								<div class="services__card--topbar d-flex justify-content-between">
-									<div class="services__card--icon mb-20">
-										<img class="display-block services__card--primary__icon" src="assets/img/icon/service-icon5.webp" alt="services-icon">
-										<img class="display-block services__card--secondary__icon" src="assets/img/icon/service-icon5-white.webp" alt="services-icon">
-									</div>
-									<div class="services__card--number">
-										<span class="services__card--number__text">5</span>
-									</div>
-								</div>
-								<div class="services__card--content">
-									<h3 class="services__card--maintitle mb-15">Advanced To Watch</h3>
-									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
-									<span class="services__card--readmore text__secondary"> Read More
-										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
-									</span>
-								</div>
-							</a>
-						</article>
-					</div>
-					<div class="col custom-col mb-30">
-						<article class="services__card">
-							<a class="services__card--link" href="shop.html">
-								<div class="services__card--topbar d-flex justify-content-between">
-									<div class="services__card--icon mb-20">
-										<img class="display-block services__card--primary__icon" src="assets/img/icon/service-icon6.webp" alt="services-icon">
-										<img class="display-block services__card--secondary__icon" src="assets/img/icon/service-icon6-white.webp" alt="services-icon">
-									</div>
-									<div class="services__card--number">
-										<span class="services__card--number__text">6</span>
+										<span class="services__card--number__text">1</span>
 									</div>
 								</div>
 								<div class="services__card--content">
@@ -298,6 +210,95 @@
 							</a>
 						</article>
 					</div>
+					<div class="col custom-col mb-30">
+						<article class="services__card">
+							<a class="services__card--link" href="product-details.html">
+								<div class="services__card--topbar d-flex justify-content-between">
+									<div class="services__card--icon mb-20">
+										<img class="display-block services__card--primary__icon" src="{{asset('user/img/icon/service-icon1.webp')}}" alt="services-icon">
+										<img class="display-block services__card--secondary__icon" src="{{asset('user/img/icon/service-icon1-white.webp')}}" alt="services-icon">
+									</div>
+									<div class="services__card--number">
+										<span class="services__card--number__text">1</span>
+									</div>
+								</div>
+								<div class="services__card--content">
+									<h3 class="services__card--maintitle mb-15">Advanced Analytic</h3>
+									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
+									<span class="services__card--readmore text__secondary"> Read More
+										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
+									</span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col custom-col mb-30">
+						<article class="services__card">
+							<a class="services__card--link" href="product-details.html">
+								<div class="services__card--topbar d-flex justify-content-between">
+									<div class="services__card--icon mb-20">
+										<img class="display-block services__card--primary__icon" src="{{asset('user/img/icon/service-icon1.webp')}}" alt="services-icon">
+										<img class="display-block services__card--secondary__icon" src="{{asset('user/img/icon/service-icon1-white.webp')}}" alt="services-icon">
+									</div>
+									<div class="services__card--number">
+										<span class="services__card--number__text">1</span>
+									</div>
+								</div>
+								<div class="services__card--content">
+									<h3 class="services__card--maintitle mb-15">Advanced Analytic</h3>
+									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
+									<span class="services__card--readmore text__secondary"> Read More
+										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
+									</span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col custom-col mb-30">
+						<article class="services__card">
+							<a class="services__card--link" href="product-details.html">
+								<div class="services__card--topbar d-flex justify-content-between">
+									<div class="services__card--icon mb-20">
+										<img class="display-block services__card--primary__icon" src="{{asset('user/img/icon/service-icon1.webp')}}" alt="services-icon">
+										<img class="display-block services__card--secondary__icon" src="{{asset('user/img/icon/service-icon1-white.webp')}}" alt="services-icon">
+									</div>
+									<div class="services__card--number">
+										<span class="services__card--number__text">1</span>
+									</div>
+								</div>
+								<div class="services__card--content">
+									<h3 class="services__card--maintitle mb-15">Advanced Analytic</h3>
+									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
+									<span class="services__card--readmore text__secondary"> Read More
+										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
+									</span>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="col custom-col mb-30">
+						<article class="services__card">
+							<a class="services__card--link" href="product-details.html">
+								<div class="services__card--topbar d-flex justify-content-between">
+									<div class="services__card--icon mb-20">
+										<img class="display-block services__card--primary__icon" src="{{asset('user/img/icon/service-icon1.webp')}}" alt="services-icon">
+										<img class="display-block services__card--secondary__icon" src="{{asset('user/img/icon/service-icon1-white.webp')}}" alt="services-icon">
+									</div>
+									<div class="services__card--number">
+										<span class="services__card--number__text">1</span>
+									</div>
+								</div>
+								<div class="services__card--content">
+									<h3 class="services__card--maintitle mb-15">Advanced Analytic</h3>
+									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
+									<span class="services__card--readmore text__secondary"> Read More
+										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
+									</span>
+								</div>
+							</a>
+						</article>
+					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -325,14 +326,14 @@
 						</div>
 						<div class="about__content--author d-flex align-items-center mb-50">
 							<div class="about__content--author__thumb">
-								<img class="display-block" src="assets/img/other/about-author.webp" alt="about author thumb">
+								<img class="display-block" src="{{asset('user/img/other/about-author.webp')}}" alt="about author thumb">
 							</div>
 							<div class="about__content--author__text d-flex align-items-center">
 								<div class="about__content--author__text--left">
 									<h3 class="about__content--author__name text__secondary">- Rubel Wilson,</h3>
 									<span class="about__content--author__rank">Founder</span>
 								</div>
-								<img class="about__author--signature display-block" src="assets/img/icon/signature.webp" alt="signature">
+								<img class="about__author--signature display-block" src="{{asset('user/img/icon/signature.webp')}}" alt="signature">
 							</div>
 						</div>
 						<a class="about__content--btn primary__btn" href="contact.html">Ask For Price</a>
@@ -340,7 +341,7 @@
 				</div>
 				<div class="col">
 					<div class="about__thumbnail">
-						<img class="display-block" src="assets/img/other/about-thumb.webp" alt="about-thumb">
+						<img class="display-block" src="{{asset('user/img/other/about-thumb.webp')}}" alt="about-thumb">
 					</div>
 				</div>
 			</div>
@@ -364,32 +365,32 @@
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
 										<div class="product__media--nav__items">
-											<img class="product__media--nav__items--img" src="assets/img/product/small-product1.webp" alt="product-nav-img">
+											<img class="product__media--nav__items--img" src="{{asset('user/img/product/small-product1.webp')}}" alt="product-nav-img">
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="product__media--nav__items">
-											<img class="product__media--nav__items--img" src="assets/img/product/small-product2.webp" alt="product-nav-img">
+											<img class="product__media--nav__items--img" src="{{asset('user/img/product/small-product2.webp')}}" alt="product-nav-img">
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="product__media--nav__items">
-											<img class="product__media--nav__items--img" src="assets/img/product/small-product3.webp" alt="product-nav-img">
+											<img class="product__media--nav__items--img" src="{{asset('user/img/product/small-product3.webp')}}" alt="product-nav-img">
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="product__media--nav__items">
-											<img class="product__media--nav__items--img" src="assets/img/product/small-product4.webp" alt="product-nav-img">
+											<img class="product__media--nav__items--img" src="{{asset('user/img/product/small-product4.webp')}}" alt="product-nav-img">
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="product__media--nav__items">
-											<img class="product__media--nav__items--img" src="assets/img/product/small-product1.webp" alt="product-nav-img">
+											<img class="product__media--nav__items--img" src="{{asset('user/img/product/small-product1.webp')}}" alt="product-nav-img">
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="product__media--nav__items">
-											<img class="product__media--nav__items--img" src="assets/img/product/small-product2.webp" alt="product-nav-img">
+											<img class="product__media--nav__items--img" src="{{asset('user/img/product/small-product2.webp')}}" alt="product-nav-img">
 										</div>
 									</div>
 								</div>
@@ -501,146 +502,148 @@
 						</div>
 					</div>   
 					<div class="col">
-						<div class="product__details--info">
-							<form action="#">
-								<h3 class="product__details--info__title mb-15">BASIC MICRO DAYS MONEY BACK GUARANTEE.</h3>
-								<div class="product__details--info__rating d-flex align-items-center mb-15">
-									<ul class="rating product__list--rating d-flex">
-										<li class="rating__list">
-											<span class="rating__list--icon">
-												<svg class="rating__list--icon__svg" xmlns="http://www.w3.org/2000/svg" width="13.105" height="13.732" viewBox="0 0 10.105 9.732">
-												<path data-name="star - Copy" d="M9.837,3.5,6.73,3.039,5.338.179a.335.335,0,0,0-.571,0L3.375,3.039.268,3.5a.3.3,0,0,0-.178.514L2.347,6.242,1.813,9.4a.314.314,0,0,0,.464.316L5.052,8.232,7.827,9.712A.314.314,0,0,0,8.292,9.4L7.758,6.242l2.257-2.231A.3.3,0,0,0,9.837,3.5Z" transform="translate(0 -0.018)" fill="currentColor"></path>
-												</svg>
-											</span>
-										</li>
-										<li class="rating__list">
-											<span class="rating__list--icon">
-												<svg class="rating__list--icon__svg" xmlns="http://www.w3.org/2000/svg" width="13.105" height="13.732" viewBox="0 0 10.105 9.732">
-												<path data-name="star - Copy" d="M9.837,3.5,6.73,3.039,5.338.179a.335.335,0,0,0-.571,0L3.375,3.039.268,3.5a.3.3,0,0,0-.178.514L2.347,6.242,1.813,9.4a.314.314,0,0,0,.464.316L5.052,8.232,7.827,9.712A.314.314,0,0,0,8.292,9.4L7.758,6.242l2.257-2.231A.3.3,0,0,0,9.837,3.5Z" transform="translate(0 -0.018)" fill="currentColor"></path>
-												</svg>
-											</span>
-										</li>
-										<li class="rating__list">
-											<span class="rating__list--icon">
-												<svg class="rating__list--icon__svg" xmlns="http://www.w3.org/2000/svg" width="13.105" height="13.732" viewBox="0 0 10.105 9.732">
-												<path data-name="star - Copy" d="M9.837,3.5,6.73,3.039,5.338.179a.335.335,0,0,0-.571,0L3.375,3.039.268,3.5a.3.3,0,0,0-.178.514L2.347,6.242,1.813,9.4a.314.314,0,0,0,.464.316L5.052,8.232,7.827,9.712A.314.314,0,0,0,8.292,9.4L7.758,6.242l2.257-2.231A.3.3,0,0,0,9.837,3.5Z" transform="translate(0 -0.018)" fill="currentColor"></path>
-												</svg>
-											</span>
-										</li>
-										<li class="rating__list">
-											<span class="rating__list--icon">
-												<svg class="rating__list--icon__svg" xmlns="http://www.w3.org/2000/svg" width="13.105" height="13.732" viewBox="0 0 10.105 9.732">
-												<path data-name="star - Copy" d="M9.837,3.5,6.73,3.039,5.338.179a.335.335,0,0,0-.571,0L3.375,3.039.268,3.5a.3.3,0,0,0-.178.514L2.347,6.242,1.813,9.4a.314.314,0,0,0,.464.316L5.052,8.232,7.827,9.712A.314.314,0,0,0,8.292,9.4L7.758,6.242l2.257-2.231A.3.3,0,0,0,9.837,3.5Z" transform="translate(0 -0.018)" fill="currentColor"></path>
-												</svg>
-											</span>
-										</li>
-										<li class="rating__list">
-											<span class="rating__list--icon">
-												<svg class="rating__list--icon__svg" xmlns="http://www.w3.org/2000/svg" width="13.105" height="13.732" viewBox="0 0 10.105 9.732">
-												<path data-name="star - Copy" d="M9.837,3.5,6.73,3.039,5.338.179a.335.335,0,0,0-.571,0L3.375,3.039.268,3.5a.3.3,0,0,0-.178.514L2.347,6.242,1.813,9.4a.314.314,0,0,0,.464.316L5.052,8.232,7.827,9.712A.314.314,0,0,0,8.292,9.4L7.758,6.242l2.257-2.231A.3.3,0,0,0,9.837,3.5Z" transform="translate(0 -0.018)" fill="currentColor"></path>
-												</svg>
-											</span>
-										</li>
-										<li class="rating__list"><span class="rating__list--text text__secondary">( 5.0)</span></li>
-									</ul>
+						<div class="product__details--media d-flex">
+							<div class="product__media--nav swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="product__media--nav__items">
+											<img class="product__media--nav__items--img" src="{{asset('user/img/product/small-product1.webp')}}" alt="product-nav-img">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="product__media--nav__items">
+											<img class="product__media--nav__items--img" src="{{asset('user/img/product/small-product2.webp')}}" alt="product-nav-img">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="product__media--nav__items">
+											<img class="product__media--nav__items--img" src="{{asset('user/img/product/small-product3.webp')}}" alt="product-nav-img">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="product__media--nav__items">
+											<img class="product__media--nav__items--img" src="{{asset('user/img/product/small-product4.webp')}}" alt="product-nav-img">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="product__media--nav__items">
+											<img class="product__media--nav__items--img" src="{{asset('user/img/product/small-product1.webp')}}" alt="product-nav-img">
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="product__media--nav__items">
+											<img class="product__media--nav__items--img" src="{{asset('user/img/product/small-product2.webp')}}" alt="product-nav-img">
+										</div>
+									</div>
 								</div>
-								<div class="product__details--info__price mb-10">
-									<span class="current__price">$299.00</span>
-									<span class="old__price">$320.00</span>
-								</div>  
-								<div class="product__variant">
-									<div class="product__variant--list mb-15">
-										<fieldset class="variant__input--fieldset">
-											<legend class="product__variant--title mb-8">Color :</legend>
-											<div class="variant__color d-flex">
-												<div class="variant__color--list">
-													<input id="color-red1" name="color" type="radio" checked>
-													<label class="variant__color--value red" for="color-red1" title="Red"><img class="variant__color--value__img" src="assets/img/product/small-product1.webp" alt="variant-color-img"></label>
+							</div>
+							<div class="product__media--right">
+								<div class="product__media--preview  swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="product__media--preview__items">
+												<a class="product__media--preview__items--link glightbox" data-gallery="product-media-preview" href="assets/img/product/big-product1.webp"><img class="product__media--preview__items--img" src="assets/img/product/big-product1.webp" alt="product-media-img"></a>
+												<div class="product__badge">
+													<span class="product__badge--items sale">New</span>
 												</div>
-												<div class="variant__color--list">
-													<input id="color-red2" name="color" type="radio">
-													<label class="variant__color--value red" for="color-red2" title="Black"><img class="variant__color--value__img" src="assets/img/product/small-product2.webp" alt="variant-color-img"></label>
-												</div>
-												<div class="variant__color--list">
-													<input id="color-red3" name="color" type="radio">
-													<label class="variant__color--value red" for="color-red3" title="Pink"><img class="variant__color--value__img" src="assets/img/product/small-product3.webp" alt="variant-color-img"></label>
-												</div>
-												<div class="variant__color--list">
-													<input id="color-red4" name="color" type="radio">
-													<label class="variant__color--value red" for="color-red4" title="Orange"><img class="variant__color--value__img" src="assets/img/product/small-product4.webp" alt="variant-color-img"></label>
+												<div class="product__media--view__icon">
+													<a class="product__media--view__icon--link glightbox" href="assets/img/product/big-product1.webp" data-gallery="product-media-preview">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+															<image  width="18" height="18" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAVhJREFUOE/llLtKA0EUhjdY+BD6ABaW3tIYTWEhiKKCCGIgqGhCgqXvoQFRQdBGERQvUaJFgilVRHwF8RWCWqzfD7OyjrPZ7R342HP2nP1n58yZSfm+/+F53ivUoAseoALtxirBIXiHLPSlEHrBaMGyEYzR+BXuwduHTgltYNzBKSxAM6HSAHknMAf9EqpjjEIGzmAK7mPE0sSrRkQ/cSWhIkZQE4kdwzxoAteQiCbMgeqqsSIhO3nEJK7xPLKC0/h7oT/5CbuEFByDCShDeKZNfC3lwp49SihiVdGv/6GQdm4WSlaxt/AvQ9vedteCZlsn68Aqr/pLPfenaVVsHcBt80HQbIv4txF75GravIQafKClDMKNq9kcgspXd0+CjlM1OLTXZu1LPNVwScYwSYcwA2kJPWJ8QQGekyiEcnqxd6BDQp8YupPOoRueYDdGME9c18gbjMv+BiJYeHc6xpjnAAAAAElFTkSuQmCC"/>
+														</svg>                                                              
+														<span class="visually-hidden">Media Gallery</span>
+													</a>
 												</div>
 											</div>
-										</fieldset>
-									</div>
-									<div class="product__variant--list quantity d-flex align-items-center mb-20">
-										<div class="quantity__box">
-											<button type="button" class="quantity__value quickview__value--quantity decrease" aria-label="quantity value" value="Decrease Value">-</button>
-											<label>
-												<input type="number" class="quantity__number quickview__value--number" value="1" data-counter />
-											</label>
-											<button type="button" class="quantity__value quickview__value--quantity increase" aria-label="quantity value" value="Increase Value">+</button>
 										</div>
-										<button class="quickview__cart--btn primary__btn" type="submit">Add To Cart</button>  
-										<a class="variant__wishlist--icon" href="wishlist.html" title="Add to wishlist">
-											<svg class="quickview__variant--wishlist__svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 512 512"><path d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-											Add to Wishlist
-										</a>
-									</div>
-									<div class="product__variant--list mb-15">
-									   
-										<button class="variant__buy--now__btn primary__btn" type="submit">Buy it now</button>
-									</div>
-									<div class="product__variant--list mb-15">
-										<div class="product__details--info__meta">
-											<p class="product__details--info__meta--list"><strong>Vendor:</strong>  <span>Belo</span> </p>
-											<p class="product__details--info__meta--list"><strong>Type:</strong>  <span>Sofa</span> </p>
+										<div class="swiper-slide">
+											<div class="product__media--preview__items">
+												<a class="product__media--preview__items--link glightbox" data-gallery="product-media-preview" href="assets/img/product/big-product1.webp"><img class="product__media--preview__items--img" src="assets/img/product/big-product1.webp" alt="product-media-img"></a>
+												<div class="product__badge">
+													<span class="product__badge--items sale">New</span>
+												</div>
+												<div class="product__media--view__icon">
+													<a class="product__media--view__icon--link glightbox" href="assets/img/product/big-product1.webp" data-gallery="product-media-preview">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+															<image  width="18" height="18" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAVhJREFUOE/llLtKA0EUhjdY+BD6ABaW3tIYTWEhiKKCCGIgqGhCgqXvoQFRQdBGERQvUaJFgilVRHwF8RWCWqzfD7OyjrPZ7R342HP2nP1n58yZSfm+/+F53ivUoAseoALtxirBIXiHLPSlEHrBaMGyEYzR+BXuwduHTgltYNzBKSxAM6HSAHknMAf9EqpjjEIGzmAK7mPE0sSrRkQ/cSWhIkZQE4kdwzxoAteQiCbMgeqqsSIhO3nEJK7xPLKC0/h7oT/5CbuEFByDCShDeKZNfC3lwp49SihiVdGv/6GQdm4WSlaxt/AvQ9vedteCZlsn68Aqr/pLPfenaVVsHcBt80HQbIv4txF75GravIQafKClDMKNq9kcgspXd0+CjlM1OLTXZu1LPNVwScYwSYcwA2kJPWJ8QQGekyiEcnqxd6BDQp8YupPOoRueYDdGME9c18gbjMv+BiJYeHc6xpjnAAAAAElFTkSuQmCC"/>
+														</svg>                                                              
+														<span class="visually-hidden">Media Gallery</span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product__media--preview__items">
+												<a class="product__media--preview__items--link glightbox" data-gallery="product-media-preview" href="assets/img/product/big-product1.webp"><img class="product__media--preview__items--img" src="assets/img/product/big-product1.webp" alt="product-media-img"></a>
+												<div class="product__badge">
+													<span class="product__badge--items sale">New</span>
+												</div>
+												<div class="product__media--view__icon">
+													<a class="product__media--view__icon--link glightbox" href="assets/img/product/big-product1.webp" data-gallery="product-media-preview">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+															<image  width="18" height="18" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAVhJREFUOE/llLtKA0EUhjdY+BD6ABaW3tIYTWEhiKKCCGIgqGhCgqXvoQFRQdBGERQvUaJFgilVRHwF8RWCWqzfD7OyjrPZ7R342HP2nP1n58yZSfm+/+F53ivUoAseoALtxirBIXiHLPSlEHrBaMGyEYzR+BXuwduHTgltYNzBKSxAM6HSAHknMAf9EqpjjEIGzmAK7mPE0sSrRkQ/cSWhIkZQE4kdwzxoAteQiCbMgeqqsSIhO3nEJK7xPLKC0/h7oT/5CbuEFByDCShDeKZNfC3lwp49SihiVdGv/6GQdm4WSlaxt/AvQ9vedteCZlsn68Aqr/pLPfenaVVsHcBt80HQbIv4txF75GravIQafKClDMKNq9kcgspXd0+CjlM1OLTXZu1LPNVwScYwSYcwA2kJPWJ8QQGekyiEcnqxd6BDQp8YupPOoRueYDdGME9c18gbjMv+BiJYeHc6xpjnAAAAAElFTkSuQmCC"/>
+														</svg>                                                              
+														<span class="visually-hidden">Media Gallery</span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product__media--preview__items">
+												<a class="product__media--preview__items--link glightbox" data-gallery="product-media-preview" href="assets/img/product/big-product1.webp"><img class="product__media--preview__items--img" src="assets/img/product/big-product1.webp" alt="product-media-img"></a>
+												<div class="product__badge">
+													<span class="product__badge--items sale">New</span>
+												</div>
+												<div class="product__media--view__icon">
+													<a class="product__media--view__icon--link glightbox" href="assets/img/product/big-product1.webp" data-gallery="product-media-preview">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+															<image  width="18" height="18" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAVhJREFUOE/llLtKA0EUhjdY+BD6ABaW3tIYTWEhiKKCCGIgqGhCgqXvoQFRQdBGERQvUaJFgilVRHwF8RWCWqzfD7OyjrPZ7R342HP2nP1n58yZSfm+/+F53ivUoAseoALtxirBIXiHLPSlEHrBaMGyEYzR+BXuwduHTgltYNzBKSxAM6HSAHknMAf9EqpjjEIGzmAK7mPE0sSrRkQ/cSWhIkZQE4kdwzxoAteQiCbMgeqqsSIhO3nEJK7xPLKC0/h7oT/5CbuEFByDCShDeKZNfC3lwp49SihiVdGv/6GQdm4WSlaxt/AvQ9vedteCZlsn68Aqr/pLPfenaVVsHcBt80HQbIv4txF75GravIQafKClDMKNq9kcgspXd0+CjlM1OLTXZu1LPNVwScYwSYcwA2kJPWJ8QQGekyiEcnqxd6BDQp8YupPOoRueYDdGME9c18gbjMv+BiJYeHc6xpjnAAAAAElFTkSuQmCC"/>
+														</svg>                                                              
+														<span class="visually-hidden">Media Gallery</span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product__media--preview__items">
+												<a class="product__media--preview__items--link glightbox" data-gallery="product-media-preview" href="assets/img/product/big-product1.webp"><img class="product__media--preview__items--img" src="assets/img/product/big-product1.webp" alt="product-media-img"></a>
+												<div class="product__badge">
+													<span class="product__badge--items sale">New</span>
+												</div>
+												<div class="product__media--view__icon">
+													<a class="product__media--view__icon--link glightbox" href="assets/img/product/big-product1.webp" data-gallery="product-media-preview">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+															<image  width="18" height="18" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAVhJREFUOE/llLtKA0EUhjdY+BD6ABaW3tIYTWEhiKKCCGIgqGhCgqXvoQFRQdBGERQvUaJFgilVRHwF8RWCWqzfD7OyjrPZ7R342HP2nP1n58yZSfm+/+F53ivUoAseoALtxirBIXiHLPSlEHrBaMGyEYzR+BXuwduHTgltYNzBKSxAM6HSAHknMAf9EqpjjEIGzmAK7mPE0sSrRkQ/cSWhIkZQE4kdwzxoAteQiCbMgeqqsSIhO3nEJK7xPLKC0/h7oT/5CbuEFByDCShDeKZNfC3lwp49SihiVdGv/6GQdm4WSlaxt/AvQ9vedteCZlsn68Aqr/pLPfenaVVsHcBt80HQbIv4txF75GravIQafKClDMKNq9kcgspXd0+CjlM1OLTXZu1LPNVwScYwSYcwA2kJPWJ8QQGekyiEcnqxd6BDQp8YupPOoRueYDdGME9c18gbjMv+BiJYeHc6xpjnAAAAAElFTkSuQmCC"/>
+														</svg>                                                              
+														<span class="visually-hidden">Media Gallery</span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product__media--preview__items">
+												<a class="product__media--preview__items--link glightbox" data-gallery="product-media-preview" href="assets/img/product/big-product1.webp"><img class="product__media--preview__items--img" src="assets/img/product/big-product1.webp" alt="product-media-img"></a>
+												<div class="product__badge">
+													<span class="product__badge--items sale">New</span>
+												</div>
+												<div class="product__media--view__icon">
+													<a class="product__media--view__icon--link glightbox" href="assets/img/product/big-product1.webp" data-gallery="product-media-preview">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+															<image  width="18" height="18" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAVhJREFUOE/llLtKA0EUhjdY+BD6ABaW3tIYTWEhiKKCCGIgqGhCgqXvoQFRQdBGERQvUaJFgilVRHwF8RWCWqzfD7OyjrPZ7R342HP2nP1n58yZSfm+/+F53ivUoAseoALtxirBIXiHLPSlEHrBaMGyEYzR+BXuwduHTgltYNzBKSxAM6HSAHknMAf9EqpjjEIGzmAK7mPE0sSrRkQ/cSWhIkZQE4kdwzxoAteQiCbMgeqqsSIhO3nEJK7xPLKC0/h7oT/5CbuEFByDCShDeKZNfC3lwp49SihiVdGv/6GQdm4WSlaxt/AvQ9vedteCZlsn68Aqr/pLPfenaVVsHcBt80HQbIv4txF75GravIQafKClDMKNq9kcgspXd0+CjlM1OLTXZu1LPNVwScYwSYcwA2kJPWJ8QQGekyiEcnqxd6BDQp8YupPOoRueYDdGME9c18gbjMv+BiJYeHc6xpjnAAAAAElFTkSuQmCC"/>
+														</svg>                                                              
+														<span class="visually-hidden">Media Gallery</span>
+													</a>
+												</div>
+											</div>
 										</div>
 									</div>
+									<div class="swiper__nav--btn swiper-button-next"></div>
+									<div class="swiper__nav--btn swiper-button-prev"></div>
 								</div>
-								<div class="quickview__social d-flex align-items-center mb-15">
-									<label class="quickview__social--title">Social Share:</label>
-									<ul class="quickview__social--wrapper mt-0 d-flex">
-										<li class="quickview__social--list">
-											<a class="quickview__social--icon" target="_blank" href="https://www.facebook.com/">
-												<svg  xmlns="http://www.w3.org/2000/svg" width="7.667" height="16.524" viewBox="0 0 7.667 16.524">
-													<path  data-name="Path 237" d="M967.495,353.678h-2.3v8.253h-3.437v-8.253H960.13V350.77h1.624v-1.888a4.087,4.087,0,0,1,.264-1.492,2.9,2.9,0,0,1,1.039-1.379,3.626,3.626,0,0,1,2.153-.6l2.549.019v2.833h-1.851a.732.732,0,0,0-.472.151.8.8,0,0,0-.246.642v1.719H967.8Z" transform="translate(-960.13 -345.407)" fill="currentColor"/>
-												</svg>
-												<span class="visually-hidden">Facebook</span>
-											</a>
-										</li>
-										<li class="quickview__social--list">
-											<a class="quickview__social--icon" target="_blank" href="https://twitter.com/">
-												<svg  xmlns="http://www.w3.org/2000/svg" width="16.489" height="13.384" viewBox="0 0 16.489 13.384">
-													<path  data-name="Path 303" d="M966.025,1144.2v.433a9.783,9.783,0,0,1-.621,3.388,10.1,10.1,0,0,1-1.845,3.087,9.153,9.153,0,0,1-3.012,2.259,9.825,9.825,0,0,1-4.122.866,9.632,9.632,0,0,1-2.748-.4,9.346,9.346,0,0,1-2.447-1.11q.4.038.809.038a6.723,6.723,0,0,0,2.24-.376,7.022,7.022,0,0,0,1.958-1.054,3.379,3.379,0,0,1-1.958-.687,3.259,3.259,0,0,1-1.186-1.666,3.364,3.364,0,0,0,.621.056,3.488,3.488,0,0,0,.885-.113,3.267,3.267,0,0,1-1.374-.631,3.356,3.356,0,0,1-.969-1.186,3.524,3.524,0,0,1-.367-1.5v-.057a3.172,3.172,0,0,0,1.544.433,3.407,3.407,0,0,1-1.1-1.214,3.308,3.308,0,0,1-.4-1.609,3.362,3.362,0,0,1,.452-1.694,9.652,9.652,0,0,0,6.964,3.538,3.911,3.911,0,0,1-.075-.772,3.293,3.293,0,0,1,.452-1.694,3.409,3.409,0,0,1,1.233-1.233,3.257,3.257,0,0,1,1.685-.461,3.351,3.351,0,0,1,2.466,1.073,6.572,6.572,0,0,0,2.146-.828,3.272,3.272,0,0,1-.574,1.083,3.477,3.477,0,0,1-.913.8,6.869,6.869,0,0,0,1.958-.546A7.074,7.074,0,0,1,966.025,1144.2Z" transform="translate(-951.23 -1140.849)" fill="currentColor"/>
-												</svg>
-												<span class="visually-hidden">Twitter</span>
-											</a>
-										</li>
-										<li class="quickview__social--list">
-											<a class="quickview__social--icon" target="_blank" href="https://www.skype.com/">
-												<svg  xmlns="http://www.w3.org/2000/svg" width="16.482" height="16.481" viewBox="0 0 16.482 16.481">
-												<path  data-name="Path 284" d="M879,926.615a4.479,4.479,0,0,1,.622-2.317,4.666,4.666,0,0,1,1.676-1.677,4.482,4.482,0,0,1,2.317-.622,4.577,4.577,0,0,1,2.43.678,7.58,7.58,0,0,1,5.048.961,7.561,7.561,0,0,1,3.786,6.593,8,8,0,0,1-.094,1.206,4.676,4.676,0,0,1,.7,2.411,4.53,4.53,0,0,1-.622,2.326,4.62,4.62,0,0,1-1.686,1.686,4.626,4.626,0,0,1-4.756-.075,7.7,7.7,0,0,1-1.187.094,7.623,7.623,0,0,1-7.647-7.647,7.46,7.46,0,0,1,.094-1.187A4.424,4.424,0,0,1,879,926.615Zm4.107,1.714a2.473,2.473,0,0,0,.282,1.234,2.41,2.41,0,0,0,.782.829,5.091,5.091,0,0,0,1.215.565,15.981,15.981,0,0,0,1.582.424q.678.151.979.235a3.091,3.091,0,0,1,.593.235,1.388,1.388,0,0,1,.452.348.738.738,0,0,1,.16.481.91.91,0,0,1-.48.753,2.254,2.254,0,0,1-1.271.321,2.105,2.105,0,0,1-1.253-.292,2.262,2.262,0,0,1-.65-.838,2.42,2.42,0,0,0-.414-.546.853.853,0,0,0-.584-.17.893.893,0,0,0-.669.283.919.919,0,0,0-.273.659,1.654,1.654,0,0,0,.217.782,2.456,2.456,0,0,0,.678.763,3.64,3.64,0,0,0,1.158.574,5.931,5.931,0,0,0,1.639.235,5.767,5.767,0,0,0,2.072-.339,2.982,2.982,0,0,0,1.356-.961,2.306,2.306,0,0,0,.471-1.431,2.161,2.161,0,0,0-.443-1.375,3.009,3.009,0,0,0-1.2-.894,10.118,10.118,0,0,0-1.865-.575,11.2,11.2,0,0,1-1.309-.311,2.011,2.011,0,0,1-.8-.452.992.992,0,0,1-.3-.744,1.143,1.143,0,0,1,.565-.97,2.59,2.59,0,0,1,1.488-.386,2.538,2.538,0,0,1,1.074.188,1.634,1.634,0,0,1,.622.49,3.477,3.477,0,0,1,.414.753,1.568,1.568,0,0,0,.4.594.866.866,0,0,0,.574.2,1,1,0,0,0,.706-.254.828.828,0,0,0,.273-.631,2.234,2.234,0,0,0-.443-1.253,3.321,3.321,0,0,0-1.158-1.046,5.375,5.375,0,0,0-2.524-.527,5.764,5.764,0,0,0-2.213.386,3.161,3.161,0,0,0-1.422,1.083A2.738,2.738,0,0,0,883.106,928.329Z" transform="translate(-878.999 -922)" fill="currentColor"/>
-												</svg>
-												<span class="visually-hidden">Skype</span>
-											</a>
-										</li>
-										<li class="quickview__social--list">
-											<a class="quickview__social--icon" target="_blank" href="https://www.youtube.com/">
-												<svg  xmlns="http://www.w3.org/2000/svg" width="16.49" height="11.582" viewBox="0 0 16.49 11.582">
-													<path  data-name="Path 321" d="M967.759,1365.592q0,1.377-.019,1.717-.076,1.114-.151,1.622a3.981,3.981,0,0,1-.245.925,1.847,1.847,0,0,1-.453.717,2.171,2.171,0,0,1-1.151.6q-3.585.265-7.641.189-2.377-.038-3.387-.085a11.337,11.337,0,0,1-1.5-.142,2.206,2.206,0,0,1-1.113-.585,2.562,2.562,0,0,1-.528-1.037,3.523,3.523,0,0,1-.141-.585c-.032-.2-.06-.5-.085-.906a38.894,38.894,0,0,1,0-4.867l.113-.925a4.382,4.382,0,0,1,.208-.906,2.069,2.069,0,0,1,.491-.755,2.409,2.409,0,0,1,1.113-.566,19.2,19.2,0,0,1,2.292-.151q1.82-.056,3.953-.056t3.952.066q1.821.067,2.311.142a2.3,2.3,0,0,1,.726.283,1.865,1.865,0,0,1,.557.49,3.425,3.425,0,0,1,.434,1.019,5.72,5.72,0,0,1,.189,1.075q0,.095.057,1C967.752,1364.1,967.759,1364.677,967.759,1365.592Zm-7.6.925q1.49-.754,2.113-1.094l-4.434-2.339v4.66Q958.609,1367.311,960.156,1366.517Z" transform="translate(-951.269 -1359.8)" fill="currentColor"/>
-												</svg>
-												<span class="visually-hidden">Youtube</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="guarantee__safe--checkout">
-									<h5 class="guarantee__safe--checkout__title">Guaranteed Safe Checkout</h5>
-									<img class="guarantee__safe--checkout__img display-block" src="assets/img/other/safe-checkout.webp" alt="Payment Image">
-								</div>
-							</form>
+							</div>
 						</div>
-					</div>
+					</div>   
+				
 				</div>
 			</div>
 		</div>
@@ -649,7 +652,7 @@
 
 	<!-- Start banner section -->
 	<div class="banner__video--section banner__section--bg position__relative section--padding">
-		<img class="drone__position--img display-block" src="assets/img/other/drone-position-img.webp" alt="drone-position-img">
+		<img class="drone__position--img display-block" src="{{asset('user/img/other/drone-position-img.webp')}}" alt="drone-position-img">
 		<div class="container">
 			<div class="banner__video--content position__relative text-center">
 				<div class="bideo__play banner__video--play mb-35">
@@ -681,7 +684,7 @@
 					<div class="col custom-col mb-30">
 						<article class="team__card">
 							<div class="team__card--thumbnail">
-								<img class="team__card--thumbnail__img display-block" src="assets/img/other/team1.webp" alt="team-thumb">
+								<img class="team__card--thumbnail__img display-block" src="{{asset('user/img/other/team1.webp')}}" alt="team-thumb">
 							</div>
 							<div class="team__card--content ">
 								<h3 class="team__card--content__title">Brandon Bokle </h3>
@@ -704,7 +707,7 @@
 					<div class="col custom-col mb-30">
 						<article class="team__card">
 							<div class="team__card--thumbnail">
-								<img class="team__card--thumbnail__img display-block" src="assets/img/other/team2.webp" alt="team-thumb">
+								<img class="team__card--thumbnail__img display-block" src="{{asset('user/img/other/team2.webp')}}" alt="team-thumb">
 							</div>
 							<div class="team__card--content ">
 								<h3 class="team__card--content__title">Sarrison Samuel </h3>
@@ -727,11 +730,11 @@
 					<div class="col custom-col mb-30">
 						<article class="team__card">
 							<div class="team__card--thumbnail">
-								<img class="team__card--thumbnail__img display-block" src="assets/img/other/team3.webp" alt="team-thumb">
+								<img class="team__card--thumbnail__img display-block" src="{{asset('user/img/other/team1.webp')}}" alt="team-thumb">
 							</div>
 							<div class="team__card--content ">
-								<h3 class="team__card--content__title">Warrison Samuel </h3>
-								<span class="team__card--content__subtitle text__secondary">Spa Managery</span>
+								<h3 class="team__card--content__title">Brandon Bokle </h3>
+								<span class="team__card--content__subtitle text__secondary">Secretary</span>
 								<ul class="team__card--content__info">
 									<li class="team__card--content__info--list">
 										<svg class="team__card--content__info--icon" xmlns="http://www.w3.org/2000/svg" width="15.797" height="20.05" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="currentColor" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path></svg>
@@ -776,7 +779,7 @@
 								<article class="project__card ">
 									<a class="project__card--link" href="shop.html">
 										<div class="project__card--thumbnail">
-											<img class="project__card--thumbnail__img display-block" src="assets/img/product/product1.webp" alt="product-img">
+											<img class="project__card--thumbnail__img display-block" src="{{asset('user/img/product/product1.webp')}}" alt="product-img">
 										</div>
 										<div class="project__card--content d-flex justify-content-between align-items-center">
 											<div class="project__card--content__left">
@@ -792,71 +795,7 @@
 								<article class="project__card ">
 									<a class="project__card--link" href="shop.html">
 										<div class="project__card--thumbnail">
-											<img class="project__card--thumbnail__img display-block" src="assets/img/product/product2.webp" alt="product-img">
-										</div>
-										<div class="project__card--content d-flex justify-content-between align-items-center">
-											<div class="project__card--content__left">
-												<h3 class="project__card--content__title">Sarrison Samuel</h3>
-												<span class="project__card--content__subtitle">CEO - Founder</span>
-											</div>
-											<span class="project__card--btn"><svg class="project__card--btn__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"></path></svg></span>
-										</div>
-									</a>
-								</article>
-							</div>
-							<div class="col custom-col-2 mb-30">
-								<article class="project__card ">
-									<a class="project__card--link" href="shop.html">
-										<div class="project__card--thumbnail">
-											<img class="project__card--thumbnail__img display-block" src="assets/img/product/product3.webp" alt="product-img">
-										</div>
-										<div class="project__card--content d-flex justify-content-between align-items-center">
-											<div class="project__card--content__left">
-												<h3 class="project__card--content__title">Warrison Samuel</h3>
-												<span class="project__card--content__subtitle">Spa Manager</span>
-											</div>
-											<span class="project__card--btn"><svg class="project__card--btn__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"></path></svg></span>
-										</div>
-									</a>
-								</article>
-							</div>
-							<div class="col custom-col-2 mb-30">
-								<article class="project__card ">
-									<a class="project__card--link" href="shop.html">
-										<div class="project__card--thumbnail">
-											<img class="project__card--thumbnail__img display-block" src="assets/img/product/product4.webp" alt="product-img">
-										</div>
-										<div class="project__card--content d-flex justify-content-between align-items-center">
-											<div class="project__card--content__left">
-												<h3 class="project__card--content__title">Harrison Samuel</h3>
-												<span class="project__card--content__subtitle">Products Manager</span>
-											</div>
-											<span class="project__card--btn"><svg class="project__card--btn__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"></path></svg></span>
-										</div>
-									</a>
-								</article>
-							</div>
-							<div class="col custom-col-2 mb-30">
-								<article class="project__card ">
-									<a class="project__card--link" href="shop.html">
-										<div class="project__card--thumbnail">
-											<img class="project__card--thumbnail__img display-block" src="assets/img/product/product5.webp" alt="product-img">
-										</div>
-										<div class="project__card--content d-flex justify-content-between align-items-center">
-											<div class="project__card--content__left">
-												<h3 class="project__card--content__title">Miltons Marsh</h3>
-												<span class="project__card--content__subtitle">Secretary</span>
-											</div>
-											<span class="project__card--btn"><svg class="project__card--btn__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"></path></svg></span>
-										</div>
-									</a>
-								</article>
-							</div>
-							<div class="col custom-col-2 mb-30">
-								<article class="project__card ">
-									<a class="project__card--link" href="shop.html">
-										<div class="project__card--thumbnail">
-											<img class="project__card--thumbnail__img display-block" src="assets/img/product/product6.webp" alt="product-img">
+											<img class="project__card--thumbnail__img display-block" src="{{asset('user/img/product/product1.webp')}}" alt="product-img">
 										</div>
 										<div class="project__card--content d-flex justify-content-between align-items-center">
 											<div class="project__card--content__left">
@@ -868,6 +807,119 @@
 									</a>
 								</article>
 							</div>
+							<div class="col custom-col-2 mb-30">
+								<article class="project__card ">
+									<a class="project__card--link" href="shop.html">
+										<div class="project__card--thumbnail">
+											<img class="project__card--thumbnail__img display-block" src="{{asset('user/img/product/product1.webp')}}" alt="product-img">
+										</div>
+										<div class="project__card--content d-flex justify-content-between align-items-center">
+											<div class="project__card--content__left">
+												<h3 class="project__card--content__title">Advanced Analytic</h3>
+												<span class="project__card--content__subtitle">Secretary</span>
+											</div>
+											<span class="project__card--btn"><svg class="project__card--btn__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"></path></svg></span>
+										</div>
+									</a>
+								</article>
+							</div>
+							<div class="col custom-col-2 mb-30">
+								<article class="project__card ">
+									<a class="project__card--link" href="shop.html">
+										<div class="project__card--thumbnail">
+											<img class="project__card--thumbnail__img display-block" src="{{asset('user/img/product/product1.webp')}}" alt="product-img">
+										</div>
+										<div class="project__card--content d-flex justify-content-between align-items-center">
+											<div class="project__card--content__left">
+												<h3 class="project__card--content__title">Advanced Analytic</h3>
+												<span class="project__card--content__subtitle">Secretary</span>
+											</div>
+											<span class="project__card--btn"><svg class="project__card--btn__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"></path></svg></span>
+										</div>
+									</a>
+								</article>
+							</div>
+							<div class="col custom-col-2 mb-30">
+								<article class="project__card ">
+									<a class="project__card--link" href="shop.html">
+										<div class="project__card--thumbnail">
+											<img class="project__card--thumbnail__img display-block" src="{{asset('user/img/product/product1.webp')}}" alt="product-img">
+										</div>
+										<div class="project__card--content d-flex justify-content-between align-items-center">
+											<div class="project__card--content__left">
+												<h3 class="project__card--content__title">Advanced Analytic</h3>
+												<span class="project__card--content__subtitle">Secretary</span>
+											</div>
+											<span class="project__card--btn"><svg class="project__card--btn__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"></path></svg></span>
+										</div>
+									</a>
+								</article>
+							</div>
+							<div class="col custom-col-2 mb-30">
+								<article class="project__card ">
+									<a class="project__card--link" href="shop.html">
+										<div class="project__card--thumbnail">
+											<img class="project__card--thumbnail__img display-block" src="{{asset('user/img/product/product1.webp')}}" alt="product-img">
+										</div>
+										<div class="project__card--content d-flex justify-content-between align-items-center">
+											<div class="project__card--content__left">
+												<h3 class="project__card--content__title">Advanced Analytic</h3>
+												<span class="project__card--content__subtitle">Secretary</span>
+											</div>
+											<span class="project__card--btn"><svg class="project__card--btn__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"></path></svg></span>
+										</div>
+									</a>
+								</article>
+							</div>
+							<div class="col custom-col-2 mb-30">
+								<article class="project__card ">
+									<a class="project__card--link" href="shop.html">
+										<div class="project__card--thumbnail">
+											<img class="project__card--thumbnail__img display-block" src="{{asset('user/img/product/product1.webp')}}" alt="product-img">
+										</div>
+										<div class="project__card--content d-flex justify-content-between align-items-center">
+											<div class="project__card--content__left">
+												<h3 class="project__card--content__title">Advanced Analytic</h3>
+												<span class="project__card--content__subtitle">Secretary</span>
+											</div>
+											<span class="project__card--btn"><svg class="project__card--btn__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"></path></svg></span>
+										</div>
+									</a>
+								</article>
+							</div>
+							<div class="col custom-col-2 mb-30">
+								<article class="project__card ">
+									<a class="project__card--link" href="shop.html">
+										<div class="project__card--thumbnail">
+											<img class="project__card--thumbnail__img display-block" src="{{asset('user/img/product/product1.webp')}}" alt="product-img">
+										</div>
+										<div class="project__card--content d-flex justify-content-between align-items-center">
+											<div class="project__card--content__left">
+												<h3 class="project__card--content__title">Advanced Analytic</h3>
+												<span class="project__card--content__subtitle">Secretary</span>
+											</div>
+											<span class="project__card--btn"><svg class="project__card--btn__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"></path></svg></span>
+										</div>
+									</a>
+								</article>
+							</div>
+							<div class="col custom-col-2 mb-30">
+								<article class="project__card ">
+									<a class="project__card--link" href="shop.html">
+										<div class="project__card--thumbnail">
+											<img class="project__card--thumbnail__img display-block" src="{{asset('user/img/product/product1.webp')}}" alt="product-img">
+										</div>
+										<div class="project__card--content d-flex justify-content-between align-items-center">
+											<div class="project__card--content__left">
+												<h3 class="project__card--content__title">Advanced Analytic</h3>
+												<span class="project__card--content__subtitle">Secretary</span>
+											</div>
+											<span class="project__card--btn"><svg class="project__card--btn__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"></path></svg></span>
+										</div>
+									</a>
+								</article>
+							</div>
+						
 						</div>
 					</div>
 				</div>
@@ -910,7 +962,7 @@
 								<article class="project__card ">
 									<a class="project__card--link" href="shop.html">
 										<div class="project__card--thumbnail">
-											<img class="project__card--thumbnail__img display-block" src="assets/img/product/product1.webp" alt="product-img">
+											<img class="project__card--thumbnail__img display-block" src="{{asset('user/img/product/product1.webp')}}" alt="product-img">
 										</div>
 										<div class="project__card--content d-flex justify-content-between align-items-center">
 											<div class="project__card--content__left">
@@ -1346,101 +1398,7 @@
 	</div>
 	<!-- End counterup section -->
 
-	<!-- Start blog section -->
-	<section class="blog__section blog__section--bg section--padding">
-		<div class="container">
-			<div class="section__heading text-center mb-50">
-				<h2 class="section__heading--maintitle text__secondary mb-10">Our Largest Blog</h2>
-				<p class="section__heading--desc">Beyond more stoic this along goodness this sed wow manatee mongos 
-					flusterd impressive man farcrud opened.</p>
-			</div>
-			<div class="blog__section--inner blog__swiper--activation swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<article class="blog__card">
-							<div class="blog__card--thumbnail">
-								<a class="blog__card--thumbnail__link display-block" href="blog-details.html"><img class="blog__card--thumbnail__img display-block" src="assets/img/blog/blog1.webp" alt="blog-img"></a>
-							</div>
-							<div class="blog__card--content">
-								<ul class="blog__card--meta d-flex justify-content-center">
-									<li class="blog__card--meta__text text__secondary">
-										Ruso Jonsong
-									</li>
-									<li class="blog__card--meta__text">
-										/ Mar 02, 2022
-									</li>
-								</ul>
-								<h3 class="blog__card--title"><a href="blog-details.html">What is business contents 
-									insurance this Blog. </a></h3>
-								<a class="blog__card--btn primary__btn" href="blog-details.html">Read More </a>
-							</div>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="blog__card">
-							<div class="blog__card--thumbnail">
-								<a class="blog__card--thumbnail__link display-block" href="blog-details.html"><img class="blog__card--thumbnail__img display-block" src="assets/img/blog/blog2.webp" alt="blog-img"></a>
-							</div>
-							<div class="blog__card--content">
-								<ul class="blog__card--meta d-flex justify-content-center">
-									<li class="blog__card--meta__text text__secondary">
-										Ruso Jonsong
-									</li>
-									<li class="blog__card--meta__text">
-										/ Mar 02, 2022
-									</li>
-								</ul>
-								<h3 class="blog__card--title"><a href="blog-details.html"> Amet This is adipisicing elit. Error, nons. </a></h3>
-								<a class="blog__card--btn primary__btn" href="blog-details.html">Read More </a>
-							</div>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="blog__card">
-							<div class="blog__card--thumbnail">
-								<a class="blog__card--thumbnail__link display-block" href="blog-details.html"><img class="blog__card--thumbnail__img display-block" src="assets/img/blog/blog3.webp" alt="blog-img"></a>
-							</div>
-							<div class="blog__card--content">
-								<ul class="blog__card--meta d-flex justify-content-center">
-									<li class="blog__card--meta__text text__secondary">
-										Ruso Jonsong
-									</li>
-									<li class="blog__card--meta__text">
-										/ Mar 02, 2022
-									</li>
-								</ul>
-								<h3 class="blog__card--title"><a href="blog-details.html">Lorem ipsum dolor sit amet, are adipisicing elit. </a></h3>
-								<a class="blog__card--btn primary__btn" href="blog-details.html">Read More </a>
-							</div>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="blog__card">
-							<div class="blog__card--thumbnail">
-								<a class="blog__card--thumbnail__link display-block" href="blog-details.html"><img class="blog__card--thumbnail__img display-block" src="assets/img/blog/blog1.webp" alt="blog-img"></a>
-							</div>
-							<div class="blog__card--content">
-								<ul class="blog__card--meta d-flex justify-content-center">
-									<li class="blog__card--meta__text text__secondary">
-										Ruso Jonsong
-									</li>
-									<li class="blog__card--meta__text">
-										/ Mar 02, 2022
-									</li>
-								</ul>
-								<h3 class="blog__card--title"><a href="blog-details.html">What is business contents 
-									insurance this Blog. </a></h3>
-								<a class="blog__card--btn primary__btn" href="blog-details.html">Read More </a>
-							</div>
-						</article>
-					</div>
-				</div>
-				<div class="swiper__nav--btn swiper-button-next"></div>
-				<div class="swiper__nav--btn swiper-button-prev"></div>
-			</div>
-		</div>
-	</section>
-	<!-- End blog section -->
+
 
 </main>
 

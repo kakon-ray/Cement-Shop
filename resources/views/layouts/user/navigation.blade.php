@@ -1,5 +1,48 @@
-    <!-- Start header area -->
-    <header class="header__section">
+    <!-- Start preloader -->
+    <div id="preloader">
+        <div id="ctn-preloader" class="ctn-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text-preloader="L" class="letters-loading">
+                        L
+                    </span>
+                    
+                    <span data-text-preloader="O" class="letters-loading">
+                        O
+                    </span>
+                    
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+                    
+                    <span data-text-preloader="D" class="letters-loading">
+                        D
+                    </span>
+                    
+                    <span data-text-preloader="I" class="letters-loading">
+                        I
+                    </span>
+                    
+                    <span data-text-preloader="N" class="letters-loading">
+                        N
+                    </span>
+                    
+                    <span data-text-preloader="G" class="letters-loading">
+                        G
+                    </span>
+                </div>
+            </div>	
+
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+    </div>
+    <!-- End preloader -->
+
+	
+<!-- Start header area -->
+	<header class="header__section">
         <!-- Start Header topbar -->
         <div class="header__topbar bg__primary color-primary-2">
             <div class="container">
@@ -67,110 +110,29 @@
                         </a>
                     </div>
                     <div class="main__logo">
-                        <h1 class="main__logo--title"><a class="main__logo--link" href="index.html"><img class="main__logo--img" src="assets/img/logo/nav-logo.webp" alt="logo-img"></a></h1>
+                        <h1 class="main__logo--title"><a class="main__logo--link" href="index.html"><img class="main__logo--img" src="{{asset('user/img/logo/nav-logo.webp')}}" alt="logo-img"></a></h1>
+                        <div class="header__menu d-none d-lg-block">
+                            <nav class="header__menu--navigation">
+                                <ul class="d-flex">
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link" href="{{route('home')}}">Home</a>
+                                    </li>
+                                    <li class="header__menu--items mega__menu--items">
+                                        <a class="header__menu--link" href="{{route('user.shop')}}">Shop</a>
+                                      
+                                    </li>
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link" href="{{route('user.about')}}">About US </a>  
+                                    </li>
+                         
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link" href="{{route('user.contact')}}">Contact </a>  
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
-                    <div class="header__menu d-none d-lg-block">
-                        <nav class="header__menu--navigation">
-                            <ul class="d-flex">
-                                <li class="header__menu--items">
-                                    <a class="header__menu--link" href="index.html">Home <span class="menu__plus--icon">+</span></a>
-                                    <ul class="header__sub--menu">
-                                        <li class="header__sub--menu__items"><a href="index.html" class="header__sub--menu__link">Home One</a></li>
-                                        <li class="header__sub--menu__items"><a href="index-2.html" class="header__sub--menu__link">Home Two</a></li>
-                                        <li class="header__sub--menu__items"><a href="index-3.html" class="header__sub--menu__link">Home Three</a></li>
-                                        <li class="header__sub--menu__items"><a href="index-4.html" class="header__sub--menu__link">Home Four</a></li>
-                                    </ul>
-                                </li>
-                                <li class="header__menu--items mega__menu--items">
-                                    <a class="header__menu--link" href="shop.html">Shop <span class="menu__plus--icon">+</span></a>
-                                    <ul class="header__mega--menu d-flex">
-                                        <li class="header__mega--menu__li">
-                                            <span class="header__mega--subtitle">Column One</span>
-                                            <ul class="header__mega--sub__menu">
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="shop.html">Shop Left Sidebar</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="shop-grid.html">Shop Grid</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="shop-grid-list.html">Shop Grid List</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="shop-list.html">Shop List</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="header__mega--menu__li">
-                                            <span class="header__mega--subtitle">Column Two</span>
-                                            <ul class="header__mega--sub__menu">
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="product-details.html">Standard Product</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="product-video.html">Video Product</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="product-horizontal.html">Product Horizontal</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="product-left-sidebar.html">Product Left Sidebar</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="product-gallery.html">Product Gallery</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="header__mega--menu__li">
-                                            <span class="header__mega--subtitle">Column Three</span>
-                                            <ul class="header__mega--sub__menu">
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="my-account.html">My Account</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="my-account-2.html">My Account 2</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="404.html">404 Page</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="login.html">Login Page</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="faq.html">Faq Page</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="header__mega--menu__li">
-                                            <span class="header__mega--subtitle">Column Four</span>
-                                            <ul class="header__mega--sub__menu">
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="compare.html">Compare Pages</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="cart.html">Cart Page</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="checkout.html">Checkout page</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="wishlist.html">Wishlist Page</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="404.html">Error Page</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="header__mega--menu__li">
-                                            <span class="header__mega--subtitle">Column Five</span>
-                                            <ul class="header__mega--sub__menu">
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="about.html">About Us</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="contact.html">Contact Us</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="privacy-policy.html">Privacy Policy</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="faq.html">Frequently</a></li>
-                                                <li class="header__mega--sub__menu_li"><a class="header__mega--sub__menu--title" href="login.html">Register</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="header__mega--menu__li fullscreen__style d-flex">
-                                            <a class="header__mega--menu__banner" href="shop.html"><img class="header__mega--menu__banner--img" src="assets/img/other/mega-menu-banner.webp" alt="banner-menu"></a>
-                                            <a class="header__mega--menu__banner" href="shop.html"><img class="header__mega--menu__banner--img" src="assets/img/other/mega-menu-banner2.webp" alt="banner-menu"></a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li class="header__menu--items">
-                                    <a class="header__menu--link" href="about.html">About US </a>  
-                                </li>
-                                <li class="header__menu--items">
-                                    <a class="header__menu--link" href="blog.html">Blog <span class="menu__plus--icon">+</span> </a>
-                                    <ul class="header__sub--menu">
-                                        <li class="header__sub--menu__items"><a href="blog.html" class="header__sub--menu__link">Blog Grid</a></li>
-                                        <li class="header__sub--menu__items"><a href="blog-details.html" class="header__sub--menu__link">Blog Details</a></li>
-                                        <li class="header__sub--menu__items"><a href="blog-left-sidebar.html" class="header__sub--menu__link">Blog Left Sidebar</a></li>
-                                        <li class="header__sub--menu__items"><a href="blog-right-sidebar.html" class="header__sub--menu__link">Blog Right Sidebar</a></li>
-                                    </ul>
-                                </li>
-                                <li class="header__menu--items">
-                                    <a class="header__menu--link " href="#">Pages <span class="menu__plus--icon">+</span></a>
-                                    <ul class="header__sub--menu">
-                                        <li class="header__sub--menu__items"><a href="about.html" class="header__sub--menu__link">About Us</a></li>
-                                        <li class="header__sub--menu__items"><a href="contact.html" class="header__sub--menu__link">Contact Us</a></li>
-                                        <li class="header__sub--menu__items"><a href="cart.html" class="header__sub--menu__link">Cart Page</a></li>
-                                        <li class="header__sub--menu__items"><a href="portfolio.html" class="header__sub--menu__link">Portfolio Page</a></li>
-                                        <li class="header__sub--menu__items"><a href="wishlist.html" class="header__sub--menu__link">Wishlist Page</a></li>
-                                        <li class="header__sub--menu__items"><a href="login.html" class="header__sub--menu__link">Login Page</a></li>
-                                        <li class="header__sub--menu__items"><a href="404.html" class="header__sub--menu__link">Error Page</a></li>
-                                    </ul>
-                                </li>
-                                <li class="header__menu--items">
-                                    <a class="header__menu--link" href="contact.html">Contact </a>  
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                  
                     <div class="header__account">
                         <ul class="d-flex">
                             <li class="header__account--items  header__account--search__items d-md-none">
@@ -179,20 +141,7 @@
                                     <span class="visually-hidden">Search</span>
                                 </a>
                             </li>
-                            <li class="header__account--items">
-                                <a class="header__account--btn" href="my-account.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  width="26.51" height="23.443" viewBox="0 0 512 512"><path d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg> 
-                                    <span class="visually-hidden">My Account</span>
-                                </a>
-                            </li>
-                            <li class="header__account--items">
-                                <a class="header__account--btn minicart__open--btn" href="javascript:void(0)" data-offcanvas>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18.897" height="21.565" viewBox="0 0 18.897 21.565">
-                                        <path  d="M16.84,8.082V6.091a4.725,4.725,0,1,0-9.449,0v4.725a.675.675,0,0,0,1.35,0V9.432h5.4V8.082h-5.4V6.091a3.375,3.375,0,0,1,6.75,0v4.691a.675.675,0,1,0,1.35,0V9.433h3.374V21.581H4.017V9.432H6.041V8.082H2.667V21.641a1.289,1.289,0,0,0,1.289,1.29h16.32a1.289,1.289,0,0,0,1.289-1.29V8.082Z" transform="translate(-2.667 -1.366)" fill="currentColor"/>
-                                    </svg>
-                                    <span class="items__count">02</span> 
-                                </a>
-                            </li>
+                       
                         </ul>
                     </div>
                 </div>
@@ -205,7 +154,7 @@
             <div class="offcanvas__inner">
                 <div class="offcanvas__logo">
                     <a class="offcanvas__logo_link" href="index.html">
-                        <img src="assets/img/logo/nav-logo.webp" alt="Rokon Logo">
+                        <img src="{{asset('user/img/logo/nav-logo.webp')}}" alt="Rokon Logo">
                     </a>
                     <button class="offcanvas__close--btn" data-offcanvas>close</button>
                 </div>
@@ -301,7 +250,7 @@
                         <ul class="d-flex align-items-center">
                             <li class="language__currency--list">
                                 <a class="offcanvas__language--switcher" href="#">
-                                    <img class="language__switcher--icon__img" src="assets/img/icon/language-icon.webp" alt="currency">
+                                    <img class="language__switcher--icon__img" src="{{asset('user/img/icon/language-icon.webp')}}" alt="currency">
                                     <span>English</span> 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="11.797" height="9.05" viewBox="0 0 9.797 6.05">
                                         <path  d="M14.646,8.59,10.9,12.329,7.151,8.59,6,9.741l4.9,4.9,4.9-4.9Z" transform="translate(-6 -8.59)" fill="currentColor" opacity="0.7"/>
@@ -317,7 +266,7 @@
                             </li>
                             <li class="language__currency--list">
                                 <a class="offcanvas__account--currency__menu" href="#">
-                                    <img src="assets/img/icon/usd-icon.webp" alt="currency">
+                                    <img src="{{asset('user/img/icon/usd-icon.webp')}}" alt="currency">
                                     <span>$ US Dollar</span> 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="11.797" height="9.05" viewBox="0 0 9.797 6.05">
                                         <path  d="M14.646,8.59,10.9,12.329,7.151,8.59,6,9.741l4.9,4.9,4.9-4.9Z" transform="translate(-6 -8.59)" fill="currentColor" opacity="0.7"/>
@@ -406,7 +355,7 @@
             <div class="minicart__product">
                 <div class="minicart__product--items d-flex">
                     <div class="minicart__thumbnail">
-                        <a href="product-details.html"><img src="assets/img/product/small-product1.webp" alt="prduct-img"></a>
+                        <a href="product-details.html"><img src="{{asset('user/img/product/small-product1.webps')}}" alt="prduct-img"></a>
                     </div>
                     <div class="minicart__text">
                         <h4 class="minicart__subtitle"><a href="product-details.html">TAdvanced Analytic</a></h4>
@@ -429,7 +378,7 @@
                 </div>
                 <div class="minicart__product--items d-flex">
                     <div class="minicart__thumbnail">
-                        <a href="product-details.html"><img src="assets/img/product/small-product2.webp" alt="prduct-img"></a>
+                        <a href="product-details.html"><img src="{{asset('user/img/product/small-product2.webp')}}" alt="prduct-img"></a>
                     </div>
                     <div class="minicart__text">
                         <h4 class="minicart__subtitle"><a href="product-details.html">Warrison Samuel.</a></h4>

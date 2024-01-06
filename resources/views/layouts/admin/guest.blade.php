@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,40 +13,55 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         {{-- bootstrap css --}}
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 
         <style>
-            .swalstyle{
+            .swalstyle {
                 width: 300px !important;
                 height: 200px !important;
                 font-size: 11px !important;
             }
 
-            .btn-submit{
-                background-color: red;
-                color: white
-                
+            .title{
+                font-size: 20px;
+                text-align: center;
+                padding: 50px 30px; 
+               
             }
 
-            .btn-submit:hover{
-                background-color: rgb(219, 6, 6);
-                color: white;
-                border-style:none;
-                outline-style:none;
+            .btn-submit {
+                background:  #ffffff;
+                border: 1px solid #dddddd;
+                color: var(--text-gray-color);
+                line-height: 3.8rem;
+                height: 4rem;
+                padding: 0 2rem;
+                transition: 0.4s
+
+            }
+
+            .btn-submit:hover {
+                background: #d72323;
+                border-color: #d72323;
+                color: #ffffff;
             }
         </style>
     </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
-         
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
-       
+    <body class="font-sans text-gray-900 antialiased">
+        <div
+            class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
+
+
+            <div
+                class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
+
 
                 @yield('content')
             </div>
@@ -53,8 +69,11 @@
 
         <!-- sweet alert -->
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="{{asset('admin/js/auth.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+        <script src="{{ asset('admin/js/auth.js') }}"></script>
     </body>
+
 </html>

@@ -1,13 +1,13 @@
-@extends('layouts.user.guest')
+@extends('layouts.admin.guest')
 @section('content')
 
-    <div class="mb-4 text-sm text-center text-gray-600 dark:text-gray-400">
-        {{ __('লগিন করতে আপনকে ইমেইল ভেরিফিকেশন করতে হবে। ইমেইল ভেরিফিকেশন লিংক অলরেডি পাঠানো হয়েছে । আপনার ইমেইল চেক করুন।') }}
+    <div class="title">
+        <h1>Please verify your Email then Login</h1>
     </div>
 
     @if (session('status') == 'verification-link-sent')
-        <div class="mb-4 font-medium text-sm text-green-600 dark:text-green-400">
-            {{ __('ইমেইল ভেরিফিকেশন লিঙ্ক আপনার ইমেইলে পাঠানো হয়েছে') }}
+        <div class="mb-4 text-center font-medium text-sm text-green-600 dark:text-green-400">
+            {{ __('Email verification link has been sent to your email') }}
         </div>
     @endif
 
@@ -16,9 +16,7 @@
             @csrf
 
             <div>
-                <x-primary-button>
-                    {{ __('Resend Verification Email') }}
-                </x-primary-button>
+              <button type="submit" class="btn-submit">Resend verification Link</button>
             </div>
         </form>
 

@@ -38,11 +38,11 @@
             .btn-submit {
                 background:  #ffffff;
                 border: 1px solid #dddddd;
-                color: var(--text-gray-color);
-                line-height: 3.8rem;
-                height: 4rem;
-                padding: 0 2rem;
-                transition: 0.4s
+                color: #000000;
+                padding: 10px 30px;
+                transition: 0.4s;
+                border-radius: 5px;
+                margin-top: 10px
 
             }
 

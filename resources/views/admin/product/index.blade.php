@@ -24,7 +24,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 px-4 py-3 d-flex justify-content-end">
-                        <button class="btn btn-success" onclick="open_model()"> + Add New Category</button>
+                        <button class="btn btn-success" onclick="open_model()"> + Add New Product</button>
                         {{-- modal start --}}
 
 
@@ -39,7 +39,7 @@
                                     </div>
                                     <div class="modal-body my-3">
 
-                                        <form action="{{route('admin.category.submit')}}" id="" method="POST">
+                                        <form action="" id="" method="POST">
                                             @csrf
                                             <input type="text" class="form-control d-none" id="set_student_id">
                                             <div class="mb-2">

@@ -1,25 +1,30 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\Auth\AdminRegistationController;
-use App\Http\Controllers\Admin\Auth\LoginController;
-use App\Http\Controllers\Admin\Auth\ForgetController;
-use App\Http\Controllers\Admin\Category\CategoryController;
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
+use App\Http\Controllers\Admin\Product\ProductController;
 
 // admin dashboard
-Route::name('admin.')->prefix('admin')->group(function () {
-    Route::middleware(['AdminAuth','VerifiedAdminEmail'])->group(function (){
-        Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-        
+Route::middleware(['AdminAuth', 'VerifiedAdminEmail'])->group(function () {
+
+    Route::name('admin.')->prefix('admin')->group(function () {
+
+        // dashboard route
+        Route::name('dashboard.')->prefix('dashboard')->group(function () {
+            Route::get('home', [DashboardController::class, 'dashboard'])->name('home');
+        });
+
+        // category start
+        Route::name('dashboard.')->prefix('dashboard')->group(function () {
+            Route::name('product.')->prefix('product')->group(function () {
+                Route::get('home', [ProductController::class, 'product'])->name('home');
+            });
+        });
+
+        // category end
+
+
     });
 });
 
 // category dashboard
-Route::name('admin.')->prefix('admin')->group(function () {
-    Route::middleware(['AdminAuth','VerifiedAdminEmail'])->group(function (){
-        Route::get('category', [CategoryController::class, 'category'])->name('category');
-        Route::post('category/submit', [CategoryController::class, 'category_submit'])->name('category.submit');
-        
-    });
-});

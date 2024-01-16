@@ -117,16 +117,22 @@
                                     <li class="header__menu--items">
                                         <a class="header__menu--link" href="{{route('home')}}">Home</a>
                                     </li>
-                                    <li class="header__menu--items mega__menu--items">
-                                        <a class="header__menu--link" href="{{route('user.shop')}}">Shop</a>
-                                      
-                                    </li>
+
                                     <li class="header__menu--items">
                                         <a class="header__menu--link" href="{{route('user.about')}}">About US </a>  
                                     </li>
                          
+
+                                    <li class="header__menu--items mega__menu--items">
+                                        <a class="header__menu--link" href="{{route('user.shop')}}">Employes</a>
+                                      
+                                    </li>
+                                 
                                     <li class="header__menu--items">
-                                        <a class="header__menu--link" href="{{route('user.contact')}}">Contact </a>  
+                                        <a class="header__menu--link" href="{{route('user.contact')}}">Gallery</a>  
+                                    </li>
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link" href="{{route('user.contact')}}">Contact</a>  
                                     </li>
                                 </ul>
                             </nav>

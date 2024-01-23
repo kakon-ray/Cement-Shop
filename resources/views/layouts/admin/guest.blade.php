@@ -24,7 +24,6 @@
         <style>
             .swalstyle {
                 width: 300px !important;
-                height: 200px !important;
                 font-size: 11px !important;
             }
 
@@ -47,8 +46,8 @@
             }
 
             .btn-submit:hover {
-                background: #d72323;
-                border-color: #d72323;
+                background: #36b9cc;
+                border-color: #36b9cc;
                 color: #ffffff;
             }
         </style>

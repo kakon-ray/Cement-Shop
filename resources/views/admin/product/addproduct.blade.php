@@ -30,7 +30,7 @@
                         <div class="col-lg-12">
                             <div class="card m-0 p-4">
                                 <form method="POST" action="{{ route('admin.dashboard.product.add.submit') }}"
-                                    id="common_alert" enctype="multipart/form-data">
+                                    id="product" enctype="multipart/form-data">
                                     @csrf
 
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -88,10 +88,10 @@
                                             <select class="form-control" name="rod_brand"
                                                 aria-label="Default select example">
                                                 <option value="" selected>Select Rod Brand</option>
-                                                <option value="Elephant">AKS</option>
-                                                <option value="Basundhara">SCRM</option>
-                                                <option value="Anwar">BSRM</option>
-                                                <option value="Scan">NORMAL</option>
+                                                <option value="AKS">AKS</option>
+                                                <option value="SCRM">SCRM</option>
+                                                <option value="BSRM">BSRM</option>
+                                                <option value="NORMAL">NORMAL</option>
 
                                             </select>
                                         </div>
@@ -102,8 +102,8 @@
                                                 aria-label="Default select example">
                                                 <option value="" selected>Select Rod Size</option>
                                                 <option value="8m">8m</option>
-                                                <option value="AM">10m</option>
-                                                <option value="10m">12m</option>
+                                                <option value="10m">10m</option>
+                                                <option value="12m">12m</option>
                                                 <option value="16m">16m</option>
                                                 <option value="20m">20m</option>
                                                 <option value="22m">22m</option>

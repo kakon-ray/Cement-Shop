@@ -10,21 +10,26 @@ use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
-    public function product(){
+    public function product()
+    {
         $allproduct = Products::all();
-        return view('admin.product.index',compact('allproduct'));
+        return view('admin.product.index', compact('allproduct'));
     }
-    public function add_product(){
+    public function add_product()
+    {
         return view('admin.product.addproduct');
     }
-    public function update_product(){
-        return view('admin.product.updateproduct');
+    public function update_product(Request $request)
+    {
+        $updateproduct = Products::find($request->id);
+        return view('admin.product.updateproduct', compact('updateproduct'));
     }
 
-    public function add_product_submit(Request $request){
+    public function add_product_submit(Request $request)
+    {
 
-    // dd($request->all());
-        if($request->category == 'cement'){
+
+        if ($request->category == 'cement') {
 
             $arrayRequest = [
                 'brand_title' => $request->brand_title,
@@ -34,7 +39,7 @@ class ProductController extends Controller
                 'image' => $request->image,
                 'price' => $request->price,
             ];
-    
+
             $arrayValidate  = [
                 'brand_title' => 'required',
                 'cement_brand' => 'required',
@@ -42,10 +47,10 @@ class ProductController extends Controller
                 'product_details' => 'required',
                 'brand_title' => 'required',
                 'image' => 'required',
-    
+
             ];
-        }else if($request->category == 'rod'){
-            
+        } else if ($request->category == 'rod') {
+
             $arrayRequest = [
                 'brand_title' => $request->brand_title,
                 'rod_brand' => $request->rod_brand,
@@ -54,7 +59,7 @@ class ProductController extends Controller
                 'image' => $request->image,
                 'price' => $request->price,
             ];
-    
+
             $arrayValidate  = [
                 'brand_title' => 'required',
                 'rod_brand' => 'required',
@@ -62,7 +67,7 @@ class ProductController extends Controller
                 'product_details' => 'required',
                 'brand_title' => 'required',
                 'image' => 'required',
-    
+
             ];
         }
 
@@ -100,7 +105,7 @@ class ProductController extends Controller
                     'product_details' => $request->product_details,
                     'image' => $image,
                     'price' => $request->price,
-             
+
 
                 ]);
 
@@ -120,6 +125,197 @@ class ProductController extends Controller
                     'msg' => 'Internal Server Error',
                     'err_msg' => $err->getMessage()
                 ]);
+            }
+        }
+    }
+    public function update_product_submit(Request $request)
+    {
+
+        $product = Products::find($request->id);
+
+        if (is_null($product)) {
+            return response()->json([
+                'msg' => "Do not Find any Product",
+                'status' => 404
+            ], 404);
+        } else {
+            if ($request->image) {
+
+                if ($request->category == 'cement') {
+
+                    $arrayRequest = [
+                        'brand_title' => $request->brand_title,
+                        'cement_brand' => $request->cement_brand,
+                        'cement_brand_type' => $request->cement_brand_type,
+                        'product_details' => $request->product_details,
+                        'image' => $request->image,
+                        'price' => $request->price,
+                    ];
+
+                    $arrayValidate  = [
+                        'brand_title' => 'required',
+                        'cement_brand' => 'required',
+                        'cement_brand_type' => 'required',
+                        'product_details' => 'required',
+                        'brand_title' => 'required',
+                        'image' => 'required',
+
+                    ];
+                } else if ($request->category == 'rod') {
+
+                    $arrayRequest = [
+                        'brand_title' => $request->brand_title,
+                        'rod_brand' => $request->rod_brand,
+                        'rod_size' => $request->rod_size,
+                        'product_details' => $request->product_details,
+                        'image' => $request->image,
+                        'price' => $request->price,
+                    ];
+
+                    $arrayValidate  = [
+                        'brand_title' => 'required',
+                        'rod_brand' => 'required',
+                        'rod_size' => 'required',
+                        'product_details' => 'required',
+                        'brand_title' => 'required',
+                        'image' => 'required',
+
+                    ];
+                }
+            } else {
+
+                if ($request->category == 'cement') {
+
+                    $arrayRequest = [
+                        'brand_title' => $request->brand_title,
+                        'cement_brand' => $request->cement_brand,
+                        'cement_brand_type' => $request->cement_brand_type,
+                        'product_details' => $request->product_details,
+                        'price' => $request->price,
+                    ];
+
+                    $arrayValidate  = [
+                        'brand_title' => 'required',
+                        'cement_brand' => 'required',
+                        'cement_brand_type' => 'required',
+                        'product_details' => 'required',
+                        'brand_title' => 'required',
+
+                    ];
+                } else if ($request->category == 'rod') {
+
+                    $arrayRequest = [
+                        'brand_title' => $request->brand_title,
+                        'rod_brand' => $request->rod_brand,
+                        'rod_size' => $request->rod_size,
+                        'product_details' => $request->product_details,
+                        'price' => $request->price,
+                    ];
+
+                    $arrayValidate  = [
+                        'brand_title' => 'required',
+                        'rod_brand' => 'required',
+                        'rod_size' => 'required',
+                        'product_details' => 'required',
+                        'brand_title' => 'required',
+
+                    ];
+                }
+            }
+
+
+
+            $response = Validator::make($arrayRequest, $arrayValidate);
+
+            if ($response->fails()) {
+                $msg = '';
+                foreach ($response->getMessageBag()->toArray() as $item) {
+                    $msg = $item;
+                };
+
+                return response()->json([
+                    'status' => 400,
+                    'msg' => $msg
+                ], 200);
+            } else {
+                DB::beginTransaction();
+
+                try {
+
+                    if ($request->image) {
+                        $img = $request->image;
+                        $image =  $img->store('/public/image');
+                        $image = (explode('/', $image))[2];
+                        $host = $_SERVER['HTTP_HOST'];
+                        $image = "http://" . $host . "/storage/image/" . $image;
+                    } else {
+                        $image = $request->old_image;
+                    }
+
+                    $product->brand_title = $request->brand_title;
+                    $product->category = $request->category;
+                    $product->cement_brand = $request->cement_brand;
+                    $product->cement_brand_type = $request->cement_brand_type;
+                    $product->rod_brand = $request->rod_brand;
+                    $product->rod_size = $request->rod_size;
+                    $product->product_details = $request->product_details;
+                    $product->price = $request->price;
+                    $product->image = $image;
+                    $product->save();
+
+                    DB::commit();
+                } catch (\Exception $err) {
+                    $product = null;
+                }
+
+                if ($product != null) {
+                    return response()->json([
+                        'status' => 200,
+                        'msg' => 'Updated Products'
+                    ]);
+                } else {
+                    return response()->json([
+                        'status' => 500,
+                        'msg' => 'Internal Server Error',
+                        'err_msg' => $err->getMessage()
+                    ]);
+                }
+            }
+        }
+    }
+
+    public function delete_product_submit(Request $request)
+    {
+        $product = Products::find($request->id);
+
+        if (is_null($product)) {
+
+            return response()->json([
+                'msg' => "Do not Find any Product",
+                'status' => 404
+            ], 404);
+        } else {
+
+            DB::beginTransaction();
+
+            try {
+
+                $product->delete();
+                DB::commit();
+
+                return response()->json([
+                    'status' => 200,
+                    'msg' => 'Delete This Product',
+                ], 200);
+            } catch (\Exception $err) {
+
+                DB::rollBack();
+
+                return response()->json([
+                    'msg' => "Internal Server Error",
+                    'status' => 500,
+                    'err_msg' => $err->getMessage()
+                ], 500);
             }
         }
     }

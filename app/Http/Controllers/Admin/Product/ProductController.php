@@ -46,7 +46,8 @@ class ProductController extends Controller
                 'cement_brand_type' => 'required',
                 'product_details' => 'required',
                 'brand_title' => 'required',
-                'image' => 'required',
+                'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
+                'price' => "required|regex:/^\d+(\.\d{1,2})?$/"
 
             ];
         } else if ($request->category == 'rod') {
@@ -66,8 +67,8 @@ class ProductController extends Controller
                 'rod_size' => 'required',
                 'product_details' => 'required',
                 'brand_title' => 'required',
-                'image' => 'required',
-
+                'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
+                'price' => "required|regex:/^\d+(\.\d{1,2})?$/"
             ];
         }
 
@@ -158,7 +159,8 @@ class ProductController extends Controller
                         'cement_brand_type' => 'required',
                         'product_details' => 'required',
                         'brand_title' => 'required',
-                        'image' => 'required',
+                        'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
+                        'price' => "required|regex:/^\d+(\.\d{1,2})?$/"
 
                     ];
                 } else if ($request->category == 'rod') {
@@ -178,7 +180,8 @@ class ProductController extends Controller
                         'rod_size' => 'required',
                         'product_details' => 'required',
                         'brand_title' => 'required',
-                        'image' => 'required',
+                        'image' =>['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
+                        'price' => "required|regex:/^\d+(\.\d{1,2})?$/"
 
                     ];
                 }
@@ -200,6 +203,7 @@ class ProductController extends Controller
                         'cement_brand_type' => 'required',
                         'product_details' => 'required',
                         'brand_title' => 'required',
+                        'price' => "required|regex:/^\d+(\.\d{1,2})?$/"
 
                     ];
                 } else if ($request->category == 'rod') {
@@ -218,6 +222,7 @@ class ProductController extends Controller
                         'rod_size' => 'required',
                         'product_details' => 'required',
                         'brand_title' => 'required',
+                        'price' => "required|regex:/^\d+(\.\d{1,2})?$/"
 
                     ];
                 }

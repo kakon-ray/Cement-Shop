@@ -34,20 +34,31 @@
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th>Brand Name</th>
+                                                <th>Product Title</th>
                                                 <th>Category</th>
-                                                <th>Product Price</th>
-                                                <th>Product Image</th>
+                                                <th>Cement Brand</th>
+                                                <th>Cement Brand Type</th>
+                                                <th>Rod Brand</th>
+                                                <th>Rod Size</th>
+                                                <th>Price</th>
+                                                <th>Image</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
 
                                         <tbody>
+                                            @foreach ($allproduct as $item)
                                             <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
+                                                <td>{{$item->brand_title}}</td>
+                                                <td>{{$item->category}}</td>
+                                                <td>{{$item->cement_brand}}</td>
+                                                <td>{{$item->cement_brand_type}}</td>
+                                                <td>{{$item->rod_brand}}</td>
+                                                <td>{{$item->rod_size}}</td>
+                                                <td>{{$item->price}}</td>
+                                                <td>
+                                                    <img src="{{$item->image}}" style="height: 100px" class="img-fluid" alt="Products">
+                                                </td>
                                                 <td>
                                                     <a href="{{route('admin.dashboard.product.update')}}" class="btn btn-info btn-circle btn-sm"><i class="fas fa-edit"></i></a>
 
@@ -55,7 +66,9 @@
                                                         class="btn btn-danger btn-circle btn-sm"><i
                                                             class="fas fa-trash"></i></a>
                                                 </td>
-                                            </tr>
+                                            </tr>  
+                                            @endforeach
+                                           
 
                                         </tbody>
                                     </table>

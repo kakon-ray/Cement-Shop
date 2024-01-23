@@ -52,7 +52,14 @@
                                                     <td>{{ $item->brand_title }}</td>
                                                     <td>{{ $item->category }}</td>
                                                     <td>{{ $item->cement_brand }}</td>
-                                                    <td>{{ $item->cement_brand_type }}</td>
+                                                    <td>
+                                                        @php
+                                                            foreach (json_decode($item->cement_brand_type) as  $value) {
+                                                                echo "$value->value <br>";
+                                                            }
+                                                        @endphp
+
+                                                    </td>
                                                     <td>{{ $item->rod_brand }}</td>
                                                     <td>{{ $item->rod_size }}</td>
                                                     <td>{{ $item->price }}</td>

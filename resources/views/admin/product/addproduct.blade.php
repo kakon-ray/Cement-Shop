@@ -4,6 +4,10 @@
 @endsection
 
 @section('content')
+    {{-- tags input --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -69,16 +73,9 @@
 
                                         <div class="col-lg-6">
                                             <label>Cement Brand Type</label>
-                                            <select class="form-control" name="cement_brand_type"
-                                                aria-label="Default select example">
-                                                <option value="" selected>Select Cement Brand</option>
-                                                <option value="PCC">PCC</option>
-                                                <option value="AM">AM</option>
-                                                <option value="OPC">OPC</option>
-                                                <option value="MPC">MPC</option>
+                                            <input required type="text" id="tags" class="form-control"
+                                                name="cement_brand_type" value="0" required  placeholder="PCC AM OPC MPC">
 
-
-                                            </select>
                                         </div>
 
                                     </div>
@@ -174,4 +171,18 @@
         aria-hidden="true">
     </div>
     <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+
+
+    {{-- tagsinput --}}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@yaireo/tagify"></script>
+    <script src="https://unpkg.com/@yaireo/tagify@3.1.0/dist/tagify.polyfills.min.js"></script>
+    <script>
+        // The DOM element you wish to replace with Tagify
+        var input = document.querySelector('#tags');
+
+        // initialize Tagify on the above input node reference
+        new Tagify(input)
+    </script>
 @endsection

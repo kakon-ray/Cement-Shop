@@ -37,4 +37,24 @@ $(document).ready(function(){
     })
   
     
+// profile page show and hiddin button
+$("#cement").show();
+$("#rod").hide();
+
+$('#category').on('change', function (e) {
+  var valueSelected = this.value;
+
+  if(valueSelected == 'rod'){
+    console.log(true)
+    $("#rod").show();
+    $("#cement").hide();
+  }else if(valueSelected == 'cement'){
+    $("#cement").show();
+    $("#rod").hide();
+  }
+
+})
+
+
+    
         })

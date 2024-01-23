@@ -5,7 +5,7 @@
 <!-- Mirrored from risingtheme.com/html/rokon-demo/rokon/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Jan 2024 14:21:38 GMT -->
 <head>
   <meta charset="utf-8">
-  <title>Rokon - Single Product eCommerce HTML Template</title>
+  <title>@yield('title')</title>
   <meta name="description" content="Morden Bootstrap HTML5 Template">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">

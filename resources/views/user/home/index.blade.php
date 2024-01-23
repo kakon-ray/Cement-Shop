@@ -1,5 +1,5 @@
 @extends('layouts.user.master')
-@section('title') {{'User Dashboard | Laravel Auth '}} @endsection
+@section('title') {{'Cement Shop | Home '}} @endsection
 
 @section('content')
 <main class="main__content_wrapper">
@@ -109,296 +109,12 @@
 	</section>
 	<!-- End slider section -->
 
-
-	<!-- Start service section -->
-	<section class="services__section services__section--bg section--padding">
-		<div class="container">
-			<div class="section__heading text-center mb-50">
-				<h2 class="section__heading--maintitle text__secondary mb-10">Our Best Service</h2>
-				<p class="section__heading--desc">Beyond more stoic this along goodness this sed wow manatee mongos 
-					flusterd impressive man farcrud opened.</p>
-			</div>
-			<div class="services__inner">
-				<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-2 mb--n30">
-					<div class="col custom-col mb-30">
-						<article class="services__card">
-							<a class="services__card--link" href="product-details.html">
-								<div class="services__card--topbar d-flex justify-content-between">
-									<div class="services__card--icon mb-20">
-										<img class="display-block services__card--primary__icon" src="{{asset('user/img/icon/service-icon1.webp')}}" alt="services-icon">
-										<img class="display-block services__card--secondary__icon" src="{{asset('user/img/icon/service-icon1-white.webp')}}" alt="services-icon">
-									</div>
-									<div class="services__card--number">
-										<span class="services__card--number__text">1</span>
-									</div>
-								</div>
-								<div class="services__card--content">
-									<h3 class="services__card--maintitle mb-15">Advanced Analytic</h3>
-									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
-									<span class="services__card--readmore text__secondary"> Read More
-										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
-									</span>
-								</div>
-							</a>
-						</article>
-					</div>
-					<div class="col custom-col mb-30">
-						<article class="services__card">
-							<a class="services__card--link" href="product-details.html">
-								<div class="services__card--topbar d-flex justify-content-between">
-									<div class="services__card--icon mb-20">
-										<img class="display-block services__card--primary__icon" src="{{asset('user/img/icon/service-icon1.webp')}}" alt="services-icon">
-										<img class="display-block services__card--secondary__icon" src="{{asset('user/img/icon/service-icon1-white.webp')}}" alt="services-icon">
-									</div>
-									<div class="services__card--number">
-										<span class="services__card--number__text">1</span>
-									</div>
-								</div>
-								<div class="services__card--content">
-									<h3 class="services__card--maintitle mb-15">Advanced Analytic</h3>
-									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
-									<span class="services__card--readmore text__secondary"> Read More
-										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
-									</span>
-								</div>
-							</a>
-						</article>
-					</div>
-					<div class="col custom-col mb-30">
-						<article class="services__card">
-							<a class="services__card--link" href="product-details.html">
-								<div class="services__card--topbar d-flex justify-content-between">
-									<div class="services__card--icon mb-20">
-										<img class="display-block services__card--primary__icon" src="{{asset('user/img/icon/service-icon1.webp')}}" alt="services-icon">
-										<img class="display-block services__card--secondary__icon" src="{{asset('user/img/icon/service-icon1-white.webp')}}" alt="services-icon">
-									</div>
-									<div class="services__card--number">
-										<span class="services__card--number__text">1</span>
-									</div>
-								</div>
-								<div class="services__card--content">
-									<h3 class="services__card--maintitle mb-15">Advanced Analytic</h3>
-									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
-									<span class="services__card--readmore text__secondary"> Read More
-										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
-									</span>
-								</div>
-							</a>
-						</article>
-					</div>
-					<div class="col custom-col mb-30">
-						<article class="services__card">
-							<a class="services__card--link" href="product-details.html">
-								<div class="services__card--topbar d-flex justify-content-between">
-									<div class="services__card--icon mb-20">
-										<img class="display-block services__card--primary__icon" src="{{asset('user/img/icon/service-icon1.webp')}}" alt="services-icon">
-										<img class="display-block services__card--secondary__icon" src="{{asset('user/img/icon/service-icon1-white.webp')}}" alt="services-icon">
-									</div>
-									<div class="services__card--number">
-										<span class="services__card--number__text">1</span>
-									</div>
-								</div>
-								<div class="services__card--content">
-									<h3 class="services__card--maintitle mb-15">Advanced Analytic</h3>
-									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
-									<span class="services__card--readmore text__secondary"> Read More
-										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
-									</span>
-								</div>
-							</a>
-						</article>
-					</div>
-					<div class="col custom-col mb-30">
-						<article class="services__card">
-							<a class="services__card--link" href="product-details.html">
-								<div class="services__card--topbar d-flex justify-content-between">
-									<div class="services__card--icon mb-20">
-										<img class="display-block services__card--primary__icon" src="{{asset('user/img/icon/service-icon1.webp')}}" alt="services-icon">
-										<img class="display-block services__card--secondary__icon" src="{{asset('user/img/icon/service-icon1-white.webp')}}" alt="services-icon">
-									</div>
-									<div class="services__card--number">
-										<span class="services__card--number__text">1</span>
-									</div>
-								</div>
-								<div class="services__card--content">
-									<h3 class="services__card--maintitle mb-15">Advanced Analytic</h3>
-									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
-									<span class="services__card--readmore text__secondary"> Read More
-										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
-									</span>
-								</div>
-							</a>
-						</article>
-					</div>
-					<div class="col custom-col mb-30">
-						<article class="services__card">
-							<a class="services__card--link" href="product-details.html">
-								<div class="services__card--topbar d-flex justify-content-between">
-									<div class="services__card--icon mb-20">
-										<img class="display-block services__card--primary__icon" src="{{asset('user/img/icon/service-icon1.webp')}}" alt="services-icon">
-										<img class="display-block services__card--secondary__icon" src="{{asset('user/img/icon/service-icon1-white.webp')}}" alt="services-icon">
-									</div>
-									<div class="services__card--number">
-										<span class="services__card--number__text">1</span>
-									</div>
-								</div>
-								<div class="services__card--content">
-									<h3 class="services__card--maintitle mb-15">Advanced Analytic</h3>
-									<p class="services__card--desc mb-15">Every team has a culture and set of ct ations that have either been aed orsve naturally evolved.</p>
-									<span class="services__card--readmore text__secondary"> Read More
-										<svg class="services__card--readmore__svg" xmlns="http://www.w3.org/2000/svg" width="15.51" height="15.443" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
-									</span>
-								</div>
-							</a>
-						</article>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End service section -->
-
-	<!-- Start about section -->
-	<section class="about__section section--padding border-bottom">
-		<div class="container">
-			<div class="row row-cols-md-1 row-cols-1  align-items-center mb-50">
-				<div class="col">
-					<h2 class="text-center text__secondary mb-10">ABOUT US</h2>
-				</div>
-			</div>
-			<div class="row row-cols-lg-2 row-cols-md-2 row-cols-1 align-items-center">
-				<div class="col">
-					<div class="about__content">
-						<h2 class="about__content--title mb-18">We Have This Builders 
-							Easy integrative.</h2>
-						<div class="about__content--step mb-25">
-							<p class="about__content--desc mb-20">Beyond more stoic this along goodness this sed wow manatee mongos 
-								flusterd impressive man farcrud opened inside owin punitively 
-								wasteful telling spransac coldly spokeles.</p>
-							<ul class="mb-20">
-								<li class="about__content--desc__list">Beyond drone is an to be contre unmanned aerial.</li>
-								<li class="about__content--desc__list">With various equipment including tho drone.</li>
-							</ul>
-							<p class="about__content--desc style2">Beyond more stoic this along goodness this sed wow 
-								flusterd impressive</p>
-						</div>
-						<div class="about__content--author d-flex align-items-center mb-50">
-							<div class="about__content--author__thumb">
-								<img class="display-block" src="{{asset('user/img/other/about-author.webp')}}" alt="about author thumb">
-							</div>
-							<div class="about__content--author__text d-flex align-items-center">
-								<div class="about__content--author__text--left">
-									<h3 class="about__content--author__name text__secondary">- Rubel Wilson,</h3>
-									<span class="about__content--author__rank">Founder</span>
-								</div>
-								<img class="about__author--signature display-block" src="{{asset('user/img/icon/signature.webp')}}" alt="signature">
-							</div>
-						</div>
-						<a class="about__content--btn primary__btn" href="contact.html">Ask For Price</a>
-					</div>
-				</div>
-				<div class="col">
-					<div class="about__thumbnail">
-						<img class="display-block" src="{{asset('user/img/other/about-thumb.webp')}}" alt="about-thumb">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End about section -->
-
-
-	<!-- Start team members section -->
-	<section class="team__section section--padding">
-		<div class="container">
-			<div class="section__heading text-center mb-50">
-				<h2 class="section__heading--maintitle text__secondary mb-10">Our Employees</h2>
-				<p class="section__heading--desc">Beyond more stoic this along goodness this sed wow manatee mongos 
-					flusterd impressive man farcrud opened.</p>
-			</div>
-			<div class="team__container">
-				<div class="row row-cols-md-3 row-cols-sm-2 row-cols-2 mb--n30">
-					<div class="col custom-col mb-30">
-						<article class="team__card">
-							<div class="team__card--thumbnail">
-								<img class="team__card--thumbnail__img display-block" src="{{asset('user/img/other/team1.webp')}}" alt="team-thumb">
-							</div>
-							<div class="team__card--content ">
-								<h3 class="team__card--content__title">Brandon Bokle </h3>
-								<span class="team__card--content__subtitle text__secondary">Secretary</span>
-								<ul class="team__card--content__info">
-									<li class="team__card--content__info--list">
-										<svg class="team__card--content__info--icon" xmlns="http://www.w3.org/2000/svg" width="15.797" height="20.05" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="currentColor" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path></svg>
-										<a href="tel:099-56336958">099 - 563 369 58</a>
-									</li>
-									<li class="team__card--content__info--list">
-										<svg class="team__card--content__info--icon" xmlns="http://www.w3.org/2000/svg" width="20.57" height="13.13" viewBox="0 0 31.57 31.13">
-											<path  d="M30.413,4H5.157C3.421,4,2.016,5.751,2.016,7.891L2,31.239c0,2.14,1.421,3.891,3.157,3.891H30.413c1.736,0,3.157-1.751,3.157-3.891V7.891C33.57,5.751,32.149,4,30.413,4Zm0,7.783L17.785,21.511,5.157,11.783V7.891l12.628,9.728L30.413,7.891Z" transform="translate(-2 -4)" fill="currentColor"></path>
-										</svg>
-										<a href="mailto:demo@example.com">demo@example.com</a>
-									</li>
-								</ul>
-							</div>
-						</article>
-					</div>
-					<div class="col custom-col mb-30">
-						<article class="team__card">
-							<div class="team__card--thumbnail">
-								<img class="team__card--thumbnail__img display-block" src="{{asset('user/img/other/team2.webp')}}" alt="team-thumb">
-							</div>
-							<div class="team__card--content ">
-								<h3 class="team__card--content__title">Sarrison Samuel </h3>
-								<span class="team__card--content__subtitle text__secondary">CEO - Founder</span>
-								<ul class="team__card--content__info">
-									<li class="team__card--content__info--list">
-										<svg class="team__card--content__info--icon" xmlns="http://www.w3.org/2000/svg" width="15.797" height="20.05" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="currentColor" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path></svg>
-										<a href="tel:099-56336958">099 - 563 369 58</a>
-									</li>
-									<li class="team__card--content__info--list">
-										<svg class="team__card--content__info--icon" xmlns="http://www.w3.org/2000/svg" width="20.57" height="13.13" viewBox="0 0 31.57 31.13">
-											<path  d="M30.413,4H5.157C3.421,4,2.016,5.751,2.016,7.891L2,31.239c0,2.14,1.421,3.891,3.157,3.891H30.413c1.736,0,3.157-1.751,3.157-3.891V7.891C33.57,5.751,32.149,4,30.413,4Zm0,7.783L17.785,21.511,5.157,11.783V7.891l12.628,9.728L30.413,7.891Z" transform="translate(-2 -4)" fill="currentColor"></path>
-										</svg>
-										<a href="mailto:demo@example.com">demo@example.com</a>
-									</li>
-								</ul>
-							</div>
-						</article>
-					</div>
-					<div class="col custom-col mb-30">
-						<article class="team__card">
-							<div class="team__card--thumbnail">
-								<img class="team__card--thumbnail__img display-block" src="{{asset('user/img/other/team1.webp')}}" alt="team-thumb">
-							</div>
-							<div class="team__card--content ">
-								<h3 class="team__card--content__title">Brandon Bokle </h3>
-								<span class="team__card--content__subtitle text__secondary">Secretary</span>
-								<ul class="team__card--content__info">
-									<li class="team__card--content__info--list">
-										<svg class="team__card--content__info--icon" xmlns="http://www.w3.org/2000/svg" width="15.797" height="20.05" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="currentColor" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path></svg>
-										<a href="tel:099-56336958">099 - 563 369 58</a>
-									</li>
-									<li class="team__card--content__info--list">
-										<svg class="team__card--content__info--icon" xmlns="http://www.w3.org/2000/svg" width="20.57" height="13.13" viewBox="0 0 31.57 31.13">
-											<path  d="M30.413,4H5.157C3.421,4,2.016,5.751,2.016,7.891L2,31.239c0,2.14,1.421,3.891,3.157,3.891H30.413c1.736,0,3.157-1.751,3.157-3.891V7.891C33.57,5.751,32.149,4,30.413,4Zm0,7.783L17.785,21.511,5.157,11.783V7.891l12.628,9.728L30.413,7.891Z" transform="translate(-2 -4)" fill="currentColor"></path>
-										</svg>
-										<a href="mailto:demo@example.com">demo@example.com</a>
-									</li>
-								</ul>
-							</div>
-						</article>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End team members section -->
-
+	
 	<!-- Start project section -->
 	<section class="project__section project__section--bg section--padding">
 		<div class="container">
 			<div class="section__heading text-center mb-20">
-				<h2 class="section__heading--maintitle text__secondary mb-10">Gallery</h2>
+				<h2 class="section__heading--maintitle text__secondary mb-10">Our Products</h2>
 				<p class="section__heading--desc">Beyond more stoic this along goodness this sed wow manatee mongos 
 					flusterd impressive man farcrud opened.</p>
 			</div>
@@ -973,6 +689,142 @@
 		</div>
 	</section>
 	<!-- End project section -->
+
+	<!-- Start about section -->
+	<section class="about__section section--padding border-bottom">
+		<div class="container">
+			<div class="row row-cols-md-1 row-cols-1  align-items-center mb-50">
+				<div class="col">
+					<h2 class="text-center text__secondary mb-10">ABOUT US</h2>
+				</div>
+			</div>
+			<div class="row row-cols-lg-2 row-cols-md-2 row-cols-1 align-items-center">
+				<div class="col">
+					<div class="about__content">
+						<h2 class="about__content--title mb-18">We Have This Builders 
+							Easy integrative.</h2>
+						<div class="about__content--step mb-25">
+							<p class="about__content--desc mb-20">Beyond more stoic this along goodness this sed wow manatee mongos 
+								flusterd impressive man farcrud opened inside owin punitively 
+								wasteful telling spransac coldly spokeles.</p>
+							<ul class="mb-20">
+								<li class="about__content--desc__list">Beyond drone is an to be contre unmanned aerial.</li>
+								<li class="about__content--desc__list">With various equipment including tho drone.</li>
+							</ul>
+							<p class="about__content--desc style2">Beyond more stoic this along goodness this sed wow 
+								flusterd impressive</p>
+						</div>
+						<div class="about__content--author d-flex align-items-center mb-50">
+							<div class="about__content--author__thumb">
+								<img class="display-block" src="{{asset('user/img/other/about-author.webp')}}" alt="about author thumb">
+							</div>
+							<div class="about__content--author__text d-flex align-items-center">
+								<div class="about__content--author__text--left">
+									<h3 class="about__content--author__name text__secondary">- Rubel Wilson,</h3>
+									<span class="about__content--author__rank">Founder</span>
+								</div>
+								<img class="about__author--signature display-block" src="{{asset('user/img/icon/signature.webp')}}" alt="signature">
+							</div>
+						</div>
+						<a class="about__content--btn primary__btn" href="contact.html">Ask For Price</a>
+					</div>
+				</div>
+				<div class="col">
+					<div class="about__thumbnail">
+						<img class="display-block" src="{{asset('user/img/other/about-thumb.webp')}}" alt="about-thumb">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End about section -->
+
+
+	<!-- Start team members section -->
+	<section class="team__section section--padding">
+		<div class="container">
+			<div class="section__heading text-center mb-50">
+				<h2 class="section__heading--maintitle text__secondary mb-10">Our Employees</h2>
+				<p class="section__heading--desc">Beyond more stoic this along goodness this sed wow manatee mongos 
+					flusterd impressive man farcrud opened.</p>
+			</div>
+			<div class="team__container">
+				<div class="row row-cols-md-3 row-cols-sm-2 row-cols-2 mb--n30">
+					<div class="col custom-col mb-30">
+						<article class="team__card">
+							<div class="team__card--thumbnail">
+								<img class="team__card--thumbnail__img display-block" src="{{asset('user/img/other/team1.webp')}}" alt="team-thumb">
+							</div>
+							<div class="team__card--content ">
+								<h3 class="team__card--content__title">Brandon Bokle </h3>
+								<span class="team__card--content__subtitle text__secondary">Secretary</span>
+								<ul class="team__card--content__info">
+									<li class="team__card--content__info--list">
+										<svg class="team__card--content__info--icon" xmlns="http://www.w3.org/2000/svg" width="15.797" height="20.05" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="currentColor" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path></svg>
+										<a href="tel:099-56336958">099 - 563 369 58</a>
+									</li>
+									<li class="team__card--content__info--list">
+										<svg class="team__card--content__info--icon" xmlns="http://www.w3.org/2000/svg" width="20.57" height="13.13" viewBox="0 0 31.57 31.13">
+											<path  d="M30.413,4H5.157C3.421,4,2.016,5.751,2.016,7.891L2,31.239c0,2.14,1.421,3.891,3.157,3.891H30.413c1.736,0,3.157-1.751,3.157-3.891V7.891C33.57,5.751,32.149,4,30.413,4Zm0,7.783L17.785,21.511,5.157,11.783V7.891l12.628,9.728L30.413,7.891Z" transform="translate(-2 -4)" fill="currentColor"></path>
+										</svg>
+										<a href="mailto:demo@example.com">demo@example.com</a>
+									</li>
+								</ul>
+							</div>
+						</article>
+					</div>
+					<div class="col custom-col mb-30">
+						<article class="team__card">
+							<div class="team__card--thumbnail">
+								<img class="team__card--thumbnail__img display-block" src="{{asset('user/img/other/team2.webp')}}" alt="team-thumb">
+							</div>
+							<div class="team__card--content ">
+								<h3 class="team__card--content__title">Sarrison Samuel </h3>
+								<span class="team__card--content__subtitle text__secondary">CEO - Founder</span>
+								<ul class="team__card--content__info">
+									<li class="team__card--content__info--list">
+										<svg class="team__card--content__info--icon" xmlns="http://www.w3.org/2000/svg" width="15.797" height="20.05" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="currentColor" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path></svg>
+										<a href="tel:099-56336958">099 - 563 369 58</a>
+									</li>
+									<li class="team__card--content__info--list">
+										<svg class="team__card--content__info--icon" xmlns="http://www.w3.org/2000/svg" width="20.57" height="13.13" viewBox="0 0 31.57 31.13">
+											<path  d="M30.413,4H5.157C3.421,4,2.016,5.751,2.016,7.891L2,31.239c0,2.14,1.421,3.891,3.157,3.891H30.413c1.736,0,3.157-1.751,3.157-3.891V7.891C33.57,5.751,32.149,4,30.413,4Zm0,7.783L17.785,21.511,5.157,11.783V7.891l12.628,9.728L30.413,7.891Z" transform="translate(-2 -4)" fill="currentColor"></path>
+										</svg>
+										<a href="mailto:demo@example.com">demo@example.com</a>
+									</li>
+								</ul>
+							</div>
+						</article>
+					</div>
+					<div class="col custom-col mb-30">
+						<article class="team__card">
+							<div class="team__card--thumbnail">
+								<img class="team__card--thumbnail__img display-block" src="{{asset('user/img/other/team1.webp')}}" alt="team-thumb">
+							</div>
+							<div class="team__card--content ">
+								<h3 class="team__card--content__title">Brandon Bokle </h3>
+								<span class="team__card--content__subtitle text__secondary">Secretary</span>
+								<ul class="team__card--content__info">
+									<li class="team__card--content__info--list">
+										<svg class="team__card--content__info--icon" xmlns="http://www.w3.org/2000/svg" width="15.797" height="20.05" viewBox="0 0 512 512"><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="currentColor" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path></svg>
+										<a href="tel:099-56336958">099 - 563 369 58</a>
+									</li>
+									<li class="team__card--content__info--list">
+										<svg class="team__card--content__info--icon" xmlns="http://www.w3.org/2000/svg" width="20.57" height="13.13" viewBox="0 0 31.57 31.13">
+											<path  d="M30.413,4H5.157C3.421,4,2.016,5.751,2.016,7.891L2,31.239c0,2.14,1.421,3.891,3.157,3.891H30.413c1.736,0,3.157-1.751,3.157-3.891V7.891C33.57,5.751,32.149,4,30.413,4Zm0,7.783L17.785,21.511,5.157,11.783V7.891l12.628,9.728L30.413,7.891Z" transform="translate(-2 -4)" fill="currentColor"></path>
+										</svg>
+										<a href="mailto:demo@example.com">demo@example.com</a>
+									</li>
+								</ul>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End team members section -->
+
 
 
 

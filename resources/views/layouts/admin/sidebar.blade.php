@@ -26,32 +26,47 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white my-1 collapse-inner rounded">
-                <a class="collapse-item" href="{{route('admin.dashboard.product.home')}}">Product</a>
+                <a class="collapse-item" href="{{route('admin.dashboard.product.home')}}">Manage Product</a>
             </div>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3"
+            aria-expanded="true" aria-controls="collapse3">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Employe</span>
+        </a>
+        <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white my-1 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Sub Category</a>
+                <a class="collapse-item" href="{{route('admin.dashboard.product.home')}}">Manage Employe</a>
             </div>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse5"
+            aria-expanded="true" aria-controls="collapse5">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Gallery</span>
+        </a>
+        <div id="collapse5" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white my-1 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Child Category</a>
+                <a class="collapse-item" href="{{route('admin.dashboard.product.home')}}">Manage Gallery</a>
             </div>
         </div>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3"
-            aria-expanded="true" aria-controls="collapse3">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse4"
+            aria-expanded="true" aria-controls="collapse4">
             <i class="fas fa-fw fa-cog"></i>
             <span>Settings</span>
         </a>
-        <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapse4" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white my-1 collapse-inner rounded">
                 <a class="collapse-item" href="buttons.html">Seo Setting</a>
             </div>
             <div class="bg-white my-1 collapse-inner rounded">
                 <a class="collapse-item" href="buttons.html">SMTP Mail Setting</a>
-            </div>
-            <div class="bg-white my-1 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Page Manage</a>
             </div>
         </div>
     </li>

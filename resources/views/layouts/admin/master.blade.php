@@ -61,5 +61,22 @@
     <script src="{{asset('admin/js/demo/datatables-demo.js')}}"></script>
     <script src="{{asset('admin/js/custome.js')}}"></script>
 
+
+    <script>
+        var desc;
+        ClassicEditor
+            .create(document.querySelector('#ck_editor'), {
+                ckfinder: {
+                    uploadUrl: '{{ route('admin.image.upload') . '?_token=' . csrf_token() }}',
+                }
+            })
+            .then(editor => {
+                console.log(editor)
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
     </body>
 </html>

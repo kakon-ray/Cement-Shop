@@ -14,13 +14,13 @@ Route::middleware(['AdminAuth', 'VerifiedAdminEmail'])->group(function () {
 
         // dashboard route
         Route::name('dashboard.')->prefix('dashboard')->group(function () {
-            Route::get('home', [DashboardController::class, 'dashboard'])->name('home');
+            Route::get('/', [DashboardController::class, 'dashboard'])->name('home');
         });
 
         // category start
         Route::name('dashboard.')->prefix('dashboard')->group(function () {
             Route::name('product.')->prefix('product')->group(function () {
-                Route::get('home', [ProductController::class, 'product'])->name('home');
+                Route::get('/', [ProductController::class, 'product'])->name('home');
                 Route::get('add', [ProductController::class, 'add_product'])->name('add');
                 Route::get('update/{id}', [ProductController::class, 'update_product'])->name('update');
                 Route::post('add/submit', [ProductController::class, 'add_product_submit'])->name('add.submit');

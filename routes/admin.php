@@ -29,6 +29,7 @@ Route::middleware(['AdminAuth', 'VerifiedAdminEmail'])->group(function () {
             });
             Route::name('gallery.')->prefix('gallery')->group(function () {
                 Route::get('/', [GalleryController::class, 'gallery'])->name('home');
+                Route::post('store', [GalleryController::class, 'store'])->name('store');
             });
         });
 

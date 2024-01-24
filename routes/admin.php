@@ -28,7 +28,8 @@ Route::middleware(['AdminAuth', 'VerifiedAdminEmail'])->group(function () {
                 Route::get('delete', [ProductController::class, 'delete_product_submit']);
             });
             Route::name('gallery.')->prefix('gallery')->group(function () {
-                Route::get('/', [GalleryController::class, 'gallery'])->name('home');
+                Route::get('/', [GalleryController::class, 'index'])->name('home');
+                Route::get('gallery', [GalleryController::class, 'gallery'])->name('add');
                 Route::post('store', [GalleryController::class, 'store'])->name('store');
             });
         });

@@ -13,8 +13,14 @@ use Intervention\Image\Facades\Image;
 
 class GalleryController extends Controller
 {
+    public function index()
+    {
+        $allgallery = Gallery::all();
+        return view('admin.gallery.index',compact('allgallery'));
+    }
     public function gallery()
     {
+
         return view('admin.gallery.addgallery');
     }
 
@@ -69,10 +75,16 @@ class GalleryController extends Controller
                 //multiple images
                 $images = array();
                 if ($request->hasFile('images')) {
-                    foreach ($request->file('images') as $key => $image) {
-                        $imageName = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
-                        Image::make($image)->resize(600, 600)->save('public/images/' . $imageName);
-                        array_push($images, $imageName);
+                    foreach ($request->file('images') as $key => $image2) {
+                        $imageName = hexdec(uniqid()) . '.' . $image2->getClientOriginalExtension();
+
+                        $img = Image::make($image2);
+                        $img->resize(320, 240)->save(public_path('uploads/' . $imageName));
+
+                        $host = $_SERVER['HTTP_HOST'];
+                        $imageLink = "http://" . $host . "/uploads/" . $imageName;
+
+                        array_push($images, $imageLink);
                     }
                     $data['images'] = json_encode($images);
                 }
@@ -88,7 +100,7 @@ class GalleryController extends Controller
             if ($gallery != null) {
                 return response()->json([
                     'status' => 200,
-                    'msg' => 'Submited New Products'
+                    'msg' => 'Submited New Images'
                 ]);
             } else {
                 return response()->json([

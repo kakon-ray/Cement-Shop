@@ -54,7 +54,7 @@
                                     <div class="my-4">
                                         <h3 class="card-title">More Images (Click Add For More Image)</h3>
                                         <div class="my-4" id="dynamic_field">
-                                            <input type="file" accept="image/*" name="images[1]"
+                                            <input type="file" accept="image/*" name="images[]"
                                                 class="form-control my-4" />
                                         </div>
 

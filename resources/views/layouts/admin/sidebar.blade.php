@@ -53,8 +53,10 @@
         </a>
         <div id="collapse5" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white my-1 collapse-inner rounded">
-                <a class="collapse-item" href="{{route('admin.dashboard.product.home')}}">Manage Gallery</a>
-                <a class="collapse-item" href="{{route('admin.dashboard.gallery.home')}}">Add Gallery</a>
+                <a class="collapse-item" href="{{route('admin.dashboard.gallery.home')}}">Manage Gallery</a>
+            </div>
+            <div class="bg-white my-1 collapse-inner rounded">
+                <a class="collapse-item" href="{{route('admin.dashboard.gallery.add')}}">Add Gallery</a>
             </div>
         </div>
     </li>

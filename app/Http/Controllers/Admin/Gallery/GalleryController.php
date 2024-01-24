@@ -55,31 +55,37 @@ class GalleryController extends Controller
                 $data = array();
 
                 if ($request->thumbnail) {
-                    $thumbnail = $request->thumbnail;
-                    $photoname = $slug . '.' . $thumbnail->getClientOriginalExtension();
-                    $photoname = Image::make($thumbnail)->resize(600, 600)->save('public/files/product/'.$photoname);
-                    $data['thumbnail'] = $photoname;   // public/files/product/plus-point.jpg
+                    $file = $request->file('thumbnail');
+                    $filename = $slug . '.' . $file->getClientOriginalExtension();
+
+                    $img = Image::make($file);
+                    $img->resize(320, 240)->save(public_path('uploads/' . $filename));
+
+                    $host = $_SERVER['HTTP_HOST'];
+                    $image = "http://" . $host . "/uploads/" . $filename;
+
+                    $data['thumbnail'] = $image;   //http://127.0.0.1:8000/uploads/kakon-ray.jpg
                 }
                 //multiple images
                 $images = array();
                 if ($request->hasFile('images')) {
                     foreach ($request->file('images') as $key => $image) {
                         $imageName = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
-                        Image::make($image)->resize(600, 600)->save('public/files/product/' . $imageName);
+                        Image::make($image)->resize(600, 600)->save('public/images/' . $imageName);
                         array_push($images, $imageName);
                     }
                     $data['images'] = json_encode($images);
                 }
 
 
-                DB::table('galleries')->insert($data);
+                $gallery = Gallery::insert($data);
 
                 DB::commit();
             } catch (\Exception $err) {
-                $products = null;
+                $gallery = null;
             }
 
-            if ($products != null) {
+            if ($gallery != null) {
                 return response()->json([
                     'status' => 200,
                     'msg' => 'Submited New Products'

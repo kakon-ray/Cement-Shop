@@ -31,6 +31,7 @@ Route::middleware(['AdminAuth', 'VerifiedAdminEmail'])->group(function () {
                 Route::get('/', [GalleryController::class, 'index'])->name('home');
                 Route::get('gallery', [GalleryController::class, 'gallery'])->name('add');
                 Route::post('store', [GalleryController::class, 'store'])->name('store');
+                Route::post('thumbnail/delete', [GalleryController::class, 'thumbnail_delete'])->name('thumbnail.delete');
             });
         });
 

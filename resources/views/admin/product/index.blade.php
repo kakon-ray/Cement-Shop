@@ -75,7 +75,7 @@
                                                         <button type="button"
                                                             onclick="delete_product({!! $item->id !!})"
                                                             class="btn btn-danger btn-circle btn-sm"><i
-                                                                class="fas fa-trash"></i></a>
+                                                                class="fas fa-trash"></i></button>
                                                     </td>
                                                 </tr>
                                             @endforeach

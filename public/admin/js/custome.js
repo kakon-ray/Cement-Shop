@@ -78,7 +78,7 @@ $(document).ready(function () {
 
 
 
-    //Admin login submit alert
+    //custome alert
     $('body').on('submit','#product',function(e){
       e.preventDefault();
   
@@ -100,7 +100,42 @@ $(document).ready(function () {
               customClass: 'swalstyle',
             });
 
-            window.location.href = '/admin/dashboard/product/home';
+            window.location.href = '/admin/dashboard/gallery';
+          }else{
+            Swal.fire({
+              icon: "error",
+              title: data.msg,
+              text: "Thanks",
+              timer: 1500,
+              showConfirmButton: false,
+              customClass: 'swalstyle',
+            });
+          }
+       }
+  })
+  })
+    $('body').on('submit','#gallery',function(e){
+      e.preventDefault();
+  
+      $.ajax({
+      url: $(this).attr('action'),
+      method:"POST",
+      data: new FormData(this),
+      contentType:false,
+      cache:false,
+      processData: false,
+      success: function(data){
+          if (data.status == 200) {
+             Swal.fire({
+              icon: "success",
+              title: data.msg,
+              text: "Thanks",
+              timer: 1500,
+              showConfirmButton: false,
+              customClass: 'swalstyle',
+            });
+
+            window.location.href = '/admin/dashboard/gallery';
           }else{
             Swal.fire({
               icon: "error",

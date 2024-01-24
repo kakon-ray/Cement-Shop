@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="card m-0 p-4">
-                                <form method="POST" action="{{ route('admin.dashboard.gallery.store') }}" id=""
+                                <form method="POST" action="{{ route('admin.dashboard.gallery.store') }}" id="gallery"
                                     enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">

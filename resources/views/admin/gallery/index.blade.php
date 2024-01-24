@@ -4,6 +4,12 @@
 @endsection
 
 @section('content')
+    <style>
+        .delete-button {
+            position: absolute;
+            top: 10px;
+        }
+    </style>
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -24,7 +30,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12 px-4 py-3 d-flex justify-content-end">
-                            <a href="{{ route('admin.dashboard.product.add') }}" class="btn btn-info"> + Add New
+                            <a href="{{ route('admin.dashboard.gallery.add') }}" class="btn btn-info"> + Add New
                                 Product</a>
 
                         </div>
@@ -33,7 +39,25 @@
                             <div class="row">
                                 @foreach ($allgallery as $item)
                                     <div class="col-lg-4 my-2">
-                                        <img src="{{ $item->thumbnail }}" class="img-fluid" alt="All Image">
+                                        <div class="card p-3">
+                                            <img src="{{ $item->thumbnail }}" class="img-fluid" alt="All Image">
+                                            <form method="POST"
+                                                action="{{ route('admin.dashboard.gallery.thumbnail.delete') }}"
+                                                id="gallery">
+                                                @csrf
+                                                <input type="text" class="d-none" name="item"
+                                                    value="{{ $item->thumbnail }}">
+                                                <input type="text" class="d-none" name="id"
+                                                    value="{{ $item->id }}">
+
+
+                                                <button type="submit"
+                                                    class="btn btn-danger btn-circle btn-sm delete-button"><i
+                                                        class="fas fa-trash"></i></button>
+                                            </form>
+
+                                        </div>
+
                                     </div>
                                 @endforeach
                             </div>
@@ -46,7 +70,10 @@
                                 @foreach ($allgallery as $item)
                                     @foreach (json_decode($item->images) as $item2)
                                         <div class="col-lg-4 my-2">
-                                            <img src="{{ $item2 }}" class="img-fluid" alt="All Image">
+                                            <div class="card p-3">
+                                                <img src="{{ $item2 }}" class="img-fluid" alt="All Image">
+
+                                            </div>
                                         </div>
                                     @endforeach
                                 @endforeach
@@ -98,73 +125,4 @@
             </div>
         </div>
     </div>
-
-
-    <script>
-        const delete_product = (id) => {
-            Swal.fire({
-                customClass: 'swalstyle',
-                title: 'Are you sure?',
-                text: "Delete this Item",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    axios
-                        .get("/admin/dashboard/product/delete", {
-                            params: {
-                                id: id
-                            }
-                        })
-                        .then(function(response) {
-
-                            if (response.data.status == 200) {
-                                Swal.fire({
-                                    customClass: 'swalstyle',
-                                    position: 'top-center',
-                                    icon: 'success',
-                                    title: response.data.msg,
-                                    showConfirmButton: false,
-                                    timer: 1500
-
-                                })
-                                setTimeout(function() {
-                                    location.reload();
-                                }, 1500);
-
-
-                            } else {
-                                Swal.fire({
-                                    customClass: 'swalstyle',
-                                    position: 'top-center',
-                                    icon: 'error',
-                                    title: response.data.msg,
-                                    text: response.data.err_msg,
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                })
-                            }
-
-
-                        })
-                        .catch(function(error) {
-                            Swal.fire({
-                                customClass: 'swalstyle',
-                                position: 'top-center',
-                                icon: 'error',
-                                title: error.message,
-                                showConfirmButton: false,
-                                timer: 1500
-                            });
-                        });
-                }
-            })
-
-
-
-        }
-    </script>
 @endsection

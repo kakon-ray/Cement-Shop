@@ -30,7 +30,7 @@
                         <div class="col-lg-12">
                             <div class="card m-0 p-4">
                                 <form method="POST" action="{{ route('admin.dashboard.employee.update.submit') }}"
-                                    id="" enctype="multipart/form-data">
+                                    id="employee" enctype="multipart/form-data">
                                     @csrf
 
                                     <input required type="text" class="d-none" name="id"

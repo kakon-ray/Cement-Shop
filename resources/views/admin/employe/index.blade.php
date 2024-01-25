@@ -54,7 +54,9 @@
                                                     <td><img src="{{ $item->image  }}" style="height: 100px"
                                                         class="img-fluid" alt="Products"></td>
                                                     <td>{{ $item->address }}</td>
-                                                    <td>{{ $item->qrcode }}</td>
+                                                    <td>
+                                                        {!! QrCode::size(100)->generate($item->email) !!}
+                                                    </td>
                                           
                                                     <td>
                                                         <a href="{{ route('admin.dashboard.employee.update', ['id' => $item->id]) }}"

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
+use App\Http\Controllers\Admin\Employe\EmployeController;
 use App\Http\Controllers\Admin\Gallery\GalleryController;
 use App\Http\Controllers\Admin\Product\ProductController;
 
@@ -27,11 +28,21 @@ Route::middleware(['AdminAuth', 'VerifiedAdminEmail'])->group(function () {
                 Route::post('update/submit', [ProductController::class, 'update_product_submit'])->name('update.submit');
                 Route::get('delete', [ProductController::class, 'delete_product_submit']);
             });
+
             Route::name('gallery.')->prefix('gallery')->group(function () {
                 Route::get('/', [GalleryController::class, 'index'])->name('home');
                 Route::get('gallery', [GalleryController::class, 'gallery'])->name('add');
                 Route::post('store', [GalleryController::class, 'store'])->name('store');
                 Route::post('thumbnail/delete', [GalleryController::class, 'thumbnail_delete'])->name('thumbnail.delete');
+            });
+
+            Route::name('employee.')->prefix('employee')->group(function () {
+                Route::get('/', [EmployeController::class, 'index'])->name('home');
+                Route::get('add', [EmployeController::class, 'add'])->name('add');
+                Route::post('add/submit', [EmployeController::class, 'add_employe_submit'])->name('add.submit');
+                Route::get('update', [EmployeController::class, 'edit_employe'])->name('update');
+                Route::post('update/submit', [EmployeController::class, 'edit_employe_submit'])->name('update.submit');
+                Route::get('delete', [EmployeController::class, 'delete_employee_submit']);
             });
         });
 

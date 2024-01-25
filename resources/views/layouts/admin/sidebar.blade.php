@@ -41,7 +41,10 @@
         </a>
         <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white my-1 collapse-inner rounded">
-                <a class="collapse-item" href="{{route('admin.dashboard.product.home')}}">Manage Employe</a>
+                <a class="collapse-item" href="{{route('admin.dashboard.employee.home')}}">Manage Employe</a>
+            </div>
+            <div class="bg-white my-1 collapse-inner rounded">
+                <a class="collapse-item" href="{{route('admin.dashboard.employee.add')}}">Add Employe</a>
             </div>
         </div>
     </li>

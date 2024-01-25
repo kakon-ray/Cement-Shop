@@ -22,7 +22,8 @@ return new class extends Migration
             $table->string('rod_brand')->nullable();
             $table->string('rod_size')->nullable();
             $table->text('product_details')->nullable();
-            $table->string('image')->nullable();
+            $table->string('thumbnail')->nullable();
+            $table->text('images')->nullable();
             $table->string('price')->nullable();
             $table->timestamps();
         });

@@ -64,7 +64,7 @@
                                                     <td>{{ $item->rod_size }}</td>
                                                     <td>{{ $item->price }}</td>
                                                     <td>
-                                                        <img src="{{ $item->image }}" style="height: 100px"
+                                                        <img src="{{ $item->thumbnail }}" style="height: 100px"
                                                             class="img-fluid" alt="Products">
                                                     </td>
                                                     <td>

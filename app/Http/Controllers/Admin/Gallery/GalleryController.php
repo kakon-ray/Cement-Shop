@@ -37,7 +37,7 @@ class GalleryController extends Controller
 
         $arrayValidate  = [
             'name' => 'required',
-            'thumbnail' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
+            'thumbnail' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg'],
 
         ];
 
@@ -131,27 +131,35 @@ class GalleryController extends Controller
 
             try {
 
-                // image file delete kora hocce jodi image file delete hoy tarpor databse theke data delete kora hobe
+                // delete single image file in public folder inside uploads folder
                 $pathinfo = pathinfo($request->item);
                 $filename = $pathinfo['basename'];
                 $image_path = public_path("/uploads/") . $filename;
 
                 if (File::exists($image_path)) {
                     File::delete($image_path);
-
-                    $gallery->delete();
-                    DB::commit();
-
-                    return response()->json([
-                        'status' => 200,
-                        'msg' => 'Delete This Product',
-                    ], 200);
-                } else {
-                    return response()->json([
-                        'status' => 200,
-                        'msg' => 'Image Path Not Found',
-                    ], 200);
                 }
+
+                // multiple image delete start
+
+                foreach (json_decode($gallery->images) as $item) {
+                    $allimagePathInfo = pathinfo($item);
+                    $allImageFilename = $allimagePathInfo['basename'];
+                    $all_image_path = public_path("/uploads/") . $allImageFilename;
+
+                    if (File::exists($all_image_path)) {
+                        File::delete($all_image_path);
+                    }
+                }
+                // multiple image delete end
+
+                $gallery->delete();
+                DB::commit();
+
+                return response()->json([
+                    'status' => 200,
+                    'msg' => 'Delete This Image',
+                ], 200);
             } catch (\Exception $err) {
 
                 DB::rollBack();

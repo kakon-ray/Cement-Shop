@@ -121,14 +121,24 @@
                                     <div class="row mb-4">
                                         <div class="col-lg-6">
                                             <label class="form-label">Product Image</label>
-                                            <input type="file" name="image" required="" accept="image/*"
-                                            class="dropify">
+                                            <input type="file" name="thumbnail" required="" accept="image/*"
+                                                class="dropify">
                                         </div>
 
                                         <div class="col-lg-6">
                                             <label>Product Price</label>
                                             <input required type="text" class="form-control" name="price"
                                                 placeholder="10000">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="my-4" id="dynamic_field">
+                                                <label>More Images (Click Add For More Image)</label>
+                                                <input type="file" accept="image/*" name="images[]"
+                                                    class="form-control" />
+                                            </div>
+
+                                            <button type="button" name="add" id="add"
+                                                class="btn btn-success">Add</button>
                                         </div>
                                     </div>
 
@@ -179,7 +189,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://jeremyfagis.github.io/dropify/dist/js/dropify.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://jeremyfagis.github.io/dropify/dist/css/dropify.min.css">
-
+    <script src="{{ asset('public/backend') }}/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    
     {{-- tagsinput --}}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script>
@@ -201,7 +212,25 @@
             $(this).bootstrapSwitch('state', $(this).prop('checked'));
         });
 
+        // multiple image upload
+        $(document).ready(function() {
+            var postURL = "<?php echo url('addmore'); ?>";
+            var i = 1;
 
 
+            $('#add').click(function() {
+                i++;
+                $('#dynamic_field').append('<tr id="row' + i +
+                    '" class="dynamic-added"><td><input type="file" accept="image/*" name="images[' +
+                    i +
+                    ']" class="form-control name_list" /></td><td><button type="button" name="remove" id="' +
+                    i + '" class="btn btn-danger btn_remove">X</button></td></tr>');
+            });
+
+            $(document).on('click', '.btn_remove', function() {
+                var button_id = $(this).attr("id");
+                $('#row' + button_id + '').remove();
+            });
+        });
     </script>
 @endsection

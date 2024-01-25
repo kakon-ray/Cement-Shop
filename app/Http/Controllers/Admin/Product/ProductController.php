@@ -31,7 +31,6 @@ class ProductController extends Controller
     public function add_product_submit(Request $request)
     {
 
-
         if ($request->category == 'cement') {
 
             $arrayRequest = [
@@ -39,7 +38,7 @@ class ProductController extends Controller
                 'cement_brand' => $request->cement_brand,
                 'cement_brand_type' => $request->cement_brand_type,
                 'product_details' => $request->product_details,
-                'image' => $request->image,
+                'thumbnail' => $request->thumbnail,
                 'price' => $request->price,
             ];
 
@@ -49,7 +48,7 @@ class ProductController extends Controller
                 'cement_brand_type' => 'required',
                 'product_details' => 'required',
                 'brand_title' => 'required',
-                'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
+                'thumbnail' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
                 'price' => "required|regex:/^\d+(\.\d{1,2})?$/"
 
             ];
@@ -60,7 +59,7 @@ class ProductController extends Controller
                 'rod_brand' => $request->rod_brand,
                 'rod_size' => $request->rod_size,
                 'product_details' => $request->product_details,
-                'image' => $request->image,
+                'thumbnail' => $request->thumbnail,
                 'price' => $request->price,
             ];
 
@@ -70,7 +69,7 @@ class ProductController extends Controller
                 'rod_size' => 'required',
                 'product_details' => 'required',
                 'brand_title' => 'required',
-                'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
+                'thumbnail' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
                 'price' => "required|regex:/^\d+(\.\d{1,2})?$/"
             ];
         }
@@ -96,15 +95,31 @@ class ProductController extends Controller
                 // single thumbnil image upload
                 $slug = Str::slug($request->brand_title, '-');
 
-                if ($request->image) {
-                    $file = $request->file('image');
+                if ($request->thumbnail) {
+                    $file = $request->file('thumbnail');
                     $filename = $slug . '.' . $file->getClientOriginalExtension();
 
                     $img = Image::make($file);
                     $img->resize(500, 500)->save(public_path('uploads/' . $filename));
 
                     $host = $_SERVER['HTTP_HOST'];
-                    $image = "http://" . $host . "/uploads/" . $filename;
+                    $thumbnail = "http://" . $host . "/uploads/" . $filename;
+                }
+
+                //multiple images uploads
+                $images = array();
+                if ($request->hasFile('images')) {
+                    foreach ($request->file('images') as $key => $image2) {
+                        $imageName = hexdec(uniqid()) . '.' . $image2->getClientOriginalExtension();
+
+                        $img = Image::make($image2);
+                        $img->resize(320, 240)->save(public_path('uploads/' . $imageName));
+
+                        $host = $_SERVER['HTTP_HOST'];
+                        $imageLink = "http://" . $host . "/uploads/" . $imageName;
+
+                        array_push($images, $imageLink);
+                    }
                 }
 
                 $products = Products::create([
@@ -115,7 +130,8 @@ class ProductController extends Controller
                     'rod_brand' => $request->rod_brand,
                     'rod_size' => $request->rod_size,
                     'product_details' => $request->product_details,
-                    'image' => $image,
+                    'thumbnail' => $thumbnail,
+                    'images' => json_encode($images),
                     'price' => $request->price,
 
 
@@ -151,7 +167,7 @@ class ProductController extends Controller
                 'status' => 404
             ], 404);
         } else {
-            if ($request->image) {
+            if ($request->thumbnail) {
 
                 if ($request->category == 'cement') {
 
@@ -160,7 +176,7 @@ class ProductController extends Controller
                         'cement_brand' => $request->cement_brand,
                         'cement_brand_type' => $request->cement_brand_type,
                         'product_details' => $request->product_details,
-                        'image' => $request->image,
+                        'thumbnail' => $request->thumbnail,
                         'price' => $request->price,
                     ];
 
@@ -170,7 +186,7 @@ class ProductController extends Controller
                         'cement_brand_type' => 'required',
                         'product_details' => 'required',
                         'brand_title' => 'required',
-                        'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
+                        'thumbnail' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
                         'price' => "required|regex:/^\d+(\.\d{1,2})?$/"
 
                     ];
@@ -181,7 +197,7 @@ class ProductController extends Controller
                         'rod_brand' => $request->rod_brand,
                         'rod_size' => $request->rod_size,
                         'product_details' => $request->product_details,
-                        'image' => $request->image,
+                        'thumbnail' => $request->thumbnail,
                         'price' => $request->price,
                     ];
 
@@ -191,7 +207,7 @@ class ProductController extends Controller
                         'rod_size' => 'required',
                         'product_details' => 'required',
                         'brand_title' => 'required',
-                        'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
+                        'thumbnail' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
                         'price' => "required|regex:/^\d+(\.\d{1,2})?$/"
 
                     ];
@@ -261,17 +277,35 @@ class ProductController extends Controller
                     // single thumbnil image upload
                     $slug = Str::slug($request->brand_title, '-');
 
-                    if ($request->image) {
-                        $file = $request->file('image');
+                    if ($request->thumbnail) {
+                        $file = $request->file('thumbnail');
                         $filename = $slug . '.' . $file->getClientOriginalExtension();
 
                         $img = Image::make($file);
                         $img->resize(500, 500)->save(public_path('uploads/' . $filename));
 
                         $host = $_SERVER['HTTP_HOST'];
-                        $image = "http://" . $host . "/uploads/" . $filename;
+                        $thumbnail = "http://" . $host . "/uploads/" . $filename;
                     } else {
-                        $image = $request->old_image;
+                        $thumbnail = $request->old_image;
+                    }
+
+                    //multiple images uploads
+                    $images = array();
+                    if ($request->hasFile('images')) {
+                        foreach ($request->file('images') as $key => $image2) {
+                            $imageName = hexdec(uniqid()) . '.' . $image2->getClientOriginalExtension();
+
+                            $img = Image::make($image2);
+                            $img->resize(320, 240)->save(public_path('uploads/' . $imageName));
+
+                            $host = $_SERVER['HTTP_HOST'];
+                            $imageLink = "http://" . $host . "/uploads/" . $imageName;
+
+                            array_push($images, $imageLink);
+                        }
+                    }else{
+                        $images = $product->images;
                     }
 
                     $product->brand_title = $request->brand_title;
@@ -282,7 +316,8 @@ class ProductController extends Controller
                     $product->rod_size = $request->rod_size;
                     $product->product_details = $request->product_details;
                     $product->price = $request->price;
-                    $product->image = $image;
+                    $product->thumbnail = $thumbnail;
+                    $product->images = $images;
                     $product->save();
 
                     DB::commit();
@@ -321,29 +356,39 @@ class ProductController extends Controller
             DB::beginTransaction();
 
             try {
-                // image file delete kora hocce jodi image file delete hoy tarpor databse theke data delete kora hobe
-                $pathinfo = pathinfo($product->image);
+                // single thumbnail file delete kora hocce jodi image file delete hoy tarpor databse theke data delete kora hobe
+                $pathinfo = pathinfo($product->thumbnail);
                 $filename = $pathinfo['basename'];
                 $image_path = public_path("/uploads/") . $filename;
 
                 if (File::exists($image_path)) {
                     File::delete($image_path);
 
-                    $product->delete();
-                    DB::commit();
-
-                    return response()->json([
-                        'status' => 200,
-                        'msg' => 'Delete This Product',
-                    ], 200);
-
-
-                } else {
-                    return response()->json([
-                        'status' => 200,
-                        'msg' => 'Image Path Not Found',
-                    ], 200);
                 }
+
+                // multiple image delete start
+ 
+                foreach(json_decode($product->images) as $item){
+                    $allimagePathInfo = pathinfo($item);
+                    $allImageFilename = $allimagePathInfo['basename'];
+                    $all_image_path = public_path("/uploads/") . $allImageFilename;
+
+                    if (File::exists($all_image_path)) {
+                        File::delete($all_image_path);
+                    }
+              
+                }
+                // multiple image delete end
+
+                $product->delete();
+                DB::commit();
+
+                return response()->json([
+                    'status' => 200,
+                    'msg' => 'Delete This Product',
+                ], 200);
+
+
             } catch (\Exception $err) {
 
                 DB::rollBack();

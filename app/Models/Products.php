@@ -18,7 +18,8 @@ class Products extends Model
         'rod_brand',
         'rod_size',
         'product_details',
-        'image',
+        'thumbnail',
+        'images',
         'price',
     ];
 }

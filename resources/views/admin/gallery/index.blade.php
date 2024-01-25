@@ -68,14 +68,16 @@
                             <h2 class="py-3">All Image </h2>
                             <div class="row">
                                 @foreach ($allgallery as $item)
-                                    @foreach (json_decode($item->images) as $item2)
-                                        <div class="col-lg-4 my-2">
-                                            <div class="card p-3">
-                                                <img src="{{ $item2 }}" class="img-fluid" alt="All Image">
+                                    @if ($item->images)
+                                        @foreach (json_decode($item->images) as $item2)
+                                            <div class="col-lg-4 my-2">
+                                                <div class="card p-3">
+                                                    <img src="{{ $item2 }}" class="img-fluid" alt="All Image">
 
+                                                </div>
                                             </div>
-                                        </div>
-                                    @endforeach
+                                        @endforeach
+                                    @endif
                                 @endforeach
                             </div>
 

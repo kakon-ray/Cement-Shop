@@ -100,7 +100,7 @@ $(document).ready(function () {
               customClass: 'swalstyle',
             });
 
-            window.location.href = '/admin/dashboard/gallery';
+            window.location.href = '/admin/dashboard/product';
           }else{
             Swal.fire({
               icon: "error",

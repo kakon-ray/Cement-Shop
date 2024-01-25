@@ -74,7 +74,8 @@
                                         <div class="col-lg-6">
                                             <label>Cement Brand Type</label>
                                             <input required type="text" id="tags" class="form-control"
-                                                name="cement_brand_type" value="0" required  placeholder="PCC AM OPC MPC">
+                                                name="cement_brand_type" value="0" required
+                                                placeholder="PCC AM OPC MPC">
 
                                         </div>
 
@@ -120,7 +121,8 @@
                                     <div class="row mb-4">
                                         <div class="col-lg-6">
                                             <label class="form-label">Product Image</label>
-                                            <input name="image" type="file" class="form-control">
+                                            <input type="file" name="image" required="" accept="image/*"
+                                            class="dropify">
                                         </div>
 
                                         <div class="col-lg-6">
@@ -173,16 +175,33 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
 
 
+    {{-- image upload --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://jeremyfagis.github.io/dropify/dist/js/dropify.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://jeremyfagis.github.io/dropify/dist/css/dropify.min.css">
+
     {{-- tagsinput --}}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/@yaireo/tagify"></script>
     <script src="https://unpkg.com/@yaireo/tagify@3.1.0/dist/tagify.polyfills.min.js"></script>
-    <script>
+
+    <script type="text/javascript">
         // The DOM element you wish to replace with Tagify
         var input = document.querySelector('#tags');
 
         // initialize Tagify on the above input node reference
         new Tagify(input)
+
+
+
+        //thumbline image upload 
+        $('.dropify').dropify(); //dropify image
+        $("input[data-bootstrap-switch]").each(function() {
+            $(this).bootstrapSwitch('state', $(this).prop('checked'));
+        });
+
+
+
     </script>
 @endsection

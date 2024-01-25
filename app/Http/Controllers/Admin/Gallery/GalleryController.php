@@ -58,6 +58,7 @@ class GalleryController extends Controller
 
             try {
 
+                // single thumbnil image upload
                 $slug = Str::slug($request->name, '-');
                 $data = array();
 
@@ -73,7 +74,7 @@ class GalleryController extends Controller
 
                     $data['thumbnail'] = $image;   //http://127.0.0.1:8000/uploads/kakon-ray.jpg
                 }
-                //multiple images
+                //multiple images uploads
                 $images = array();
                 if ($request->hasFile('images')) {
                     foreach ($request->file('images') as $key => $image2) {

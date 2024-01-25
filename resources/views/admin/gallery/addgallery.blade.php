@@ -118,24 +118,6 @@
             $(this).bootstrapSwitch('state', $(this).prop('checked'));
         });
 
-        //ajax request send for collect childcategory
-        $("#subcategory_id").change(function() {
-            var id = $(this).val();
-            $.ajax({
-                url: "{{ url('/get-child-category/') }}/" + id,
-                type: 'get',
-                success: function(data) {
-                    $('select[name="childcategory_id"]').empty();
-                    $.each(data, function(key, data) {
-                        $('select[name="childcategory_id"]').append('<option value="' + data
-                            .id + '">' + data.childcategory_name + '</option>');
-                    });
-                }
-            });
-        });
-
-
-
 
         $(document).ready(function() {
             var postURL = "<?php echo url('addmore'); ?>";

@@ -7,6 +7,9 @@ use App\Models\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\File;
 
 class ProductController extends Controller
 {
@@ -90,11 +93,19 @@ class ProductController extends Controller
 
             try {
 
-                $img = $request->image;
-                $image =  $img->store('/public/image');
-                $image = (explode('/', $image))[2];
-                $host = $_SERVER['HTTP_HOST'];
-                $image = "http://" . $host . "/storage/image/" . $image;
+                // single thumbnil image upload
+                $slug = Str::slug($request->brand_title, '-');
+
+                if ($request->image) {
+                    $file = $request->file('image');
+                    $filename = $slug . '.' . $file->getClientOriginalExtension();
+
+                    $img = Image::make($file);
+                    $img->resize(500, 500)->save(public_path('uploads/' . $filename));
+
+                    $host = $_SERVER['HTTP_HOST'];
+                    $image = "http://" . $host . "/uploads/" . $filename;
+                }
 
                 $products = Products::create([
                     'brand_title' => $request->brand_title,
@@ -180,7 +191,7 @@ class ProductController extends Controller
                         'rod_size' => 'required',
                         'product_details' => 'required',
                         'brand_title' => 'required',
-                        'image' =>['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
+                        'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
                         'price' => "required|regex:/^\d+(\.\d{1,2})?$/"
 
                     ];
@@ -247,12 +258,18 @@ class ProductController extends Controller
 
                 try {
 
+                    // single thumbnil image upload
+                    $slug = Str::slug($request->brand_title, '-');
+
                     if ($request->image) {
-                        $img = $request->image;
-                        $image =  $img->store('/public/image');
-                        $image = (explode('/', $image))[2];
+                        $file = $request->file('image');
+                        $filename = $slug . '.' . $file->getClientOriginalExtension();
+
+                        $img = Image::make($file);
+                        $img->resize(500, 500)->save(public_path('uploads/' . $filename));
+
                         $host = $_SERVER['HTTP_HOST'];
-                        $image = "http://" . $host . "/storage/image/" . $image;
+                        $image = "http://" . $host . "/uploads/" . $filename;
                     } else {
                         $image = $request->old_image;
                     }
@@ -304,14 +321,29 @@ class ProductController extends Controller
             DB::beginTransaction();
 
             try {
+                // image file delete kora hocce jodi image file delete hoy tarpor databse theke data delete kora hobe
+                $pathinfo = pathinfo($product->image);
+                $filename = $pathinfo['basename'];
+                $image_path = public_path("/uploads/") . $filename;
 
-                $product->delete();
-                DB::commit();
+                if (File::exists($image_path)) {
+                    File::delete($image_path);
 
-                return response()->json([
-                    'status' => 200,
-                    'msg' => 'Delete This Product',
-                ], 200);
+                    $product->delete();
+                    DB::commit();
+
+                    return response()->json([
+                        'status' => 200,
+                        'msg' => 'Delete This Product',
+                    ], 200);
+
+
+                } else {
+                    return response()->json([
+                        'status' => 200,
+                        'msg' => 'Image Path Not Found',
+                    ], 200);
+                }
             } catch (\Exception $err) {
 
                 DB::rollBack();

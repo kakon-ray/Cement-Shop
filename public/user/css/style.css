@@ -51,7 +51,7 @@
 */
 :root {
   --primary-color: #222222;
-  --secondary-color: #d72323;
+  --secondary-color: #0093e7;
   --yellow-color: #ffc107;
   --text-gray-color: #4a4c59;
   --white-color: #ffffff;
@@ -3014,7 +3014,11 @@ body.overlay__active::before,
 
 .main__logo--title {
   line-height: 2rem;
-
+  width: 200px;
+}
+.main__logo--title img {
+  max-width: 100%;
+  height: 66px;
 }
 
 @media only screen and (max-width: 575px) {

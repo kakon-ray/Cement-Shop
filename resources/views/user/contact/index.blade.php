@@ -47,7 +47,7 @@
                                         </svg>
                                     </div>
                                     <div class="contact__info--content">
-                                        <p class="contact__info--content__desc text-white">Change the design through a range <br> <a href="tel:+01234-567890">+01234-567890</a> <a href="tel:++01234-5688765">+01234-5688765</a>   </p>
+                                        <p class="contact__info--content__desc text-white">Change the design through a range <br> <a href="tel:+8802477721145">+8802477721145</a> <a href="tel:+8801711295135">+8801711295135</a>   </p>
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                                         </svg>  
                                     </div>
                                     <div class="contact__info--content">
-                                        <p class="contact__info--content__desc text-white"> <a href="mailto:info@example.com">info@example.com</a> <br> <a href="mailto:info@example.com">info@example.com</a></p> 
+                                        <p class="contact__info--content__desc text-white"> <a href="mailto:abdul.razzak.aziz@gmail.com">abdul.razzak.aziz@gmail.com</a> <br> <a href="mailto:abdul.razzak.aziz@gmail.com">abdul.razzak.aziz@gmail.com</a></p> 
                                     </div>
                                 </div>
                             </div>
@@ -73,9 +73,7 @@
                                         </svg> 
                                     </div>
                                     <div class="contact__info--content">
-                                        <p class="contact__info--content__desc text-white">  123 Stree New York City ,
-                                            United States Of America
-                                            NY 750065.</p> 
+                                        <p class="contact__info--content__desc text-white"> রড সিমেন্ট বিক্রেতা ও সাধারন ব্যাবসায়ী ৫১, স্টেশন রোড, খুলনা-৯১০০, বাংলাদেশ  </p> 
                                     </div>
                                 </div>
                             </div>
@@ -164,8 +162,7 @@
     <!-- Start contact map area -->
    <div class="container">
     <div class="contact__map--area section--padding pt-0">
-        <iframe class="contact__map--iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7887.465355142307!2d-0.13384360843222626!3d51.4876034467734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760532743b90e1%3A0x790260718555a20c!2sU.S.%20Embassy%2C%20London!5e0!3m2!1sen!2sbd!4v1632035375945!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.542815065779!2d89.5614082!3d22.8193985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff9199e543050f%3A0x948bf127d2a2048a!2zTS9TIEFCRFVMIFJBWlpBSyBBWklaIOCmruCnh-CmuOCmvuCmsOCnjeCmuCDgpobgpqzgp43gpqbgp4HgprIg4Kaw4Ka-4Kac4KeN4Kac4Ka-4KaVIOCmhuCmnOCmv-CmnA!5e0!3m2!1sbn!2sbd!4v1706286327379!5m2!1sbn!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
    </div>
     <!-- End contact map area -->
 

@@ -45,9 +45,19 @@
             }
 
             .btn-submit:hover {
-                background: #36b9cc;
-                border-color: #36b9cc;
+                background: #0093e7;
+                border-color: #0093e7;
                 color: #ffffff;
+            }
+
+            .bg-gradient-info {
+                background-color: #0093e7!important;
+                background-image: linear-gradient(180deg, #0093e7 10%, #0093e7 100%)!important;
+                background-size: cover!important;
+            }
+
+            .btn-info{
+                background-color: #0093e7!important;
             }
         </style>
     </head>
@@ -96,7 +106,7 @@
         <!-- axios -->
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-        
+
         <script>
             var desc;
             ClassicEditor

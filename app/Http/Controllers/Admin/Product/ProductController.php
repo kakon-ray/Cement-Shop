@@ -304,7 +304,7 @@ class ProductController extends Controller
 
                             array_push($images, $imageLink);
                         }
-                    }else{
+                    } else {
                         $images = $product->images;
                     }
 
@@ -363,20 +363,19 @@ class ProductController extends Controller
 
                 if (File::exists($image_path)) {
                     File::delete($image_path);
-
                 }
 
                 // multiple image delete start
- 
-                foreach(json_decode($product->images) as $item){
-                    $allimagePathInfo = pathinfo($item);
-                    $allImageFilename = $allimagePathInfo['basename'];
-                    $all_image_path = public_path("/uploads/") . $allImageFilename;
+                if ($request->hasFile('images')) {
+                    foreach (json_decode($product->images) as $item) {
+                        $allimagePathInfo = pathinfo($item);
+                        $allImageFilename = $allimagePathInfo['basename'];
+                        $all_image_path = public_path("/uploads/") . $allImageFilename;
 
-                    if (File::exists($all_image_path)) {
-                        File::delete($all_image_path);
+                        if (File::exists($all_image_path)) {
+                            File::delete($all_image_path);
+                        }
                     }
-              
                 }
                 // multiple image delete end
 
@@ -387,8 +386,6 @@ class ProductController extends Controller
                     'status' => 200,
                     'msg' => 'Delete This Product',
                 ], 200);
-
-
             } catch (\Exception $err) {
 
                 DB::rollBack();

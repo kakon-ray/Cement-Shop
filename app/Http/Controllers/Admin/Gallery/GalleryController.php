@@ -59,7 +59,7 @@ class GalleryController extends Controller
             try {
 
                 // single thumbnil image upload
-                $slug = Str::slug($request->name, '-');
+                $slug = Str::slug($request->name . '-' .hexdec(uniqid()));
                 $data = array();
 
                 if ($request->thumbnail) {
@@ -140,18 +140,20 @@ class GalleryController extends Controller
                     File::delete($image_path);
                 }
 
-                // multiple image delete start
-
-                foreach (json_decode($gallery->images) as $item) {
-                    $allimagePathInfo = pathinfo($item);
-                    $allImageFilename = $allimagePathInfo['basename'];
-                    $all_image_path = public_path("/uploads/") . $allImageFilename;
-
-                    if (File::exists($all_image_path)) {
-                        File::delete($all_image_path);
+                  // multiple image delete start
+                if ($request->hasFile('images')) {
+                    foreach (json_decode($gallery->images) as $item) {
+                        $allimagePathInfo = pathinfo($item);
+                        $allImageFilename = $allimagePathInfo['basename'];
+                        $all_image_path = public_path("/uploads/") . $allImageFilename;
+    
+                        if (File::exists($all_image_path)) {
+                            File::delete($all_image_path);
+                        }
                     }
+               
                 }
-                // multiple image delete end
+             // multiple image delete end
 
                 $gallery->delete();
                 DB::commit();

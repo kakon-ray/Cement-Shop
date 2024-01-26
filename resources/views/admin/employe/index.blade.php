@@ -35,6 +35,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Name</th>
+                                                <th>Position</th>
                                                 <th>Phone</th>
                                                 <th>Email</th>
                                                 <th>Image</th>
@@ -49,6 +50,7 @@
                                             @foreach ($allemploye as $item)
                                                 <tr>
                                                     <td>{{ $item->name }}</td>
+                                                    <td>{{ $item->position }}</td>
                                                     <td>{{ $item->phone }}</td>
                                                     <td>{{ $item->email }}</td>
                                                     <td><img src="{{ $item->image  }}" style="height: 100px"

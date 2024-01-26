@@ -39,31 +39,38 @@
                                             <input required type="text" class="form-control" name="name"
                                                 placeholder="Name">
                                         </div>
-
-
                                         <div class="col-lg-6">
+                                            <label>Position</label>
+                                            <input required type="text" class="form-control" name="position"
+                                                placeholder="Position">
+                                        </div>
+
+
+                                        <div class="col-lg-6 my-4">
                                             <label>Employee Address</label>
                                             <input type="address" class="form-control" name="address"
                                                 placeholder="Phone Address">
                                         </div>
 
-                                        <div class="col-lg-4 my-4">
-                                            <label class="form-label">Employee Image</label>
-                                            <input type="file" name="image" required="" accept="image/*"
-                                                class="dropify">
-                                        </div>
-
-                                        <div class="col-lg-4 my-4">
+                                        <div class="col-lg-3 my-4">
                                             <label>Phone Number</label>
                                             <input required type="text" class="form-control" name="phone"
                                                 placeholder="Phone Number">
                                         </div>
 
-                                        <div class="col-lg-4 my-4">
+                                        <div class="col-lg-3 my-4">
                                             <label>Phone Email</label>
                                             <input required type="text" class="form-control" name="email"
                                                 placeholder="Phone Email">
                                         </div>
+
+                                        <div class="col-lg-4 mb-4">
+                                            <label class="form-label">Employee Image</label>
+                                            <input type="file" name="image" required="" accept="image/*"
+                                                class="dropify">
+                                        </div>
+
+                                 
 
                                     </div>
                                     <div class="my-4">

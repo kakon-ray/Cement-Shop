@@ -34,51 +34,56 @@
                                     @csrf
 
                                     <input required type="text" class="d-none" name="id"
-                                    value="{{ $employe->id }}">
+                                        value="{{ $employe->id }}">
 
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 my-2">
                                             <label>Name</label>
                                             <input required type="text" class="form-control" name="name"
                                                 value="{{ $employe->name }}">
                                         </div>
 
 
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 my-2">
                                             <label>Employee Address</label>
                                             <input type="address" class="form-control" name="address"
                                                 value="{{ $employe->address }}">
                                         </div>
 
-                                        <div class="col-lg-4 my-4">
-                                            <div class="card p-2 my-3">
-                                                <label class="form-label">Employee Old Image:</label>
-                                                <input type="address" class="form-control" name="old_img"
-                                                value="{{ $employe->image }}">
-                                                <img src="{{ $employe->image }}" style="height: 200px;" class="img-fluid">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-4 my-4">
-                                            <label class="form-label">New Employee Image</label>
-                                            <input type="file" name="image" accept="image/*"
-                                                class="dropify">
-                                        </div>
-
-                                        <div class="col-lg-4 my-4">
+                                        <div class="col-lg-4 my-2">
                                             <label>Phone Number</label>
                                             <input required type="text" class="form-control" name="phone"
                                                 value="{{ $employe->phone }}">
                                         </div>
 
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-4 my-2">
                                             <label>Phone Email</label>
                                             <input required type="text" class="form-control" name="email"
                                                 value="{{ $employe->email }}">
                                         </div>
 
+                                        <div class="col-lg-4 my-2">
+                                            <label>Position</label>
+                                            <input required type="text" class="form-control" value="{{ $employe->position }}" name="position"
+                                                placeholder="Position">
+                                        </div>
+
+                                        <div class="col-lg-4 my-2">
+                                            <div class="card p-2 my-3">
+                                                <label class="form-label">Employee Old Image:</label>
+                                                <input type="address" class="d-none" name="old_img"
+                                                    value="{{ $employe->image }}">
+                                                <img src="{{ $employe->image }}" style="height: 170px;" class="img-fluid">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 my-2">
+                                            <label class="form-label">New Employee Image</label>
+                                            <input type="file" name="image" accept="image/*" class="dropify">
+                                        </div>
+
                                     </div>
-                                    <div class="my-4">
+                                    <div class="my-2">
                                         <button type="submit" class="btn btn-primary">
                                             Update
                                         </button>

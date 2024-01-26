@@ -35,6 +35,7 @@ class EmployeController extends Controller
 
         $arrayRequest = [
             'name' => $request->name,
+            'position' => $request->position,
             'phone' => $request->phone,
             'email' => $request->email,
             'image' => $request->image,
@@ -43,6 +44,7 @@ class EmployeController extends Controller
 
         $arrayValidate  = [
             'name' => 'required',
+            'position' => 'required',
             'phone' => 'required',
             'email' => 'required',
             'image' => 'required',
@@ -83,6 +85,7 @@ class EmployeController extends Controller
 
                 $products = Employe::create([
                     'name' => $request->name,
+                    'position' => $request->position,
                     'phone' => $request->phone,
                     'email' => $request->email,
                     'image' => $image,
@@ -122,6 +125,7 @@ class EmployeController extends Controller
             if ($request->image) {
                 $arrayRequest = [
                     'name' => $request->name,
+                    'position' => $request->position,
                     'phone' => $request->phone,
                     'email' => $request->email,
                     'image' => $request->image,
@@ -130,6 +134,7 @@ class EmployeController extends Controller
 
                 $arrayValidate  = [
                     'name' => 'required',
+                    'position' => 'required',
                     'phone' => 'required',
                     'email' => 'required',
                     'image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
@@ -138,6 +143,7 @@ class EmployeController extends Controller
             } else {
                 $arrayRequest = [
                     'name' => $request->name,
+                    'position' => $request->position,
                     'phone' => $request->phone,
                     'email' => $request->email,
                     'address' => $request->address,
@@ -145,6 +151,7 @@ class EmployeController extends Controller
 
                 $arrayValidate  = [
                     'name' => 'required',
+                    'position' => 'required',
                     'phone' => 'required',
                     'email' => 'required',
                     'address' => 'required',
@@ -187,6 +194,7 @@ class EmployeController extends Controller
                     }
 
                     $employee->name =  $request->name;
+                    $employee->position =  $request->position;
                     $employee->phone =  $request->phone;
                     $employee->email =  $request->email;
                     $employee->image =  $image;

@@ -100,7 +100,7 @@
                     <div class="col">
                         <div class="product__details--info">
                             <form action="#">
-                                <h3 class="product__details--info__title mb-15">BASIC MICRO DAYS MONEY BACK GUARANTEE.</h3>
+                                <h3 class="product__details--info__title mb-15">{{$product->brand_title}}</h3>
                                 <div class="product__details--info__rating d-flex align-items-center mb-15">
                                     <ul class="rating product__list--rating d-flex">
                                         <li class="rating__list">
@@ -158,29 +158,47 @@
                                     </ul>
                                 </div>
                                 <div class="product__details--info__price mb-10">
-                                    <span class="current__price">$299.00</span>
-                                    <span class="old__price">$320.00</span>
+                                    <span class="current__price">৳ {{$product->price}}</span>
                                 </div>
-                                <p class="product__details--info__desc mb-15">Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Aut numquam ullam is recusandae laborum explicabo id sequi quisquam,
-                                    ab sunt deleniti quidem.</p>
+                                <p class="product__details--info__desc mb-15">
+                                    @php
+                                        echo $product->product_details
+                                    @endphp
+                                </p>
                                 <div class="product__variant">
 
   
                                     <div class="product__variant--list mb-15">
                                         <div class="product__details--info__meta">
-                                            <p class="product__details--info__meta--list"><strong>Barcode:</strong>
-                                                <span>565461</span>
+                                          
+                                            @if($product->rod_brand)
+                                            <p class="product__details--info__meta--list"><strong>Rod Brand:
+                                            </strong>
+                                            <span>{{ $product->rod_brand }}</span>
                                             </p>
-                                            <p class="product__details--info__meta--list"><strong>Sky:</strong>
-                                                <span>4420</span>
+                                            @endif
+                                            @if($product->rod_size)
+                                            <p class="product__details--info__meta--list"><strong>Rod Size:
+                                            </strong>
+                                            <span>{{ $product->rod_size }}</span>
                                             </p>
-                                            <p class="product__details--info__meta--list"><strong>Vendor:</strong>
-                                                <span>Drone</span>
+                                            @endif
+                                            @if($product->cement_brand)
+                                            <p class="product__details--info__meta--list"><strong>Cement Brand:
+                                            </strong>
+                                            <span>{{ $product->cement_brand }}</span>
                                             </p>
-                                            <p class="product__details--info__meta--list"><strong>Type:</strong>
-                                                <span>Sofa</span>
+                                            @endif
+                                           
+                                            @foreach(json_decode($product->cement_brand_type) as  $item)
+                                            @if($item->value != 0)
+                                            <p class="product__details--info__meta--list"><strong>Cement Brand Type:
+                                                {{$item->value}}
                                             </p>
+                                            @endif
+                                           
+                                            @endforeach
+                                            
                                         </div>
                                     </div>
                                 </div>

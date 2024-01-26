@@ -79,6 +79,10 @@
                                                     {{ $updateproduct->cement_brand == 'Scan' ? 'selected' : '' }}> Scan
                                                 </option>
 
+                                            <option value=""
+                                                {{ $updateproduct->cement_brand == '' ? 'selected' : '' }}> Null
+                                             </option>
+
                                             </select>
                                         </div>
 
@@ -107,7 +111,9 @@
                                                 <option value="NORMAL"
                                                     {{ $updateproduct->rod_brand == 'NORMAL' ? 'selected' : '' }}>NORMAL
                                                 </option>
-
+                                                <option value=""
+                                                {{ $updateproduct->rod_brand == '' ? 'selected' : '' }}> Null
+                                                </option>
                                             </select>
                                         </div>
 
@@ -131,7 +137,8 @@
                                                     {{ $updateproduct->rod_size == '25m' ? 'selected' : '' }}>25m</option>
                                                 <option value="32m"
                                                     {{ $updateproduct->rod_size == '32m' ? 'selected' : '' }}>32m</option>
-
+                                                    <option value=""
+                                                    {{ $updateproduct->rod_size == '' ? 'selected' : '' }}>Null</option>
                                             </select>
                                         </div>
 

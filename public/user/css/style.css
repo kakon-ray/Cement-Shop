@@ -78,6 +78,15 @@
   --container-fluid-offset: 16rem;
 }
 
+.active-nav-menue {
+  color: var(--secondary-color) !important;
+}
+.active-nav-menue::before {
+  width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
 .color-scheme-1 {
   --secondary-color: #d72323;
 }
@@ -1990,6 +1999,7 @@ select {
 
 #scroll__top svg {
   width: 25px;
+  color: #fff;
   line-height: 1;
 }
 
@@ -5288,6 +5298,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .project__card--content__subtitle {
   color: var(--secondary-color);
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 479px) {
@@ -6356,6 +6367,7 @@ span.info__list--item-content {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
+
 
 .team__card--thumbnail {
   position: relative;

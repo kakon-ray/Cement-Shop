@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Contact\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
 use App\Http\Controllers\Admin\Employe\EmployeController;
@@ -43,6 +44,11 @@ Route::middleware(['AdminAuth', 'VerifiedAdminEmail'])->group(function () {
                 Route::get('update', [EmployeController::class, 'edit_employe'])->name('update');
                 Route::post('update/submit', [EmployeController::class, 'edit_employe_submit'])->name('update.submit');
                 Route::get('delete', [EmployeController::class, 'delete_employee_submit']);
+            });
+
+            Route::name('contact.')->prefix('contact')->group(function () {
+                Route::get('/', [ContactController::class, 'index'])->name('home');
+                Route::get('delete', [ContactController::class, 'delete_user_contact']);
             });
         });
 

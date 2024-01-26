@@ -115,24 +115,24 @@
                             <nav class="header__menu--navigation">
                                 <ul class="d-flex">
                                     <li class="header__menu--items">
-                                        <a class="header__menu--link" href="{{route('home')}}">Home</a>
+                                        <a class="header__menu--link {{ request()->routeIs('home') ? 'active-nav-menue' : '' }}" href="{{route('home')}}">Home</a>
                                     </li>
 
                                     <li class="header__menu--items">
-                                        <a class="header__menu--link" href="{{route('user.about')}}">About US </a>  
+                                        <a class="header__menu--link {{ request()->routeIs('user.about') ? 'active-nav-menue' : '' }}" href="{{route('user.about')}}">About US </a>  
                                     </li>
                          
 
                                     <li class="header__menu--items mega__menu--items">
-                                        <a class="header__menu--link" href="{{route('user.shop')}}">Employes</a>
+                                        <a class="header__menu--link {{ request()->routeIs('user.shop') ? 'active-nav-menue' : '' }}" href="{{route('user.shop')}}">Employes</a>
                                       
                                     </li>
                                  
                                     <li class="header__menu--items">
-                                        <a class="header__menu--link" href="{{route('user.contact')}}">Gallery</a>  
+                                        <a class="header__menu--link {{ request()->routeIs('user.gallery') ? 'active-nav-menue' : '' }}" href="{{route('user.gallery')}}">Gallery</a>  
                                     </li>
                                     <li class="header__menu--items">
-                                        <a class="header__menu--link" href="{{route('user.contact')}}">Contact</a>  
+                                        <a class="header__menu--link {{ request()->routeIs('user.contact') ? 'active-nav-menue' : '' }}" href="{{route('user.contact')}}">Contact</a>  
                                     </li>
                                 </ul>
                             </nav>

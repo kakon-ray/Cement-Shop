@@ -65,17 +65,14 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse4"
-            aria-expanded="true" aria-controls="collapse4">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6"
+            aria-expanded="true" aria-controls="collapse6">
             <i class="fas fa-fw fa-cog"></i>
-            <span>Settings</span>
+            <span>Contact Message</span>
         </a>
-        <div id="collapse4" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapse6" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white my-1 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">Seo Setting</a>
-            </div>
-            <div class="bg-white my-1 collapse-inner rounded">
-                <a class="collapse-item" href="buttons.html">SMTP Mail Setting</a>
+                <a class="collapse-item" href="{{route('admin.dashboard.contact.home')}}">Contact Message</a>
             </div>
         </div>
     </li>

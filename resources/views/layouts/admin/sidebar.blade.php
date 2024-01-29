@@ -81,6 +81,19 @@
     </li>
 
     <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse8"
+            aria-expanded="true" aria-controls="collapse8">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>About US</span>
+        </a>
+        <div id="collapse8" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white my-1 collapse-inner rounded">
+                <a class="collapse-item" href="{{route('admin.dashboard.aboutus.home')}}">Aboutus Manage</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6"
             aria-expanded="true" aria-controls="collapse6">
             <i class="fas fa-fw fa-cog"></i>

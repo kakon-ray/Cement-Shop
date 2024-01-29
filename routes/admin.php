@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutUs\AboutUsController;
 use App\Http\Controllers\Admin\Contact\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
@@ -51,6 +52,7 @@ Route::middleware(['AdminAuth', 'VerifiedAdminEmail'])->group(function () {
                 Route::get('/', [ContactController::class, 'index'])->name('home');
                 Route::get('delete', [ContactController::class, 'delete_user_contact']);
             });
+
             Route::name('slider.')->prefix('slider')->group(function () {
                 Route::get('/', [SliderController::class, 'index'])->name('home');
                 Route::get('add', [SliderController::class, 'add'])->name('add');
@@ -59,6 +61,13 @@ Route::middleware(['AdminAuth', 'VerifiedAdminEmail'])->group(function () {
                 Route::post('update/submit', [SliderController::class, 'edit_slider_submit'])->name('update.submit');
                 Route::get('delete', [SliderController::class, 'delete_slider_submit']);
             });
+
+            Route::name('aboutus.')->prefix('aboutus')->group(function () {
+                Route::get('/', [AboutUsController::class, 'index'])->name('home');
+                Route::post('add/submit', [AboutUsController::class, 'add_submit'])->name('add.submit');
+            });
+
+
         });
 
         // category end

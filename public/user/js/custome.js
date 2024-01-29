@@ -33,4 +33,10 @@ $(document).ready(function(){
         })
     })
 
+    $('#price-quantity').on('input',function(e){
+        var amount =  parseFloat($('#product-price').val());
+        var quantity =  parseFloat($(this).val());
+        var totalprice = (quantity * amount);
+        $("#show-price").text("৳ " + totalprice + " কেজি");
+       });
 })

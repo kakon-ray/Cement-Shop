@@ -440,9 +440,7 @@ input[type="submit"] {
   line-height: var(--body-line-height);
 }
 
-input[type="number"] {
-  -moz-appearance: textfield;
-}
+
 
 img {
   max-width: 100%;
@@ -3874,12 +3872,6 @@ input.quantity__number {
   margin: 0px;
   width: 3.3rem;
   height: 3rem;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
 .minicart__amount {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User\UserGuest;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutUS;
 use App\Models\Contact;
 use App\Models\Employe;
 use App\Models\Gallery;
@@ -20,12 +21,14 @@ class UserGuestController extends Controller
         $allemployee = Employe::all();
         $gallery = Gallery::all()->reverse();
         $slider = Slider::all()->reverse();
+        $aboutus = AboutUS::first();
 
-        return view('user.home.index',compact('allproduct','allemployee','gallery','slider'));
+        return view('user.home.index',compact('allproduct','allemployee','gallery','slider','aboutus'));
     }
     public function about()
     {
-        return view('user.about.index');
+        $aboutus = AboutUS::first();
+        return view('user.about.index',compact('aboutus'));
     }
     public function shop()
     {

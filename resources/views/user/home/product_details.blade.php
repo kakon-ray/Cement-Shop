@@ -4,6 +4,15 @@
 @endsection
 
 @section('content')
+    <style>
+        .quantity-calculate {
+            display: flex;
+            max-width: 400px;
+            margin: 20px 0px;
+            flex-direction: column;
+            gap: 4px;
+        }
+    </style>
     <main class="main__content_wrapper">
 
 
@@ -74,8 +83,7 @@
                                                     </div>
                                                     <div class="product__media--view__icon">
                                                         <a class="product__media--view__icon--link glightbox"
-                                                            href="{{ $item }}"
-                                                            data-gallery="product-media-preview">
+                                                            href="{{ $item }}" data-gallery="product-media-preview">
                                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
                                                                 height="18" viewBox="0 0 18 18">
@@ -100,7 +108,7 @@
                     <div class="col">
                         <div class="product__details--info">
                             <form action="#">
-                                <h3 class="product__details--info__title mb-15">{{$product->brand_title}}</h3>
+                                <h3 class="product__details--info__title mb-15">{{ $product->brand_title }}</h3>
                                 <div class="product__details--info__rating d-flex align-items-center mb-15">
                                     <ul class="rating product__list--rating d-flex">
                                         <li class="rating__list">
@@ -158,47 +166,70 @@
                                     </ul>
                                 </div>
                                 <div class="product__details--info__price mb-10">
-                                    <span class="current__price">৳ {{$product->price}}</span>
+                                    @if ($product->rod_brand)
+                                        <span class="current__price" id="show-price">৳ {{ $product->price }} </span>
+                                        <div>
+                                            <input type="text" id="product-price" class="d-none"
+                                                value="{{ $product->price }}">
+                                            <span class="quantity-calculate">মোট টাকা হিসাব করতে রড এর পরিমান (কেজি) ইনপুট দিন
+                                                <input id="price-quantity" type="number" min="1" value="1"
+                                                    class="contact__form--input" />
+                                            </span>
+                                        </div>
+                                    @endif
+                                    @if ($product->cement)
+                                        <span class="current__price">৳ {{ $product->price }} ব্যাগ</span>
+                                        <div>
+                                            <input type="text" id="product-price" class="d-none"
+                                                value="{{ $product->price }}">
+                                            <span class="quantity-calculate">মোট টাকা হিসাব করতে সিমেন্ট এর পরিমান (প্যাকেট) ইনপুট দিন
+                                                <input id="price-quantity" type="number" min="1" value="1"
+                                                    class="contact__form--input" />
+                                            </span>
+                                        </div>
+                                    @endif
+
+
                                 </div>
                                 <p class="product__details--info__desc mb-15">
                                     @php
-                                        echo $product->product_details
+                                        echo $product->product_details;
                                     @endphp
                                 </p>
                                 <div class="product__variant">
 
-  
+
                                     <div class="product__variant--list mb-15">
                                         <div class="product__details--info__meta">
-                                          
-                                            @if($product->rod_brand)
-                                            <p class="product__details--info__meta--list"><strong>Rod Brand:
-                                            </strong>
-                                            <span>{{ $product->rod_brand }}</span>
-                                            </p>
+
+                                            @if ($product->rod_brand)
+                                                <p class="product__details--info__meta--list"><strong>Rod Brand:
+                                                    </strong>
+                                                    <span>{{ $product->rod_brand }}</span>
+                                                </p>
                                             @endif
-                                            @if($product->rod_size)
-                                            <p class="product__details--info__meta--list"><strong>Rod Size:
-                                            </strong>
-                                            <span>{{ $product->rod_size }}</span>
-                                            </p>
+                                            @if ($product->rod_size)
+                                                <p class="product__details--info__meta--list"><strong>Rod Size:
+                                                    </strong>
+                                                    <span>{{ $product->rod_size }}</span>
+                                                </p>
                                             @endif
-                                            @if($product->cement_brand)
-                                            <p class="product__details--info__meta--list"><strong>Cement Brand:
-                                            </strong>
-                                            <span>{{ $product->cement_brand }}</span>
-                                            </p>
+                                            @if ($product->cement_brand)
+                                                <p class="product__details--info__meta--list"><strong>Cement Brand:
+                                                    </strong>
+                                                    <span>{{ $product->cement_brand }}</span>
+                                                </p>
                                             @endif
-                                           
-                                            @foreach(json_decode($product->cement_brand_type) as  $item)
-                                            @if($item->value != 0)
-                                            <p class="product__details--info__meta--list"><strong>Cement Brand Type:
-                                                {{$item->value}}
-                                            </p>
-                                            @endif
-                                           
+
+                                            @foreach (json_decode($product->cement_brand_type) as $item)
+                                                @if ($item->value != 0)
+                                                    <p class="product__details--info__meta--list"><strong>Cement Brand
+                                                            Type:
+                                                            {{ $item->value }}
+                                                    </p>
+                                                @endif
                                             @endforeach
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -255,7 +286,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                         
+
                             </form>
                         </div>
                     </div>

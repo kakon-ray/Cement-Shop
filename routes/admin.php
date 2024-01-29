@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\Dashboard\DashboardController;
 use App\Http\Controllers\Admin\Employe\EmployeController;
 use App\Http\Controllers\Admin\Gallery\GalleryController;
 use App\Http\Controllers\Admin\Product\ProductController;
+use App\Http\Controllers\Admin\Slider\SliderController;
 
 // admin dashboard
 Route::middleware(['AdminAuth', 'VerifiedAdminEmail'])->group(function () {
@@ -49,6 +50,14 @@ Route::middleware(['AdminAuth', 'VerifiedAdminEmail'])->group(function () {
             Route::name('contact.')->prefix('contact')->group(function () {
                 Route::get('/', [ContactController::class, 'index'])->name('home');
                 Route::get('delete', [ContactController::class, 'delete_user_contact']);
+            });
+            Route::name('slider.')->prefix('slider')->group(function () {
+                Route::get('/', [SliderController::class, 'index'])->name('home');
+                Route::get('add', [SliderController::class, 'add'])->name('add');
+                Route::post('add/submit', [SliderController::class, 'add_slider_submit'])->name('add.submit');
+                Route::get('update', [SliderController::class, 'edit_slider'])->name('update');
+                Route::post('update/submit', [SliderController::class, 'edit_slider_submit'])->name('update.submit');
+                Route::get('delete', [SliderController::class, 'delete_slider_submit']);
             });
         });
 

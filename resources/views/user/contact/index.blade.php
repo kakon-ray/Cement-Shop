@@ -1,6 +1,6 @@
 @extends('layouts.user.master')
 @section('title')
-    {{ 'About Us | User ' }}
+    {{ 'Contact Us | রড সিমেন্ট বিক্রেতা ' }}
 @endsection
 
 @section('content')

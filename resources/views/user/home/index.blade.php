@@ -13,245 +13,41 @@
                         <div class="col-12">
                             <div class="hero__slider--activation swiper">
                                 <div class="hero__slider--wrapper swiper-wrapper">
-                                    <div class="swiper-slide ">
-                                        <div class="hero__slider--items">
-                                            <div class="hero__slider--thumbnail">
-                                                <img class="hero__slider--thumbnail__img display-block"
-                                                    src="{{ asset('user/img/slider/1.png') }}"
-                                                    alt="slider img">
-                                            </div>
-                                            <div class="slider__content text-center">
-                                                <h2 class="slider__content--maintitle h1">Basundhara Brand Cement
-                                                </h2>
-                                                <p class="slider__content--desc d-sm-2-none">There are many variations of
-                                                    passages of Lorem Ipsum available, but the majority have suffered
-                                                    alteration in alley of type and scrambled it some.</p>
-                                                <div
-                                                    class="slider__content--footer d-flex align-items-center justify-content-center">
-                                                    <a class="slider__content--btn primary__btn" href="shop.html">Shop
-                                                        Now</a>
-                                                    <div class="bideo__play slider__play--bideo">
-                                                        <a class="bideo__play--icon glightbox"
-                                                            href="https://vimeo.com/115041822" data-gallery="video">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="14"
-                                                                height="16" viewBox="0 0 31 37">
-                                                                <path data-name="Polygon 1"
-                                                                    d="M16.783,2.878a2,2,0,0,1,3.435,0l14.977,25.1A2,2,0,0,1,33.477,31H3.523a2,2,0,0,1-1.717-3.025Z"
-                                                                    transform="translate(31) rotate(90)"
-                                                                    fill="currentColor"></path>
-                                                            </svg>
-                                                            <span class="visually-hidden">Play</span>
-                                                        </a>
+
+                                    @foreach ($slider as $item)
+                                        <div class="swiper-slide ">
+                                            <div class="hero__slider--items">
+                                                <div class="hero__slider--thumbnail">
+                                                    <img class="hero__slider--thumbnail__img display-block"
+                                                        src="{{ $item->image }}" alt="slider img">
+                                                </div>
+                                                <div class="slider__content text-center">
+                                                    <h2 class="slider__content--maintitle h1">{{ $item->title }}
+                                                    </h2>
+                                                    <p class="slider__content--desc d-sm-2-none">{{ $item->desc }}</p>
+                                                    <div
+                                                        class="slider__content--footer d-flex align-items-center justify-content-center">
+                                                        <a class="slider__content--btn primary__btn" href="#shop">Shop
+                                                            Now</a>
+                                                        <div class="bideo__play slider__play--bideo">
+                                                            <a class="bideo__play--icon glightbox"
+                                                                href="https://vimeo.com/115041822" data-gallery="video">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="14"
+                                                                    height="16" viewBox="0 0 31 37">
+                                                                    <path data-name="Polygon 1"
+                                                                        d="M16.783,2.878a2,2,0,0,1,3.435,0l14.977,25.1A2,2,0,0,1,33.477,31H3.523a2,2,0,0,1-1.717-3.025Z"
+                                                                        transform="translate(31) rotate(90)"
+                                                                        fill="currentColor"></path>
+                                                                </svg>
+                                                                <span class="visually-hidden">Play</span>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide ">
-                                        <div class="hero__slider--items">
-                                            <div class="hero__slider--thumbnail">
-                                                <img class="hero__slider--thumbnail__img display-block"
-                                                    src="{{ asset('user/img/slider/2.png') }}"
-                                                    alt="slider img">
-                                            </div>
-                                            <div class="slider__content text-center">
-                                                <h2 class="slider__content--maintitle h1">Anwar Brand Cement
-                                                </h2>
-                                                <p class="slider__content--desc d-sm-2-none">There are many variations of
-                                                    passages of Lorem Ipsum available, but the majority have suffered
-                                                    alteration in alley of type and scrambled it some.</p>
-                                                <div
-                                                    class="slider__content--footer d-flex align-items-center justify-content-center">
-                                                    <a class="slider__content--btn primary__btn" href="shop.html">Shop
-                                                        Now</a>
-                                                    <div class="bideo__play slider__play--bideo">
-                                                        <a class="bideo__play--icon glightbox"
-                                                            href="https://vimeo.com/115041822" data-gallery="video">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="14"
-                                                                height="16" viewBox="0 0 31 37">
-                                                                <path data-name="Polygon 1"
-                                                                    d="M16.783,2.878a2,2,0,0,1,3.435,0l14.977,25.1A2,2,0,0,1,33.477,31H3.523a2,2,0,0,1-1.717-3.025Z"
-                                                                    transform="translate(31) rotate(90)"
-                                                                    fill="currentColor"></path>
-                                                            </svg>
-                                                            <span class="visually-hidden">Play</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide ">
-                                        <div class="hero__slider--items">
-                                            <div class="hero__slider--thumbnail">
-                                                <img class="hero__slider--thumbnail__img display-block"
-                                                    src="{{ asset('user/img/slider/3.png') }}"
-                                                    alt="slider img">
-                                            </div>
-                                            <div class="slider__content text-center">
-                                                <h2 class="slider__content--maintitle h1">Anwar Brand Cement
-                                                </h2>
-                                                <p class="slider__content--desc d-sm-2-none">There are many variations of
-                                                    passages of Lorem Ipsum available, but the majority have suffered
-                                                    alteration in alley of type and scrambled it some.</p>
-                                                <div
-                                                    class="slider__content--footer d-flex align-items-center justify-content-center">
-                                                    <a class="slider__content--btn primary__btn" href="shop.html">Shop
-                                                        Now</a>
-                                                    <div class="bideo__play slider__play--bideo">
-                                                        <a class="bideo__play--icon glightbox"
-                                                            href="https://vimeo.com/115041822" data-gallery="video">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="14"
-                                                                height="16" viewBox="0 0 31 37">
-                                                                <path data-name="Polygon 1"
-                                                                    d="M16.783,2.878a2,2,0,0,1,3.435,0l14.977,25.1A2,2,0,0,1,33.477,31H3.523a2,2,0,0,1-1.717-3.025Z"
-                                                                    transform="translate(31) rotate(90)"
-                                                                    fill="currentColor"></path>
-                                                            </svg>
-                                                            <span class="visually-hidden">Play</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide ">
-                                        <div class="hero__slider--items">
-                                            <div class="hero__slider--thumbnail">
-                                                <img class="hero__slider--thumbnail__img display-block"
-                                                    src="{{ asset('user/img/slider/4.png') }}"
-                                                    alt="slider img">
-                                            </div>
-                                            <div class="slider__content text-center">
-                                                <h2 class="slider__content--maintitle h1">Scan Brand Cement
-                                                </h2>
-                                                <p class="slider__content--desc d-sm-2-none">There are many variations of
-                                                    passages of Lorem Ipsum available, but the majority have suffered
-                                                    alteration in alley of type and scrambled it some.</p>
-                                                <div
-                                                    class="slider__content--footer d-flex align-items-center justify-content-center">
-                                                    <a class="slider__content--btn primary__btn" href="shop.html">Shop
-                                                        Now</a>
-                                                    <div class="bideo__play slider__play--bideo">
-                                                        <a class="bideo__play--icon glightbox"
-                                                            href="https://vimeo.com/115041822" data-gallery="video">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="14"
-                                                                height="16" viewBox="0 0 31 37">
-                                                                <path data-name="Polygon 1"
-                                                                    d="M16.783,2.878a2,2,0,0,1,3.435,0l14.977,25.1A2,2,0,0,1,33.477,31H3.523a2,2,0,0,1-1.717-3.025Z"
-                                                                    transform="translate(31) rotate(90)"
-                                                                    fill="currentColor"></path>
-                                                            </svg>
-                                                            <span class="visually-hidden">Play</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide ">
-                                        <div class="hero__slider--items">
-                                            <div class="hero__slider--thumbnail">
-                                                <img class="hero__slider--thumbnail__img display-block"
-                                                    src="{{ asset('user/img/slider/5.png') }}"
-                                                    alt="slider img">
-                                            </div>
-                                            <div class="slider__content text-center">
-                                                <h2 class="slider__content--maintitle h1">AKS Brand ROD
-                                                </h2>
-                                                <p class="slider__content--desc d-sm-2-none">There are many variations of
-                                                    passages of Lorem Ipsum available, but the majority have suffered
-                                                    alteration in alley of type and scrambled it some.</p>
-                                                <div
-                                                    class="slider__content--footer d-flex align-items-center justify-content-center">
-                                                    <a class="slider__content--btn primary__btn" href="shop.html">Shop
-                                                        Now</a>
-                                                    <div class="bideo__play slider__play--bideo">
-                                                        <a class="bideo__play--icon glightbox"
-                                                            href="https://vimeo.com/115041822" data-gallery="video">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="14"
-                                                                height="16" viewBox="0 0 31 37">
-                                                                <path data-name="Polygon 1"
-                                                                    d="M16.783,2.878a2,2,0,0,1,3.435,0l14.977,25.1A2,2,0,0,1,33.477,31H3.523a2,2,0,0,1-1.717-3.025Z"
-                                                                    transform="translate(31) rotate(90)"
-                                                                    fill="currentColor"></path>
-                                                            </svg>
-                                                            <span class="visually-hidden">Play</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide ">
-                                        <div class="hero__slider--items">
-                                            <div class="hero__slider--thumbnail">
-                                                <img class="hero__slider--thumbnail__img display-block"
-                                                    src="{{ asset('user/img/slider/6.png') }}"
-                                                    alt="slider img">
-                                            </div>
-                                            <div class="slider__content text-center">
-                                                <h2 class="slider__content--maintitle h1">SCRM Brand ROD
-                                                </h2>
-                                                <p class="slider__content--desc d-sm-2-none">There are many variations of
-                                                    passages of Lorem Ipsum available, but the majority have suffered
-                                                    alteration in alley of type and scrambled it some.</p>
-                                                <div
-                                                    class="slider__content--footer d-flex align-items-center justify-content-center">
-                                                    <a class="slider__content--btn primary__btn" href="shop.html">Shop
-                                                        Now</a>
-                                                    <div class="bideo__play slider__play--bideo">
-                                                        <a class="bideo__play--icon glightbox"
-                                                            href="https://vimeo.com/115041822" data-gallery="video">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="14"
-                                                                height="16" viewBox="0 0 31 37">
-                                                                <path data-name="Polygon 1"
-                                                                    d="M16.783,2.878a2,2,0,0,1,3.435,0l14.977,25.1A2,2,0,0,1,33.477,31H3.523a2,2,0,0,1-1.717-3.025Z"
-                                                                    transform="translate(31) rotate(90)"
-                                                                    fill="currentColor"></path>
-                                                            </svg>
-                                                            <span class="visually-hidden">Play</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide ">
-                                        <div class="hero__slider--items">
-                                            <div class="hero__slider--thumbnail">
-                                                <img class="hero__slider--thumbnail__img display-block"
-                                                    src="{{ asset('user/img/slider/7.png') }}"
-                                                    alt="slider img">
-                                            </div>
-                                            <div class="slider__content text-center">
-                                                <h2 class="slider__content--maintitle h1">BSRM Brand ROD
-                                                </h2>
-                                                <p class="slider__content--desc d-sm-2-none">There are many variations of
-                                                    passages of Lorem Ipsum available, but the majority have suffered
-                                                    alteration in alley of type and scrambled it some.</p>
-                                                <div
-                                                    class="slider__content--footer d-flex align-items-center justify-content-center">
-                                                    <a class="slider__content--btn primary__btn" href="shop.html">Shop
-                                                        Now</a>
-                                                    <div class="bideo__play slider__play--bideo">
-                                                        <a class="bideo__play--icon glightbox"
-                                                            href="https://vimeo.com/115041822" data-gallery="video">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="14"
-                                                                height="16" viewBox="0 0 31 37">
-                                                                <path data-name="Polygon 1"
-                                                                    d="M16.783,2.878a2,2,0,0,1,3.435,0l14.977,25.1A2,2,0,0,1,33.477,31H3.523a2,2,0,0,1-1.717-3.025Z"
-                                                                    transform="translate(31) rotate(90)"
-                                                                    fill="currentColor"></path>
-                                                            </svg>
-                                                            <span class="visually-hidden">Play</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            
+                                    @endforeach
+
                                 </div>
                             </div>
                         </div>
@@ -320,7 +116,7 @@
 
 
         <!-- Start project section -->
-        <section class="project__section project__section--bg section--padding">
+        <section id="shop" class="project__section project__section--bg section--padding">
             <div class="container">
                 <div class="section__heading text-center mb-20">
                     <h2 class="section__heading--maintitle text__secondary mb-10">Our Products</h2>
@@ -340,7 +136,8 @@
                                 @foreach ($allproduct as $item)
                                     <div class="col custom-col-2 mb-30">
                                         <article class="project__card ">
-                                            <a class="project__card--link" href="{{route('user.product.details',['id'=>$item->id])}}">
+                                            <a class="project__card--link"
+                                                href="{{ route('user.product.details', ['id' => $item->id]) }}">
                                                 <div class="project__card--thumbnail">
                                                     <img class="project__card--thumbnail__img display-block"
                                                         src="{{ $item->thumbnail }}" alt="product-img">
@@ -352,14 +149,14 @@
                                                         </h3>
                                                         <span class="project__card--content__subtitle">Price:
                                                             {{ $item->price }}</span>
-                                             
-                                                        @if($item->rod_brand)
-                                                        <p class="project__card--content__subtitle">Rod Brand:
-                                                            {{ $item->rod_brand }}</p>
+
+                                                        @if ($item->rod_brand)
+                                                            <p class="project__card--content__subtitle">Rod Brand:
+                                                                {{ $item->rod_brand }}</p>
                                                         @endif
-                                                        @if($item->cement_brand)
-                                                        <p class="project__card--content__subtitle">Cement Brand:
-                                                            {{ $item->cement_brand }}</p>
+                                                        @if ($item->cement_brand)
+                                                            <p class="project__card--content__subtitle">Cement Brand:
+                                                                {{ $item->cement_brand }}</p>
                                                         @endif
                                                     </div>
                                                     <span class="project__card--btn"><svg class="project__card--btn__svg"
@@ -388,7 +185,8 @@
                                     @if ($item->category == 'rod')
                                         <div class="col custom-col-2 mb-30">
                                             <article class="project__card ">
-                                                <a class="project__card--link" href="shop.html">
+                                                <a class="project__card--link"
+                                                    href="{{ route('user.product.details', ['id' => $item->id]) }}">
                                                     <div class="project__card--thumbnail">
                                                         <img class="project__card--thumbnail__img display-block"
                                                             src="{{ $item->thumbnail }}" alt="product-img">
@@ -426,7 +224,8 @@
                                     @if ($item->category == 'cement')
                                         <div class="col custom-col-2 mb-30">
                                             <article class="project__card ">
-                                                <a class="project__card--link" href="shop.html">
+                                                <a class="project__card--link"
+                                                    href="{{ route('user.product.details', ['id' => $item->id]) }}">
                                                     <div class="project__card--thumbnail">
                                                         <img class="project__card--thumbnail__img display-block"
                                                             src="{{ $item->thumbnail }}" alt="product-img">
@@ -476,45 +275,50 @@
                 </div>
                 <div class="team__container">
                     <div class="row row-cols-md-3 row-cols-sm-2 row-cols-2 mb--n30">
-						@foreach($allemployee as $item)
-						<div class="col custom-col mb-30">
-                            <article class="team__card">
-                                <div class="team__card--thumbnail">
-                                    <img class="team__card--thumbnail__img display-block"
-                                        src="{{ $item->image }}" alt="team-thumb">
-                                </div>
-                                <div class="team__card--content ">
-                                    <h3 class="team__card--content__title">{{ $item->name}} </h3>
-                                    <span class="team__card--content__subtitle text__secondary">{{ $item->position}}</span>
-                                    <ul class="team__card--content__info">
-                                        <li class="team__card--content__info--list">
-                                            <svg class="team__card--content__info--icon"
-                                                xmlns="http://www.w3.org/2000/svg" width="15.797" height="20.05"
-                                                viewBox="0 0 512 512">
-                                                <path
-                                                    d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z"
-                                                    fill="currentColor" stroke="currentColor" stroke-miterlimit="10"
-                                                    stroke-width="32"></path>
-                                            </svg>
-                                            <a href="tel:099-56336958">{{$item->phone}}</a>
-                                        </li>
-                                        <li class="team__card--content__info--list">
-                                            <svg class="team__card--content__info--icon"
-                                                xmlns="http://www.w3.org/2000/svg" width="20.57" height="13.13"
-                                                viewBox="0 0 31.57 31.13">
-                                                <path
-                                                    d="M30.413,4H5.157C3.421,4,2.016,5.751,2.016,7.891L2,31.239c0,2.14,1.421,3.891,3.157,3.891H30.413c1.736,0,3.157-1.751,3.157-3.891V7.891C33.57,5.751,32.149,4,30.413,4Zm0,7.783L17.785,21.511,5.157,11.783V7.891l12.628,9.728L30.413,7.891Z"
-                                                    transform="translate(-2 -4)" fill="currentColor"></path>
-                                            </svg>
-                                            <a href="mailto:demo@example.com">{{$item->email}}</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </article>
-                        </div>
-						@endforeach
-                     
-                      
+                        @foreach ($allemployee as $item)
+                            <div class="col custom-col mb-30">
+                                <article class="team__card">
+                                    <div class="team__card--thumbnail">
+                                        <a href="{{ route('user.employee.details', ['id' => $item->id]) }}">
+                                            <img class="team__card--thumbnail__img display-block"
+                                                src="{{ $item->image }}" alt="team-thumb">
+                                        </a>
+                                    </div>
+                                    <div class="team__card--content ">
+                                        <h3 class="team__card--content__title">{{ $item->name }} </h3>
+                                        <span
+                                            class="team__card--content__subtitle text__secondary">{{ $item->position }}</span>
+                                        <ul class="team__card--content__info">
+                                            <li class="team__card--content__info--list">
+                                                <svg class="team__card--content__info--icon"
+                                                    xmlns="http://www.w3.org/2000/svg" width="15.797" height="20.05"
+                                                    viewBox="0 0 512 512">
+                                                    <path
+                                                        d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z"
+                                                        fill="currentColor" stroke="currentColor" stroke-miterlimit="10"
+                                                        stroke-width="32"></path>
+                                                </svg>
+                                                <a href="tel:099-56336958">{{ $item->phone }}</a>
+                                            </li>
+                                            <li class="team__card--content__info--list">
+                                                <svg class="team__card--content__info--icon"
+                                                    xmlns="http://www.w3.org/2000/svg" width="20.57" height="13.13"
+                                                    viewBox="0 0 31.57 31.13">
+                                                    <path
+                                                        d="M30.413,4H5.157C3.421,4,2.016,5.751,2.016,7.891L2,31.239c0,2.14,1.421,3.891,3.157,3.891H30.413c1.736,0,3.157-1.751,3.157-3.891V7.891C33.57,5.751,32.149,4,30.413,4Zm0,7.783L17.785,21.511,5.157,11.783V7.891l12.628,9.728L30.413,7.891Z"
+                                                        transform="translate(-2 -4)" fill="currentColor"></path>
+                                                </svg>
+                                                <a href="mailto:demo@example.com">{{ $item->email }}</a>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                </article>
+                            </div>
+                        @endforeach
+
+
                     </div>
                 </div>
             </div>
@@ -522,53 +326,52 @@
         <!-- End team members section -->
 
 
-                <!-- Start project section -->
-                <section class="project__section project__section--bg section--padding">
-                    <div class="container">
-                        <div class="section__heading text-center mb-20">
-                            <h2 class="section__heading--maintitle text__secondary mb-10">Gallery</h2>
-                            <p class="section__heading--desc">Beyond more stoic this along goodness this sed wow manatee mongos
-                                flusterd impressive man farcrud opened.</p>
-                        </div>
-                        <div class="tab_content">
-                            <div id="all" class="tab_pane active show">
-                                <div class="project__section--inner">
-                                    <div class="row row-cols-md-3 row-cols-2 mb--n30">
-                                        @foreach ($gallery->slice(0,6) as $item)
-                                            <div class="col custom-col-2 mb-30">
-                                                <div class="product__media--preview__items">
-                                                    <a class="product__media--preview__items--link glightbox"
-                                                        data-gallery="product-media-preview"
-                                                        href="assets/img/product/big-product1.webp"><img
-                                                            class="product__media--preview__items--img"
-                                                            src="{{ $item->thumbnail }}" alt="product-media-img"></a>
-                                              
-                                                    <div class="product__media--view__icon">
-                                                        <a class="product__media--view__icon--link glightbox"
-                                                            href="{{ $item->thumbnail }}"
-                                                            data-gallery="product-media-preview">
-                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
-                                                                height="18" viewBox="0 0 18 18">
-                                                                <image width="18" height="18"
-                                                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAVhJREFUOE/llLtKA0EUhjdY+BD6ABaW3tIYTWEhiKKCCGIgqGhCgqXvoQFRQdBGERQvUaJFgilVRHwF8RWCWqzfD7OyjrPZ7R342HP2nP1n58yZSfm+/+F53ivUoAseoALtxirBIXiHLPSlEHrBaMGyEYzR+BXuwduHTgltYNzBKSxAM6HSAHknMAf9EqpjjEIGzmAK7mPE0sSrRkQ/cSWhIkZQE4kdwzxoAteQiCbMgeqqsSIhO3nEJK7xPLKC0/h7oT/5CbuEFByDCShDeKZNfC3lwp49SihiVdGv/6GQdm4WSlaxt/AvQ9vedteCZlsn68Aqr/pLPfenaVVsHcBt80HQbIv4txF75GravIQafKClDMKNq9kcgspXd0+CjlM1OLTXZu1LPNVwScYwSYcwA2kJPWJ8QQGekyiEcnqxd6BDQp8YupPOoRueYDdGME9c18gbjMv+BiJYeHc6xpjnAAAAAElFTkSuQmCC" />
-                                                            </svg>
-                                                            <span class="visually-hidden">Media Gallery</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
+        <!-- Start project section -->
+        <section class="project__section project__section--bg section--padding">
+            <div class="container">
+                <div class="section__heading text-center mb-20">
+                    <h2 class="section__heading--maintitle text__secondary mb-10">Gallery</h2>
+                    <p class="section__heading--desc">Beyond more stoic this along goodness this sed wow manatee mongos
+                        flusterd impressive man farcrud opened.</p>
+                </div>
+                <div class="tab_content">
+                    <div id="all" class="tab_pane active show">
+                        <div class="project__section--inner">
+                            <div class="row row-cols-md-3 row-cols-2 mb--n30">
+                                @foreach ($gallery->slice(0, 6) as $item)
+                                    <div class="col custom-col-2 mb-30">
+                                        <div class="product__media--preview__items">
+                                            <a class="product__media--preview__items--link glightbox"
+                                                data-gallery="product-media-preview"
+                                                href="assets/img/product/big-product1.webp"><img
+                                                    class="product__media--preview__items--img"
+                                                    src="{{ $item->thumbnail }}" alt="product-media-img"></a>
+
+                                            <div class="product__media--view__icon">
+                                                <a class="product__media--view__icon--link glightbox"
+                                                    href="{{ $item->thumbnail }}" data-gallery="product-media-preview">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="18"
+                                                        height="18" viewBox="0 0 18 18">
+                                                        <image width="18" height="18"
+                                                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAVhJREFUOE/llLtKA0EUhjdY+BD6ABaW3tIYTWEhiKKCCGIgqGhCgqXvoQFRQdBGERQvUaJFgilVRHwF8RWCWqzfD7OyjrPZ7R342HP2nP1n58yZSfm+/+F53ivUoAseoALtxirBIXiHLPSlEHrBaMGyEYzR+BXuwduHTgltYNzBKSxAM6HSAHknMAf9EqpjjEIGzmAK7mPE0sSrRkQ/cSWhIkZQE4kdwzxoAteQiCbMgeqqsSIhO3nEJK7xPLKC0/h7oT/5CbuEFByDCShDeKZNfC3lwp49SihiVdGv/6GQdm4WSlaxt/AvQ9vedteCZlsn68Aqr/pLPfenaVVsHcBt80HQbIv4txF75GravIQafKClDMKNq9kcgspXd0+CjlM1OLTXZu1LPNVwScYwSYcwA2kJPWJ8QQGekyiEcnqxd6BDQp8YupPOoRueYDdGME9c18gbjMv+BiJYeHc6xpjnAAAAAElFTkSuQmCC" />
+                                                    </svg>
+                                                    <span class="visually-hidden">Media Gallery</span>
+                                                </a>
                                             </div>
-                                        @endforeach
-        
-        
-        
+                                        </div>
                                     </div>
-                                </div>
+                                @endforeach
+
+
+
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- End project section -->
+                </div>
+            </div>
+        </section>
+        <!-- End project section -->
 
 
     </main>

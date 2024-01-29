@@ -7761,8 +7761,9 @@ span.info__list--item-content {
    17. Breadcrumb Css
 */
 .breadcrumb__bg {
-  background: url(../img/banner/breadcrumb-bg.webp);
+  background: url(../img/banner/6.png);
   background-repeat: no-repeat;
+  color: var(--white-color);
   background-attachment: scroll;
   background-position: 5%;
   background-size: cover;

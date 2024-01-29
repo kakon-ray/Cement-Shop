@@ -65,6 +65,22 @@
     </li>
 
     <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse7"
+            aria-expanded="true" aria-controls="collapse7">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Slider Manage</span>
+        </a>
+        <div id="collapse7" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white my-1 collapse-inner rounded">
+                <a class="collapse-item" href="{{route('admin.dashboard.slider.home')}}">Manage Slider</a>
+            </div>
+            <div class="bg-white my-1 collapse-inner rounded">
+                <a class="collapse-item" href="{{route('admin.dashboard.slider.add')}}">Add Slider</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6"
             aria-expanded="true" aria-controls="collapse6">
             <i class="fas fa-fw fa-cog"></i>

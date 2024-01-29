@@ -7,6 +7,7 @@ use App\Models\Contact;
 use App\Models\Employe;
 use App\Models\Gallery;
 use App\Models\Products;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -18,8 +19,9 @@ class UserGuestController extends Controller
         $allproduct = Products::all()->reverse();
         $allemployee = Employe::all();
         $gallery = Gallery::all()->reverse();
+        $slider = Slider::all()->reverse();
 
-        return view('user.home.index',compact('allproduct','allemployee','gallery'));
+        return view('user.home.index',compact('allproduct','allemployee','gallery','slider'));
     }
     public function about()
     {
@@ -38,12 +40,23 @@ class UserGuestController extends Controller
         $gallery = Gallery::all()->reverse();
         return view('user.gallery.index',compact('gallery'));
     }
+    public function employee()
+    {
+        $employee = Employe::all()->reverse();
+        return view('user.employee.index',compact('employee'));
+    }
 
     public function product_details(Request $request)
     {
         $product = Products::find($request->id);
 
         return view('user.home.product_details',compact('product'));
+    }
+    public function employee_details(Request $request)
+    {
+        $employee = Employe::find($request->id);
+
+        return view('user.employee.imployee_details',compact('employee'));
     }
     public function contact_submit(Request $request)
     {

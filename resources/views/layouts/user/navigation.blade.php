@@ -124,7 +124,7 @@
                          
 
                                     <li class="header__menu--items mega__menu--items">
-                                        <a class="header__menu--link {{ request()->routeIs('user.shop') ? 'active-nav-menue' : '' }}" href="{{route('user.shop')}}">Employes</a>
+                                        <a class="header__menu--link {{ request()->routeIs('user.shop') ? 'active-nav-menue' : '' }}" href="{{route('user.employee')}}">Employes</a>
                                       
                                     </li>
                                  

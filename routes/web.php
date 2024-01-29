@@ -16,7 +16,9 @@ Route::name('user.')->prefix('user')->group(function () {
     Route::get('shop', [UserGuestController::class, 'shop'])->name('shop');
     Route::get('contact', [UserGuestController::class, 'contact'])->name('contact');
     Route::get('gallery', [UserGuestController::class, 'gallery'])->name('gallery');
+    Route::get('employee', [UserGuestController::class, 'employee'])->name('employee');
     Route::get('product/details/{id}', [UserGuestController::class, 'product_details'])->name('product.details');
+    Route::get('employee/details/{id}', [UserGuestController::class, 'employee_details'])->name('employee.details');
     Route::post('contact/submit', [UserGuestController::class, 'contact_submit'])->name('contact.submit');
 });
 

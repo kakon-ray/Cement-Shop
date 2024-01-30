@@ -1,31 +1,39 @@
 @extends('layouts.admin.guest')
+@section('title')
+    {{ 'Admin Email' }}
+@endsection
+
 @section('content')
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center">Please Verify Your Email</div>
+                {{-- error and success message show start --}}
+                <div class="mt-2 text-center w-75 mx-auto">
+                    @if (session('status') == 'verification-link-sent')
+                    <div class="mb-4 text-center font-medium text-sm text-green-600 dark:text-green-400">
+                        <p style="color:green">Email verification link has been sent to your email</p>
+                    </div>
+                @endif
+                </div>
 
-    <div class="title">
-        <h1>Please verify your Email then Login</h1>
-    </div>
-
-    @if (session('status') == 'verification-link-sent')
-        <div class="mb-4 text-center font-medium text-sm text-green-600 dark:text-green-400">
-            {{ __('Email verification link has been sent to your email') }}
-        </div>
-    @endif
-
-    <div class="mt-4 flex items-center justify-between">
-        <form method="POST" action="{{ route('admin.verification.send') }}">
-            @csrf
-
-            <div>
-              <button type="submit" class="btn-submit">Resend verification Link</button>
+                {{-- error and success message show end --}}
+                <div class="card-body px-5">
+                    <form method="POST" action="{{ route('admin.verification.send') }}">
+                        @csrf
+                       
+                        <button type="submit" class="btn btn-info w-100">Verify Your Email</button>
+                        
+                    </form>
+                </div>
+                </div>
             </div>
-        </form>
-
-        <form method="POST" action="{{ route('admin.logout') }}">
-            @csrf
-
-            <button type="submit" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
-                {{ __('Log Out') }}
-            </button>
-        </form>
+        </div>
     </div>
-    @endsection
+</div>
+</div>
+
+
+
+@endsection

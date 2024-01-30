@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>@yield('title')</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -15,10 +15,6 @@
         {{-- bootstrap css --}}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 
         <style>
@@ -34,22 +30,7 @@
                
             }
 
-            .btn-submit {
-                background:  #ffffff;
-                border: 1px solid #dddddd;
-                color: #000000;
-                padding: 10px 30px;
-                transition: 0.4s;
-                border-radius: 5px;
-                margin-top: 10px
-
-            }
-
-            .btn-submit:hover {
-                background: #36b9cc;
-                border-color: #36b9cc;
-                color: #ffffff;
-            }
+           
         </style>
     </head>
 

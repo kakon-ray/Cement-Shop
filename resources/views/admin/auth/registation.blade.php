@@ -1,58 +1,74 @@
 @extends('layouts.admin.guest')
+@section('title')
+    {{ 'Admin Registration' }}
+@endsection
+
 @section('content')
-    <form method="POST" action="{{ route('admin.register') }}">
-        @csrf
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">Admin Login In Dashboard</div>
+                    {{-- error and success message show start --}}
+                    <div class="mt-2 text-center w-75 mx-auto">
+                        @if ($errors->any())
+                            @foreach ($errors->all() as $error)
+                                <p class="alert alert-danger small">{{ $error }}</p>
+                            @endforeach
+                        @endif
+                        @if (session()->has('error'))
+                            <p class="alert alert-danger small">{{ session('error') }}</p>
+                        @endif
+                        @if (session()->has('success'))
+                            <p class="alert alert-success small">{{ session('success') }}</p>
+                        @endif
+                    </div>
+
+                    {{-- error and success message show end --}}
+                    <div class="card-body px-5">
+                        <form method="POST" action="{{ route('admin.register') }}">
+                            @csrf
+                            <div class="my-3">
+                                <label for="" id="loginemail">Enter Your Name</label>
+                                <input id="name" type="text" class="form-control" name="name" required
+                                    autocomplete="Name" placeholder="Name">
+                            </div>
+                            <div class="my-3">
+                                <label for="" id="loginemail">Enter Your Email</label>
+                                <input id="email" type="email" class="form-control" name="email" required
+                                    autocomplete="email" placeholder="Email">
+                            </div>
+
+
+                            <div class="my-3">
+                                <label for="" id="loginpassword">Enter Password</label>
+                                <input id="admin_password_login" type="password" class="form-control" name="password"
+                                    required autocomplete="new-password" placeholder="Password">
+                
+                            </div>
+
+                            <div class="my-3">
+                                <label for="" id="loginpassword">Enter Confirm Password</label>
+                                <input id="admin_password_login" type="password" class="form-control"
+                                    name="password_confirmation" required autocomplete="new-password"
+                                    placeholder="Confirm Password">
+                                <input type="checkbox" id="loginPassword" class="mt-4"><span class="ml-2">Show
+                                    Password</span>
+                            </div>
+
+
+
+                            <button id="login" class="btn btn-info">
+                                Registration
+                            </button>
+
+                    </div>
+
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex justify-content-between mt-4">
-            <x-primary-button class="btn-submit">
-                {{ __('Register') }}
-            </x-primary-button>
-
-            <p class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
-                Already Registerd
-                <a class="text-success" href="{{ route('admin.login') }}">
-                    Login 
-                 </a>
-        </p>
-
-        
-        </div>
-    </form>
-    @endsection
+    </div>
+    </div>
+@endsection

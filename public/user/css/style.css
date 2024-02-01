@@ -3010,9 +3010,8 @@ body.overlay__active::before,
 
 }
 
-.main__logo--title {
-  line-height: 2rem;
-  width: 200px;
+.offcanvas__logo_link img{
+  height: 1px !important;
 }
 .main__logo--title img {
   max-width: 100%;
@@ -10656,12 +10655,13 @@ span.info__list--item-content {
 
 @media only screen and (max-width: 575px) {
   .main__logo {
-  margin-right: -176px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 78px;
+    margin-right: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 78px;
 }
+
   .related__post--thumbnail a img {
     width: 100%;
   }

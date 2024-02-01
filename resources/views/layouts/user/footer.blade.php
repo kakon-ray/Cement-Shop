@@ -11,7 +11,7 @@
                                 </svg>
                             </h2>
                             <div class="footer__widget--inner">
-                                <a class="footer__logo" href="index.html"><img class="footer__logo--img display-block" src="assets/img/logo/nav-logo-white.webp" alt="footer-logo"></a>
+                                <a class="footer__logo" href="index.html"><img class="footer__logo--img display-block" src="{{asset('user/img/logo/nav-logo.jpg')}}" alt="footer-logo"></a>
                                 <p class="footer__widget--desc">Nemo enim ipsam voluptate quia 
                                     voluptas sit aspernatur aut odit
                                     aut fugit, sed quia magni this

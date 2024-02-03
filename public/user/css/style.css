@@ -3015,20 +3015,21 @@ body.overlay__active::before,
 }
 
 .main__logo--img{
+  max-width: 400px;
   height: 90px;
 }
 @media only screen and (max-width: 575px) {
   .main__logo--img {
-    max-width: 120px;
+    max-width: 250px;
     height: 90px;
-  }
+}
 }
 
 @media only screen and (max-width: 400px) {
   .main__logo--img {
-    max-width: 110px;
+    max-width: 250px;
     height: 90px;
-  }
+}
 }
 
 .header__topbar {

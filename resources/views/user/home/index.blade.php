@@ -8,7 +8,7 @@
         <!-- Start slider section -->
         <section class="hero__slider--section slider__section--bg">
             <div class="hero__slider--inner position__relative">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
                             <div class="hero__slider--activation swiper">

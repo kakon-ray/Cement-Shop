@@ -510,17 +510,6 @@ hr {
   padding-left: 1.5rem;
 }
 
-.container-fluid {
-  --offset-fluid: 1.5rem;
-  padding-right: var(--offset-fluid);
-  padding-left: var(--offset-fluid);
-}
-
-@media only screen and (min-width: 992px) {
-  .container-fluid {
-    --offset-fluid: 3rem;
-  }
-}
 
 @media only screen and (min-width: 1366px) {
   .container-fluid {

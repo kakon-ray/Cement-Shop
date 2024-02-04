@@ -37,6 +37,6 @@ $(document).ready(function(){
         var amount =  parseFloat($('#product-price').val());
         var quantity =  parseFloat($(this).val());
         var totalprice = (quantity * amount);
-        $("#show-price").text("৳ " + totalprice + " কেজি");
+        $("#show-price").text(totalprice);
        });
 })

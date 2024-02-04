@@ -1,6 +1,6 @@
 @extends('layouts.user.master')
 @section('title')
-    {{ 'About Us | User ' }}
+    {{ 'Product Details | User ' }}
 @endsection
 
 @section('content')
@@ -11,6 +11,10 @@
             margin: 20px 0px;
             flex-direction: column;
             gap: 4px;
+        }
+
+        .px-2{
+            padding: 0px 6px;
         }
     </style>
     <main class="main__content_wrapper">
@@ -166,8 +170,8 @@
                                     </ul>
                                 </div>
                                 <div class="product__details--info__price mb-10">
-                                    @if ($product->rod_brand)
-                                        <span class="current__price" id="show-price">৳ {{ $product->price }} </span>
+                                    @if ($product->category == 'rod')
+                                    <span>৳</span><span class="current__price px-2" id="show-price">{{ $product->price }} </span> <span>কেজি</span>
                                         <div>
                                             <input type="text" id="product-price" class="d-none"
                                                 value="{{ $product->price }}">
@@ -177,8 +181,8 @@
                                             </span>
                                         </div>
                                     @endif
-                                    @if ($product->cement)
-                                        <span class="current__price">৳ {{ $product->price }} ব্যাগ</span>
+                                    @if ($product->category == 'cement')
+                                       <span>৳</span> <span class="current__price px-2" id="show-price">{{ $product->price }}</span> <span>প্যাকেট</span>
                                         <div>
                                             <input type="text" id="product-price" class="d-none"
                                                 value="{{ $product->price }}">

@@ -9,7 +9,7 @@ use App\Http\Controllers\Admin\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 
 Route::name('admin.')->prefix('admin')->group(function () {
-    Route::get('register', [AdminRegistationController::class, 'create'])->name('register');
+    // Route::get('register', [AdminRegistationController::class, 'create'])->name('register');
     Route::post('register', [AdminRegistationController::class, 'store']);
     Route::get('login', [LoginController::class, 'create'])->name('login');
     Route::post('login', [LoginController::class, 'store']);

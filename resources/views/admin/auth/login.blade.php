@@ -52,8 +52,8 @@
                         <div class="mt-3 text-center">
                             <p class="small">পাসওয়ার্ড ভুলে গেছেন? <a class="text-primary"
                                     href="{{ route('admin.password.reset') }}">পাসওয়ার্ড রিসেট করুন</a></p>
-                            <p class="small">অ্যাকাউন্ট নেই?<a class="ml-2" href="{{ route('admin.register') }}">রেজিষ্ট্রেশন করুন</a>
-                            </p>
+                            {{-- <p class="small">অ্যাকাউন্ট নেই?<a class="ml-2" href="{{ route('admin.register') }}">রেজিষ্ট্রেশন করুন</a>
+                            </p> --}}
                 
                         </div>
                 

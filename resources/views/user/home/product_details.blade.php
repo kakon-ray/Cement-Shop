@@ -226,10 +226,10 @@
                                             @endif
 
                                             @foreach (json_decode($product->cement_brand_type) as $item)
-                                                @if ($item->value != 0)
+                                                @if ($item != 0)
                                                     <p class="product__details--info__meta--list"><strong>Cement Brand
                                                             Type:
-                                                            {{ $item->value }}
+                                                            {{ $item}}
                                                     </p>
                                                 @endif
                                             @endforeach

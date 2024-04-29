@@ -227,7 +227,7 @@
         });
 
 
- // The DOM element you wish to replace with Tagify
+        // The DOM element you wish to replace with Tagify
 var input = document.querySelector('#tags');
 
 // initialize Tagify on the above input node reference

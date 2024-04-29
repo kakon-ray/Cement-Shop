@@ -47,7 +47,6 @@ class ProductController extends Controller
                 'cement_brand' => 'required',
                 'cement_brand_type' => 'required',
                 'product_details' => 'required',
-                'brand_title' => 'required',
                 'thumbnail' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
                 'price' => "required|regex:/^\d+(\.\d{1,2})?$/"
 
@@ -68,7 +67,6 @@ class ProductController extends Controller
                 'rod_brand' => 'required',
                 'rod_size' => 'required',
                 'product_details' => 'required',
-                'brand_title' => 'required',
                 'thumbnail' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
                 'price' => "required|regex:/^\d+(\.\d{1,2})?$/"
             ];
@@ -126,7 +124,7 @@ class ProductController extends Controller
                     'brand_title' => $request->brand_title,
                     'category' => $request->category,
                     'cement_brand' => $request->cement_brand,
-                    'cement_brand_type' => $request->cement_brand_type,
+                    'cement_brand_type' => json_encode(explode(',', $request->cement_brand_type)),
                     'rod_brand' => $request->rod_brand,
                     'rod_size' => $request->rod_size,
                     'product_details' => $request->product_details,

@@ -89,7 +89,7 @@
                                     <div class="col-lg-6">
                                         <label>Cement Brand Type</label>
                                         <input required type="text" id="tags" class="form-control"
-                                            name="cement_brand_type" value="{{ $updateproduct->cement_brand_type }}"
+                                            name="cement_brand_type" value="@foreach(json_decode($updateproduct->cement_brand_type) as $item) {{$item}}  @endforeach"
                                             value="0">
 
                                     </div>

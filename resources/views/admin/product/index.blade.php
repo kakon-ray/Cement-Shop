@@ -54,13 +54,13 @@
                                             <td>{{ $item->cement_brand }}</td>
 
                                             <td>
-                                                {{-- @if($item->cement_brand_type) --}}
+                                                @if($item->cement_brand_type)
                                                 @php
                                                 foreach (json_decode($item->cement_brand_type) as $value) {
                                                 echo "$value <br>";
                                                 }
                                                 @endphp
-                                                {{-- @endif --}}
+                                                @endif
 
 
                                             </td>

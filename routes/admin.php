@@ -10,7 +10,7 @@ use App\Http\Controllers\Admin\Product\ProductController;
 use App\Http\Controllers\Admin\Slider\SliderController;
 
 // admin dashboard
-Route::middleware(['AdminAuth', 'VerifiedAdminEmail'])->group(function () {
+Route::middleware(['AdminAuth'])->group(function () {
 
     Route::name('admin.')->prefix('admin')->group(function () {
         // image upload

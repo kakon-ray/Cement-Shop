@@ -198,13 +198,6 @@
     <script src="https://unpkg.com/@yaireo/tagify@3.1.0/dist/tagify.polyfills.min.js"></script>
 
     <script type="text/javascript">
-        // The DOM element you wish to replace with Tagify
-        var input = document.querySelector('#tags');
-
-        // initialize Tagify on the above input node reference
-        new Tagify(input)
-
-
 
         //thumbline image upload 
         $('.dropify').dropify(); //dropify image
@@ -232,5 +225,12 @@
                 $('#row' + button_id + '').remove();
             });
         });
+
+
+ // The DOM element you wish to replace with Tagify
+var input = document.querySelector('#tags');
+
+// initialize Tagify on the above input node reference
+new Tagify(input)
     </script>
 @endsection
